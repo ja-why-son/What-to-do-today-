@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB521FC15FF00642F56 /* AppDelegate.swift */; };
-		9C13EFB821FC15FF00642F56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB721FC15FF00642F56 /* ViewController.swift */; };
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
 		9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFBC21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
 		9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */; };
 		9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */; };
 		9C13EFD921FC160000642F56 /* What_to_do_today_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */; };
+		9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* ToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,6 @@
 /* Begin PBXFileReference section */
 		9C13EFB221FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFB521FC15FF00642F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C13EFB721FC15FF00642F56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9C13EFBA21FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C13EFBD21FC15FF00642F56 /* What_to_do_today_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_to_do_today_.xcdatamodel; sourceTree = "<group>"; };
 		9C13EFBF21FC15FF00642F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +48,7 @@
 		9C13EFD421FC160000642F56 /* What to-do today?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
 		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C13EFE621FC170600642F56 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
-				9C13EFB721FC15FF00642F56 /* ViewController.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
+				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
 				9C13EFC421FC15FF00642F56 /* Info.plist */,
@@ -259,7 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C13EFB821FC15FF00642F56 /* ViewController.swift in Sources */,
+				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
 			);
