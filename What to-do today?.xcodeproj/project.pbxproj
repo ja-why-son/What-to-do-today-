@@ -15,6 +15,7 @@
 		9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */; };
 		9C13EFD921FC160000642F56 /* What_to_do_today_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */; };
 		9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* ToDoViewController.swift */; };
+		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
 		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C13EFE621FC170600642F56 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
+				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
 				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
