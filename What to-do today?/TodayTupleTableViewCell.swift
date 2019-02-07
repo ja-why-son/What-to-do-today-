@@ -12,6 +12,7 @@ class TodayTupleTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var textView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,5 +23,7 @@ class TodayTupleTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 
 }

@@ -10,6 +10,99 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Red Pop Up View Controller-->
+        <scene sceneID="vTf-pl-WRW">
+            <objects>
+                <viewController storyboardIdentifier="RedPopUp" id="ACt-8f-EQn" customClass="RedPopUpViewController" customModule="What_to_do_today_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWS-bF-tVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sq2-B1-8h8">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeRedPopUp:" destination="ACt-8f-EQn" eventType="touchUpInside" id="iNo-ZX-Un1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ugt-Ya-n3d">
+                                <rect key="frame" x="10" y="54" width="375" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeRedPopUp:" destination="ACt-8f-EQn" eventType="touchUpInside" id="ZuV-Zg-b0c"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fri-h6-rHS">
+                                <rect key="frame" x="30.666666666666657" y="97" width="314" height="644"/>
+                                <color key="backgroundColor" red="1" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="WsP-kK-KLw" firstAttribute="trailing" secondItem="Fri-h6-rHS" secondAttribute="trailing" constant="30.5" id="05L-f4-OwO"/>
+                            <constraint firstItem="Fri-h6-rHS" firstAttribute="top" secondItem="WsP-kK-KLw" secondAttribute="top" constant="53" id="5Bq-Zp-IG9"/>
+                            <constraint firstAttribute="bottom" secondItem="Sq2-B1-8h8" secondAttribute="bottom" id="8bf-vd-TcD"/>
+                            <constraint firstItem="Sq2-B1-8h8" firstAttribute="leading" secondItem="WsP-kK-KLw" secondAttribute="leading" id="JMm-kJ-yBE"/>
+                            <constraint firstItem="Fri-h6-rHS" firstAttribute="leading" secondItem="WsP-kK-KLw" secondAttribute="leading" constant="30.5" id="Ljl-lx-f0a"/>
+                            <constraint firstItem="Sq2-B1-8h8" firstAttribute="trailing" secondItem="WsP-kK-KLw" secondAttribute="trailing" id="aEZ-W3-fhc"/>
+                            <constraint firstItem="Sq2-B1-8h8" firstAttribute="top" secondItem="WsP-kK-KLw" secondAttribute="top" id="d1X-ej-cz6"/>
+                            <constraint firstItem="WsP-kK-KLw" firstAttribute="bottom" secondItem="Fri-h6-rHS" secondAttribute="bottom" constant="37" id="yZi-Vi-e7o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WsP-kK-KLw"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Sq2-B1-8h8" id="9qC-19-nXL"/>
+                        <outlet property="expandRedBox" destination="Fri-h6-rHS" id="c5g-hd-yKK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdD-3O-HKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="751"/>
+        </scene>
+        <!--Orange Pop Up View Controller-->
+        <scene sceneID="yYU-l5-h2L">
+            <objects>
+                <viewController storyboardIdentifier="OrangePopUp" id="rjC-Vp-9mH" customClass="OrangePopUpViewController" customModule="What_to_do_today_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IYm-EK-z7b">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4XW-9b-Bf5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeOrangePopUp:" destination="rjC-Vp-9mH" eventType="touchUpInside" id="d7n-oc-dVw"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jI1-q5-FyI">
+                                <rect key="frame" x="30.666666666666657" y="94" width="314" height="644"/>
+                                <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4XW-9b-Bf5" firstAttribute="leading" secondItem="YIh-EZ-2yJ" secondAttribute="leading" id="3OP-ky-yXR"/>
+                            <constraint firstItem="jI1-q5-FyI" firstAttribute="leading" secondItem="YIh-EZ-2yJ" secondAttribute="leading" constant="30.670000000000002" id="Yaa-6H-6kS"/>
+                            <constraint firstItem="jI1-q5-FyI" firstAttribute="top" secondItem="YIh-EZ-2yJ" secondAttribute="top" constant="50" id="bIh-1j-D3C"/>
+                            <constraint firstAttribute="bottom" secondItem="4XW-9b-Bf5" secondAttribute="bottom" id="gkM-sY-IEN"/>
+                            <constraint firstItem="YIh-EZ-2yJ" firstAttribute="bottom" secondItem="jI1-q5-FyI" secondAttribute="bottom" constant="40" id="kTN-tj-WsM"/>
+                            <constraint firstItem="4XW-9b-Bf5" firstAttribute="trailing" secondItem="YIh-EZ-2yJ" secondAttribute="trailing" id="qTl-EO-0p4"/>
+                            <constraint firstItem="4XW-9b-Bf5" firstAttribute="top" secondItem="YIh-EZ-2yJ" secondAttribute="top" id="tQe-FK-vcL"/>
+                            <constraint firstItem="YIh-EZ-2yJ" firstAttribute="trailing" secondItem="jI1-q5-FyI" secondAttribute="trailing" constant="30.329999999999998" id="udi-5p-FgX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YIh-EZ-2yJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="4XW-9b-Bf5" id="Wuq-fv-9hK"/>
+                        <outlet property="expandOrangeBox" destination="jI1-q5-FyI" id="hY8-M4-XZf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPg-Mg-uX1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="751"/>
+        </scene>
         <!--Small Box View Controller-->
         <scene sceneID="5IB-6J-H0M">
             <objects>
@@ -22,14 +115,18 @@
                                 <rect key="frame" x="16" y="94" width="167" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
-                                        <rect key="frame" x="8" y="24" width="150" height="268"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
+                                        <rect key="frame" x="8" y="24" width="150" height="288"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <string key="text">– schedule chipotle fundraiser
 –fiuts cultural fest details make sure</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="get-xx-jWh" appends="YES" id="WT2-eK-foS"/>
+                                        </connections>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TSA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-Bh-7L6">
                                         <rect key="frame" x="8" y="8" width="32" height="21"/>
@@ -41,6 +138,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="A4T-NA-Vmh" appends="YES" id="pba-cg-rwF"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
                                 <rect key="frame" x="191" y="94" width="168" height="320"/>
@@ -53,18 +153,26 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
                                         <rect key="frame" x="9" y="28" width="150" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <string key="text">– ECON Sapling
 – 日本語 日期
 – AIS Response</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="WSw-GZ-2ZD" appends="YES" id="VY6-iG-WSe"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.79607843137254897" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Wsm-8Y-tgy" appends="YES" id="k7q-6m-fgK"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
                                 <rect key="frame" x="16" y="440" width="167" height="320"/>
@@ -77,17 +185,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
                                         <rect key="frame" x="8" y="34" width="150" height="252"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.62352941179999999" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <string key="text">– make expansion for each of the small box
 </string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="mDu-mg-fil" appends="YES" id="axs-io-b7K"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.62352941176470589" green="0.8666666666666667" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="G9p-oG-BCc" appends="YES" id="xwF-IP-qA4"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
                                 <rect key="frame" x="191" y="440" width="168" height="320"/>
@@ -100,19 +216,27 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
                                         <rect key="frame" x="8" y="34" width="150" height="252"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.6588235294" green="1" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <gestureRecognizers/>
                                         <string key="text">– SLEEP EARLY
 – figure the stuff out 
 – grocery shopping!!
 – 我想吃燒臘</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="64G-fK-KWY" appends="YES" id="NE0-fL-s7l"/>
+                                        </connections>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.6588235294117647" green="1" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Ojp-Te-PpX" appends="YES" id="EBD-AT-pQi"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -126,8 +250,48 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7Y-Tu-hMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="A4T-NA-Vmh">
+                    <connections>
+                        <action selector="showRedPopUp:" destination="G3W-Cm-XPX" id="Ka4-iq-seL"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="get-xx-jWh">
+                    <connections>
+                        <action selector="showRedPopUp:" destination="G3W-Cm-XPX" id="4Pt-4o-zXV"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="WSw-GZ-2ZD">
+                    <connections>
+                        <action selector="showOrangeBox:" destination="G3W-Cm-XPX" id="ngd-0e-Xb8"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Wsm-8Y-tgy">
+                    <connections>
+                        <action selector="showOrangeBox:" destination="G3W-Cm-XPX" id="HDK-86-X7J"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="G9p-oG-BCc">
+                    <connections>
+                        <action selector="showBlueBox:" destination="G3W-Cm-XPX" id="4pS-QJ-IQO"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="mDu-mg-fil">
+                    <connections>
+                        <action selector="showBlueBox:" destination="G3W-Cm-XPX" id="Pjp-3s-tyg"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Ojp-Te-PpX">
+                    <connections>
+                        <action selector="showGreenBox:" destination="G3W-Cm-XPX" id="cSR-pI-nco"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="64G-fK-KWY">
+                    <connections>
+                        <action selector="showGreenBox:" destination="G3W-Cm-XPX" id="WtB-Xx-leU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-455.19999999999999" y="640.64039408866995"/>
+            <point key="canvasLocation" x="-351" y="751"/>
         </scene>
         <!--To Do View Controller-->
         <scene sceneID="uVL-lf-ryf">
@@ -135,7 +299,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RE2-YK-IkS" customClass="ToDoViewController" customModule="What_to_do_today_" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qIV-MC-b4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="-40"/>
+            <point key="canvasLocation" x="-351" y="5"/>
         </scene>
         <!--Big Box View Controller-->
         <scene sceneID="0zl-53-wsM">
@@ -206,7 +370,91 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGH-5x-Soj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="548" y="640.64039408866995"/>
+            <point key="canvasLocation" x="-351" y="1448"/>
+        </scene>
+        <!--Blue Pop Up View Controller-->
+        <scene sceneID="5Ay-Lz-1Hb">
+            <objects>
+                <viewController storyboardIdentifier="BluePopUp" id="QQE-Ux-Dsd" customClass="BluePopUpViewController" customModule="What_to_do_today_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XdH-qU-51a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0s-Id-aZY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeBluePopUp:" destination="QQE-Ux-Dsd" eventType="touchUpInside" id="biu-6e-Md6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8B-NB-lCO">
+                                <rect key="frame" x="30.666666666666657" y="94" width="314" height="644"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e8B-NB-lCO" firstAttribute="leading" secondItem="FV5-t0-kYg" secondAttribute="leading" constant="30.670000000000002" id="2sX-Bw-epa"/>
+                            <constraint firstItem="e8B-NB-lCO" firstAttribute="top" secondItem="FV5-t0-kYg" secondAttribute="top" constant="50" id="UQy-02-TAw"/>
+                            <constraint firstAttribute="bottom" secondItem="i0s-Id-aZY" secondAttribute="bottom" id="dqR-9T-T0w"/>
+                            <constraint firstItem="FV5-t0-kYg" firstAttribute="trailing" secondItem="e8B-NB-lCO" secondAttribute="trailing" constant="30.329999999999998" id="gyb-gP-9xd"/>
+                            <constraint firstItem="i0s-Id-aZY" firstAttribute="leading" secondItem="FV5-t0-kYg" secondAttribute="leading" id="mIq-0Y-luX"/>
+                            <constraint firstItem="i0s-Id-aZY" firstAttribute="top" secondItem="FV5-t0-kYg" secondAttribute="top" id="nxX-br-6om"/>
+                            <constraint firstItem="FV5-t0-kYg" firstAttribute="bottom" secondItem="e8B-NB-lCO" secondAttribute="bottom" constant="40" id="u5V-JX-L01"/>
+                            <constraint firstItem="i0s-Id-aZY" firstAttribute="trailing" secondItem="FV5-t0-kYg" secondAttribute="trailing" id="wPt-Zi-NlZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FV5-t0-kYg"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="i0s-Id-aZY" id="eU1-Fa-Ct6"/>
+                        <outlet property="expandBlueBox" destination="e8B-NB-lCO" id="m94-uo-Kdv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfX-BJ-QbV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1255" y="1448"/>
+        </scene>
+        <!--Green Pop Up View Controller-->
+        <scene sceneID="CYB-Az-rhI">
+            <objects>
+                <viewController storyboardIdentifier="GreenPopUp" id="Co7-qI-MdR" customClass="GreenPopUpViewController" customModule="What_to_do_today_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MCf-8W-vOH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g4y-Zc-Im4">
+                                <rect key="frame" x="0.0" y="44" width="375" height="768"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="closeGreenPopUp:" destination="Co7-qI-MdR" eventType="touchUpInside" id="uOG-cL-hOh"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M14-nA-ph0">
+                                <rect key="frame" x="30.666666666666657" y="94" width="314" height="644"/>
+                                <color key="backgroundColor" red="0.6588235294" green="1" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QLB-5s-A9H" firstAttribute="trailing" secondItem="M14-nA-ph0" secondAttribute="trailing" constant="30.329999999999998" id="Jc2-Md-xjw"/>
+                            <constraint firstItem="g4y-Zc-Im4" firstAttribute="trailing" secondItem="QLB-5s-A9H" secondAttribute="trailing" id="LAp-KQ-qAy"/>
+                            <constraint firstItem="M14-nA-ph0" firstAttribute="leading" secondItem="QLB-5s-A9H" secondAttribute="leading" constant="30.670000000000002" id="Sje-B0-4HD"/>
+                            <constraint firstItem="M14-nA-ph0" firstAttribute="top" secondItem="QLB-5s-A9H" secondAttribute="top" constant="50" id="dGr-91-iZ8"/>
+                            <constraint firstItem="g4y-Zc-Im4" firstAttribute="leading" secondItem="QLB-5s-A9H" secondAttribute="leading" id="lGV-Gg-VbU"/>
+                            <constraint firstItem="QLB-5s-A9H" firstAttribute="bottom" secondItem="M14-nA-ph0" secondAttribute="bottom" constant="40" id="qYg-fW-TVC"/>
+                            <constraint firstItem="g4y-Zc-Im4" firstAttribute="top" secondItem="QLB-5s-A9H" secondAttribute="top" id="rJ2-s2-CQp"/>
+                            <constraint firstAttribute="bottom" secondItem="g4y-Zc-Im4" secondAttribute="bottom" id="sk4-F2-PFa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QLB-5s-A9H"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="g4y-Zc-Im4" id="AtE-Fg-skT"/>
+                        <outlet property="expandGreenBox" destination="M14-nA-ph0" id="2FC-jt-nCU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H3H-9x-FZv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="548" y="1447.536945812808"/>
         </scene>
     </scenes>
 </document>

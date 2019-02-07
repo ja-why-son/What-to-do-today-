@@ -18,6 +18,10 @@
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
+		9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */; };
+		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
+		9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */; };
+		9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
+		9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPopUpViewController.swift; sourceTree = "<group>"; };
+		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
+		9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePopUpViewController.swift; sourceTree = "<group>"; };
+		9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPopUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,9 +115,13 @@
 			children = (
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
+				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
+				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
+				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
 				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
 				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
 				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
@@ -269,11 +281,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */,
+				9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */,
+				9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
+				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
+				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
