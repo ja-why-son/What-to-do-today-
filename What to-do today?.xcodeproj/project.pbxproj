@@ -115,14 +115,10 @@
 			children = (
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
-				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
-				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
-				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
-				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
-				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
-				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
-				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
-				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
+				9CF9D371220CEE6900688F21 /* Main Page */,
+				9CF9D36F220CEE2800688F21 /* Page View Controller */,
+				9CF9D36D220CED9B00688F21 /* Expand View Controller */,
+				9CF9D36E220CEDE800688F21 /* Today View Controller */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
 				9C13EFC421FC15FF00642F56 /* Info.plist */,
@@ -147,6 +143,42 @@
 				9C13EFDA21FC160000642F56 /* Info.plist */,
 			);
 			path = "What to-do today?UITests";
+			sourceTree = "<group>";
+		};
+		9CF9D36D220CED9B00688F21 /* Expand View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
+				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
+				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
+				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
+			);
+			path = "Expand View Controller";
+			sourceTree = "<group>";
+		};
+		9CF9D36E220CEDE800688F21 /* Today View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
+				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+			);
+			path = "Today View Controller";
+			sourceTree = "<group>";
+		};
+		9CF9D36F220CEE2800688F21 /* Page View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
+			);
+			path = "Page View Controller";
+			sourceTree = "<group>";
+		};
+		9CF9D371220CEE6900688F21 /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+			);
+			path = "Main Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
