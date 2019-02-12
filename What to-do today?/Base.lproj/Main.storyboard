@@ -326,22 +326,27 @@
                                         <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <inset key="separatorInset" minX="25" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Tuple" id="jI1-Vd-1QK" customClass="TodayTupleTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="302" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Tuple" rowHeight="37" id="jI1-Vd-1QK" customClass="TodayTupleTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="302" height="37"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jI1-Vd-1QK" id="IZ7-JC-UnF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="302" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="302" height="36.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="240" height="44"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
+                                                            <rect key="frame" x="29" y="0.0" width="258" height="35"/>
                                                             <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstItem="6Nk-IY-MNw" firstAttribute="leading" secondItem="IZ7-JC-UnF" secondAttribute="leading" constant="29" id="1TX-TG-ybE"/>
+                                                        <constraint firstItem="6Nk-IY-MNw" firstAttribute="top" secondItem="IZ7-JC-UnF" secondAttribute="top" id="Dpr-A0-VGD"/>
+                                                        <constraint firstAttribute="bottom" secondItem="6Nk-IY-MNw" secondAttribute="bottom" constant="1.6699999999999999" id="ZWO-3c-OOl"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Nk-IY-MNw" secondAttribute="trailing" constant="15" id="lyD-Zd-eDX"/>
+                                                    </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="textView" destination="6Nk-IY-MNw" id="gNL-43-aVA"/>
@@ -365,12 +370,13 @@
                         <viewLayoutGuide key="safeArea" id="Mx9-Qf-I3w"/>
                     </view>
                     <connections>
+                        <outlet property="tableView" destination="12g-a3-ofk" id="1ht-mw-rvE"/>
                         <outlet property="todayBox" destination="hWW-si-CPG" id="Vus-2i-PLK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mGH-5x-Soj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-351" y="1448"/>
+            <point key="canvasLocation" x="-351.19999999999999" y="1447.536945812808"/>
         </scene>
         <!--Blue Pop Up View Controller-->
         <scene sceneID="5Ay-Lz-1Hb">
