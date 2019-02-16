@@ -43,27 +43,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         cell.textView.text = list[indexPath.row]
         return cell
     }
-        
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("height function is called!")
-        if indexPath.row == expandingIndexRow {
-            return expandingCellHeight
-        } else {
-            return 100
-        }
-    }
     
 }
 
 
 extension BigBoxViewController: ExpandingCellDelegate {
-    
+
     func updated(height: CGFloat) {
-        
-        print("updated")
 
         expandingCellHeight = height
-        
+
         // Disabling animations gives us our desired behaviour
         UIView.setAnimationsEnabled(false)
         /* These will causes table cell heights to be recaluclated,
@@ -72,9 +61,9 @@ extension BigBoxViewController: ExpandingCellDelegate {
         tableView.endUpdates()
         // Re-enable animations
         UIView.setAnimationsEnabled(true)
-        
+
         let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-        
+
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
 }
