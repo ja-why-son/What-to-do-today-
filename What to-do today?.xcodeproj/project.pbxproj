@@ -22,6 +22,7 @@
 		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
 		9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */; };
 		9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */; };
+		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPopUpViewController.swift; sourceTree = "<group>"; };
+		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewCellBase.swift; path = "What to-do today?/ExpandableTableViewCellBase.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 		9C13EFA921FC15FF00642F56 = {
 			isa = PBXGroup;
 			children = (
+				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
 				9C13EFB421FC15FF00642F56 /* What to-do today? */,
 				9C13EFCC21FC15FF00642F56 /* What to-do today?Tests */,
 				9C13EFD721FC160000642F56 /* What to-do today?UITests */,
@@ -320,6 +323,7 @@
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
+				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,
 			);

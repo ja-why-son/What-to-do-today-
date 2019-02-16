@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var todayBox: UIView!
@@ -44,26 +44,14 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
-}
-
-
-extension BigBoxViewController: ExpandingCellDelegate {
-
     func updated(height: CGFloat) {
-
         expandingCellHeight = height
-
-        // Disabling animations gives us our desired behaviour
         UIView.setAnimationsEnabled(false)
-        /* These will causes table cell heights to be recaluclated,
-         without reloading the entire cell */
         tableView.beginUpdates()
         tableView.endUpdates()
-        // Re-enable animations
         UIView.setAnimationsEnabled(true)
-
         let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
+    
 }
