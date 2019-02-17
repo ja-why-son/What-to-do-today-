@@ -12,7 +12,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var todayBox: UIView!
-    @IBOutlet weak var doneButton: UIButton!
     var list = [String]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
@@ -45,10 +44,15 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list.count
+        return list.count + 1
     }
     
+    // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == list.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath)
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.delegate = self
         cell.textView.text = list[indexPath.row]
