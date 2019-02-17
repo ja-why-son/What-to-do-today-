@@ -12,6 +12,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var todayBox: UIView!
+    @IBOutlet weak var doneButton: UIButton!
     var list = [String]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
@@ -27,6 +28,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         expandingIndexRow = list.count - 1
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(BigBoxViewController.keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(BigBoxViewController.keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -52,6 +63,15 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         UIView.setAnimationsEnabled(true)
         let indexPath = IndexPath(row: expandingIndexRow, section: 0)
         tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+    }
+    
+    
+    @objc func keyboardWillShow(notification: NSNotification) {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+        tap.cancelsTouchesInView = false
+        self.view.addGestureRecognizer(tap)
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
     }
     
 }

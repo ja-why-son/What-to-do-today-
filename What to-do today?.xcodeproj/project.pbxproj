@@ -64,7 +64,7 @@
 		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPopUpViewController.swift; sourceTree = "<group>"; };
-		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpandableTableViewCellBase.swift; path = "What to-do today?/ExpandableTableViewCellBase.swift"; sourceTree = "<group>"; };
+		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +95,6 @@
 		9C13EFA921FC15FF00642F56 = {
 			isa = PBXGroup;
 			children = (
-				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
 				9C13EFB421FC15FF00642F56 /* What to-do today? */,
 				9C13EFCC21FC15FF00642F56 /* What to-do today?Tests */,
 				9C13EFD721FC160000642F56 /* What to-do today?UITests */,
@@ -116,6 +115,7 @@
 		9C13EFB421FC15FF00642F56 /* What to-do today? */ = {
 			isa = PBXGroup;
 			children = (
+				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
 				9CF9D371220CEE6900688F21 /* Main Page */,
