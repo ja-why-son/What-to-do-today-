@@ -23,6 +23,7 @@
 		9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */; };
 		9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
+		9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3762229A9DD00688F21 /* TodayAddSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
+		9CF9D3762229A9DD00688F21 /* TodayAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAddSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
+				9CF9D3762229A9DD00688F21 /* TodayAddSection.swift */,
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
 			);
 			path = "Today View Controller";
@@ -326,6 +329,7 @@
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,
+				9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

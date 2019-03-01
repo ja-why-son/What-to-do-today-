@@ -32,11 +32,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             selector: #selector(BigBoxViewController.keyboardWillShow),
             name: UIResponder.keyboardWillShowNotification,
             object: nil)
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(BigBoxViewController.keyboardWillHide),
-            name: UIResponder.keyboardWillHideNotification,
-            object: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,7 +45,8 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == list.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as!TodayAddTableViewCell
+            cell.delegate = self
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
@@ -75,7 +71,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
-    @objc func keyboardWillHide(notification: NSNotification) {
-    }
+    
     
 }
