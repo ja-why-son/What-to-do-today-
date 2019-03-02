@@ -8,7 +8,8 @@
 
 import UIKit
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate {
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TodayAddTableViewCellDelegate {
+    
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var todayBox: UIView!
@@ -47,6 +48,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         if indexPath.row == list.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as!TodayAddTableViewCell
             cell.delegate = self
+            cell.delegate_one = self
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
@@ -72,5 +74,9 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         self.view.addGestureRecognizer(tap)
     }
     
+    func addRow(_ sender:TodayAddTableViewCell, _ newString:String) {
+        print("hello")
+        print(newString)
+    }
     
 }

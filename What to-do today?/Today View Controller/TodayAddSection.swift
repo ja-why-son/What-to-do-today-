@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol TodayAddTableViewCellDelegate {
+    func addRow(_ sender:TodayAddTableViewCell, _ newString:String)
+}
+
 class TodayAddTableViewCell: ExpandableTableViewCell {
     
     @IBOutlet weak var textView: UITextView!
+    var delegate_one: TodayAddTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
@@ -18,5 +24,15 @@ class TodayAddTableViewCell: ExpandableTableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text != "" {
+            let addString = textView.text!
+            print(addString)
+            delegate_one?.addRow(self, addString)
+            textView.text = ""
+        }
+        
     }
 }
