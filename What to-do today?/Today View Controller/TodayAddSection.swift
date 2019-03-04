@@ -22,17 +22,16 @@ class TodayAddTableViewCell: ExpandableTableViewCell {
         textView.delegate = self
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//    }
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != "" {
             let addString = textView.text!
-            print(addString)
             delegate_one?.addRow(self, addString)
             textView.text = ""
         }
-        
+        delegate?.updated(height: 100)
     }
 }

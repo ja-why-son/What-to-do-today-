@@ -33,6 +33,11 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             selector: #selector(BigBoxViewController.keyboardWillShow),
             name: UIResponder.keyboardWillShowNotification,
             object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector:#selector(BigBoxViewController.keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -69,14 +74,31 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     @objc func keyboardWillShow(notification: NSNotification) {
+//        print("method called")
+//        guard let userInfo = notification.userInfo else {return}
+//        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
+//        let keyBoardFrame = keyboardSize.cgRectValue
+//        if self.view.frame.origin.y == 0 {
+//            self.view.frame.origin.y -= keyBoardFrame.height
+//        }
+        
+        
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
     
+    @objc func keyboardWillHide(notification: NSNotification) {
+//        if self.view.frame.origin.y != 0 {
+//            self.view.frame.origin.y -= 0
+//        }
+    }
+    
     func addRow(_ sender:TodayAddTableViewCell, _ newString:String) {
-        print("hello")
-        print(newString)
+        list.append(newString)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: list.count - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
     }
     
 }
