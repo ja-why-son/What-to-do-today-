@@ -355,23 +355,38 @@
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addSection" id="acj-jQ-4Mf" customClass="TodayAddTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="65" width="302" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="acj-jQ-4Mf" id="oxI-dp-Eai">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="acj-jQ-4Mf" id="oxI-dp-Eai">
                                                     <rect key="frame" x="0.0" y="0.0" width="302" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GAG-D4-0EK">
-                                                            <rect key="frame" x="28" y="0.0" width="259" height="43.666666666666664"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <rect key="frame" x="28" y="0.0" width="259" height="33"/>
+                                                            <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="33" id="3XG-yv-zUP"/>
+                                                                <constraint firstAttribute="width" constant="259" id="pfm-Jg-zBv"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_sign.png" translatesAutoresizingMaskIntoConstraints="NO" id="hd3-2q-xlz">
+                                                            <rect key="frame" x="0.0" y="11" width="22" height="22"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="22" id="Myh-Lu-GDr"/>
+                                                                <constraint firstAttribute="height" constant="22" id="P02-HL-7ir"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="GAG-D4-0EK" secondAttribute="bottom" id="CLT-Jf-iVQ"/>
                                                         <constraint firstItem="GAG-D4-0EK" firstAttribute="top" secondItem="oxI-dp-Eai" secondAttribute="top" id="KO1-Cv-nsM"/>
+                                                        <constraint firstItem="hd3-2q-xlz" firstAttribute="leading" secondItem="oxI-dp-Eai" secondAttribute="leading" id="MzX-bQ-PpO"/>
                                                         <constraint firstAttribute="trailing" secondItem="GAG-D4-0EK" secondAttribute="trailing" constant="15" id="X2N-fg-whi"/>
+                                                        <constraint firstAttribute="bottom" secondItem="hd3-2q-xlz" secondAttribute="bottom" constant="10.67" id="suT-0F-21w"/>
                                                         <constraint firstItem="GAG-D4-0EK" firstAttribute="leading" secondItem="oxI-dp-Eai" secondAttribute="leading" constant="28" id="uxL-zH-iLo"/>
+                                                        <constraint firstItem="GAG-D4-0EK" firstAttribute="leading" secondItem="hd3-2q-xlz" secondAttribute="trailing" constant="6" id="wb0-vG-jtD"/>
+                                                        <constraint firstItem="hd3-2q-xlz" firstAttribute="top" secondItem="oxI-dp-Eai" secondAttribute="top" constant="11" id="yCd-4I-SpX"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -484,4 +499,7 @@
             <point key="canvasLocation" x="548" y="1447.536945812808"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus_sign.png" width="100" height="100"/>
+    </resources>
 </document>
