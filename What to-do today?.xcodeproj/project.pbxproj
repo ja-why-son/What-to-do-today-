@@ -17,7 +17,6 @@
 		9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* ToDoViewController.swift */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
-		9C292EBF222E34BC00D01022 /* plus_sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C292EBE222E34BC00D01022 /* plus_sign.png */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */; };
 		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
@@ -61,7 +60,6 @@
 		9C13EFE621FC170600642F56 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
-		9C292EBE222E34BC00D01022 /* plus_sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_sign.png; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 		9C292EBD222DFB7800D01022 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				9C292EBE222E34BC00D01022 /* plus_sign.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -302,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C292EBF222E34BC00D01022 /* plus_sign.png in Resources */,
 				9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */,
 				9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */,
 				9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */,

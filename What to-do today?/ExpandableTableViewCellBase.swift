@@ -48,5 +48,11 @@ class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
         let height = textView.newHeight(withBaseHeight: 200)
         delegate?.updated(height: height)
     }
+    
+    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
+        print("hello")
+        textField.resignFirstResponder()
+        return true
+    }
 }
 

@@ -28,7 +28,8 @@ class TodayAddTableViewCell: ExpandableTableViewCell {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != "" {
-            let addString = textView.text!
+            var addString = textView.text!
+            addString = addString.replacingOccurrences(of: "\n", with: " ")
             delegate_one?.addRow(self, addString)
             textView.text = ""
         }
