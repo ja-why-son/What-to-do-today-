@@ -8,31 +8,15 @@
 
 import UIKit
 
-protocol TodayAddTableViewCellDelegate {
-    func addRow(_ sender:TodayAddTableViewCell, _ newString:String)
-}
 
-class TodayAddTableViewCell: ExpandableTableViewCell {
+
+class TodayAddTableViewCell: addTableViewCell {
     
     @IBOutlet weak var textView: UITextView!
-    var addRowDelegate: TodayAddTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
     }
-    
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text != "" {
-            var addString = textView.text!
-            addString = addString.replacingOccurrences(of: "\n", with: " ")
-            addRowDelegate?.addRow(self, addString)
-            textView.text = ""
-        }
-        expandCellDelegate?.updated(height: 100)
-    }
+
 }

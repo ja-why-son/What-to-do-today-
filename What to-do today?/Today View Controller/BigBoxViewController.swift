@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TodayAddTableViewCellDelegate {
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate {
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -94,7 +94,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
 //        }
     }
     
-    func addRow(_ sender:TodayAddTableViewCell, _ newString:String) {
+    func addRow(_ sender:UITableViewCell, _ newString:String) {
         list.append(newString)
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: list.count - 1, section: 0)], with: .automatic)
