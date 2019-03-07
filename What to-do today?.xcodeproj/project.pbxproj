@@ -150,13 +150,45 @@
 			path = "What to-do today?UITests";
 			sourceTree = "<group>";
 		};
-		9CF9D36D220CED9B00688F21 /* Expand View Controller */ = {
+		9C34344D2230ABE700A8B923 /* Red */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
+			);
+			path = Red;
+			sourceTree = "<group>";
+		};
+		9C34344E2230ABF700A8B923 /* Blue */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
+			);
+			path = Blue;
+			sourceTree = "<group>";
+		};
+		9C34344F2230AC0100A8B923 /* Orange */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
+			);
+			path = Orange;
+			sourceTree = "<group>";
+		};
+		9C3434502230AC0A00A8B923 /* Green */ = {
 			isa = PBXGroup;
 			children = (
 				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
-				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
-				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
-				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
+			);
+			path = Green;
+			sourceTree = "<group>";
+		};
+		9CF9D36D220CED9B00688F21 /* Expand View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C3434502230AC0A00A8B923 /* Green */,
+				9C34344F2230AC0100A8B923 /* Orange */,
+				9C34344E2230ABF700A8B923 /* Blue */,
+				9C34344D2230ABE700A8B923 /* Red */,
 			);
 			path = "Expand View Controller";
 			sourceTree = "<group>";

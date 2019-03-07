@@ -15,7 +15,7 @@ protocol TodayAddTableViewCellDelegate {
 class TodayAddTableViewCell: ExpandableTableViewCell {
     
     @IBOutlet weak var textView: UITextView!
-    var delegate_one: TodayAddTableViewCellDelegate?
+    var addRowDelegate: TodayAddTableViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class TodayAddTableViewCell: ExpandableTableViewCell {
         if textView.text != "" {
             var addString = textView.text!
             addString = addString.replacingOccurrences(of: "\n", with: " ")
-            delegate_one?.addRow(self, addString)
+            addRowDelegate?.addRow(self, addString)
             textView.text = ""
         }
         delegate?.updated(height: 100)
