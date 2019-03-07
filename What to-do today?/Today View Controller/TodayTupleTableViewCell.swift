@@ -40,7 +40,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     
     func textViewDidEndEditing(_ textView: UITextView) {
         textView.text = textView.text!.replacingOccurrences(of: "\n", with: " ")
-        delegate?.updated(height: 100)
+        expandCellDelegate?.updated(height: 100)
     }
     
 }

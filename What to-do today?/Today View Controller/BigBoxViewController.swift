@@ -52,12 +52,12 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == list.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as!TodayAddTableViewCell
-            cell.delegate = self
+            cell.expandCellDelegate = self
             cell.addRowDelegate = self
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
-        cell.delegate = self
+        cell.expandCellDelegate = self
         cell.textView.text = list[indexPath.row]
         return cell
     }

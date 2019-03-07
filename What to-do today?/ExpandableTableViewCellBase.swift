@@ -38,7 +38,7 @@ extension UITextView {
 
 class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
     
-    var delegate: ExpandingCellDelegate?
+    var expandCellDelegate: ExpandingCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -46,7 +46,7 @@ class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         let height = textView.newHeight(withBaseHeight: 200)
-        delegate?.updated(height: height)
+        expandCellDelegate?.updated(height: height)
     }
     
     func textFieldShouldReturn(_ textField: UITextView) -> Bool {

@@ -33,6 +33,6 @@ class TodayAddTableViewCell: ExpandableTableViewCell {
             addRowDelegate?.addRow(self, addString)
             textView.text = ""
         }
-        delegate?.updated(height: 100)
+        expandCellDelegate?.updated(height: 100)
     }
 }
