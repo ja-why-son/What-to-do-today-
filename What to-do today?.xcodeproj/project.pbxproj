@@ -20,6 +20,8 @@
 		9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */; };
 		9C3434542230E5AA00A8B923 /* RedTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434532230E5AA00A8B923 /* RedTupleViewCell.swift */; };
 		9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* RedAddSection.swift */; };
+		9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */; };
+		9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434592231FB4400A8B923 /* OrangeAddSection.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */; };
 		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
@@ -66,6 +68,8 @@
 		9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCellBase.swift; sourceTree = "<group>"; };
 		9C3434532230E5AA00A8B923 /* RedTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTupleViewCell.swift; sourceTree = "<group>"; };
 		9C34345522319CCA00A8B923 /* RedAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAddSection.swift; sourceTree = "<group>"; };
+		9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTupleViewCell.swift; sourceTree = "<group>"; };
+		9C3434592231FB4400A8B923 /* OrangeAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAddSection.swift; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
+				9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */,
+				9C3434592231FB4400A8B923 /* OrangeAddSection.swift */,
 			);
 			path = Orange;
 			sourceTree = "<group>";
@@ -364,11 +370,13 @@
 				9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
+				9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */,
 				9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */,
 				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
+				9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */,
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,

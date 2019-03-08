@@ -6,7 +6,6 @@
 //  Copyright © 2019 Jayson Chen. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class RedTupleTableViewCell: ExpandableTableViewCell {
