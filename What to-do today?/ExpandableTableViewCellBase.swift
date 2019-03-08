@@ -50,9 +50,13 @@ class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextView) -> Bool {
-        print("hello")
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        textView.text = textView.text!.replacingOccurrences(of: "\n", with: " ")
+        expandCellDelegate?.updated(height: 100)
     }
 }
 

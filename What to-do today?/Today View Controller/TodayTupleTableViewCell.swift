@@ -27,20 +27,6 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     
     @IBAction func checkCheckBox(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
-//        UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-//            sender.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-//
-//        }) { (success) in
-//            UIView.animate(withDuration: 0.5, delay: 0.1, options: .curveLinear, animations: {
-//                sender.isSelected = !sender.isSelected
-//                sender.transform = .identity
-//            }, completion: nil)
-//        }
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        textView.text = textView.text!.replacingOccurrences(of: "\n", with: " ")
-        expandCellDelegate?.updated(height: 100)
     }
     
 }

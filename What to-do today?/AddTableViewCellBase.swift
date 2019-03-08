@@ -15,7 +15,7 @@ protocol AddTableViewCellDelegate {
 class addTableViewCell: ExpandableTableViewCell {
     var addRowDelegate: AddTableViewCellDelegate?
     
-    func textViewDidEndEditing(_ textView: UITextView) {
+    override func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != "" {
             var addString = textView.text!
             addString = addString.replacingOccurrences(of: "\n", with: " ")

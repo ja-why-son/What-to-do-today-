@@ -23,9 +23,4 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
     @IBAction func checkCheckBox(_ sender: UIButton) {
         sender.isSelected = !sender.isSelected
     }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        textView.text = textView.text!.replacingOccurrences(of: "\n", with: " ")
-        expandCellDelegate?.updated(height: 100)
-    }
 }

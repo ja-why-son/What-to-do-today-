@@ -10,7 +10,6 @@ import UIKit
 
 class RedAddTableViewCell: addTableViewCell {
     
-    
     @IBOutlet weak var textView: UITextView!
     
     override func awakeFromNib() {

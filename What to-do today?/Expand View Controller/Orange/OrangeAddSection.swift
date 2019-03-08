@@ -7,3 +7,13 @@
 //
 
 import UIKit
+
+class OrangeAddTableViewCell: addTableViewCell {
+    
+    @IBOutlet weak var textView: UITextView!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        textView.delegate = self
+    }
+}

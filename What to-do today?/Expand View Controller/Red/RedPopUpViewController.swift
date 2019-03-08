@@ -27,7 +27,6 @@ class RedPopUpViewController: UIViewController, UITableViewDataSource, UITableVi
         self.showAnimate()
         
         super.viewDidLoad()
-        expandRedBox.layer.cornerRadius = 10
         list.append("schedule chipotle fundraiser")
         list.append("fiuts cultural fest details make sure")
         expandingIndexRow = list.count - 1
@@ -48,7 +47,6 @@ class RedPopUpViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        print("hello")
         return 1
     }
     
@@ -58,7 +56,6 @@ class RedPopUpViewController: UIViewController, UITableViewDataSource, UITableVi
     
     // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("process table")
         if indexPath.row == list.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as! RedAddTableViewCell
             cell.expandCellDelegate = self

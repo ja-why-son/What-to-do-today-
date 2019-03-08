@@ -74,7 +74,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     
     
     @objc func keyboardWillShow(notification: NSNotification) {
-//        print("method called")
 //        guard let userInfo = notification.userInfo else {return}
 //        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
 //        let keyBoardFrame = keyboardSize.cgRectValue
