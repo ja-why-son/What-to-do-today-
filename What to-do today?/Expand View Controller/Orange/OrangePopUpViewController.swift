@@ -23,8 +23,6 @@ class OrangePopUpViewController: UIViewController, UITableViewDataSource, UITabl
         backButton.backgroundColor = UIColor.clear
         expandOrangeBox.layer.cornerRadius = 15
         self.showAnimate()
-        
-        super.viewDidLoad()
         list.append("ECON Sapling")
         list.append("日本語 日期")
         list.append("AIS Response")

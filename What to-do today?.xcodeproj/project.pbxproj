@@ -22,6 +22,10 @@
 		9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* RedAddSection.swift */; };
 		9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */; };
 		9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434592231FB4400A8B923 /* OrangeAddSection.swift */; };
+		9C7C72602238B7720026FE67 /* BlueTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */; };
+		9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72612238B78B0026FE67 /* BlueAddSection.swift */; };
+		9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */; };
+		9C7C72662238BF9F0026FE67 /* GreenAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */; };
 		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
@@ -70,6 +74,10 @@
 		9C34345522319CCA00A8B923 /* RedAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAddSection.swift; sourceTree = "<group>"; };
 		9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTupleViewCell.swift; sourceTree = "<group>"; };
 		9C3434592231FB4400A8B923 /* OrangeAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAddSection.swift; sourceTree = "<group>"; };
+		9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTupleTableViewCell.swift; sourceTree = "<group>"; };
+		9C7C72612238B78B0026FE67 /* BlueAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAddSection.swift; sourceTree = "<group>"; };
+		9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenTupleTableViewCell.swift; sourceTree = "<group>"; };
+		9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenAddSection.swift; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
+				9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */,
+				9C7C72612238B78B0026FE67 /* BlueAddSection.swift */,
 			);
 			path = Blue;
 			sourceTree = "<group>";
@@ -193,6 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
+				9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */,
+				9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */,
 			);
 			path = Green;
 			sourceTree = "<group>";
@@ -367,9 +379,12 @@
 			files = (
 				9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */,
 				9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */,
+				9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */,
 				9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
+				9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */,
+				9C7C72662238BF9F0026FE67 /* GreenAddSection.swift in Sources */,
 				9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */,
 				9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */,
 				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
@@ -381,6 +396,7 @@
 				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,
 				9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */,
+				9C7C72602238B7720026FE67 /* BlueTupleTableViewCell.swift in Sources */,
 				9C3434542230E5AA00A8B923 /* RedTupleViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
