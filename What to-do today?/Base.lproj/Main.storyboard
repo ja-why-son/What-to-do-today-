@@ -221,6 +221,7 @@
                                                         <constraint firstItem="AHf-sz-U5R" firstAttribute="leading" secondItem="Ft3-2q-S9H" secondAttribute="leading" constant="7" id="ojL-tK-vTh"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <connections>
                                                     <outlet property="checkBox" destination="AHf-sz-U5R" id="Mcc-k0-Ds0"/>
                                                     <outlet property="textView" destination="cff-qE-NYf" id="r8w-Sa-e65"/>
@@ -264,6 +265,7 @@
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="rjC-Vp-9mH" id="KXK-L3-dha"/>
+                                            <outlet property="delegate" destination="rjC-Vp-9mH" id="VdP-qN-Edp"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -274,7 +276,6 @@
                                     <constraint firstItem="KxC-dj-Ff7" firstAttribute="top" secondItem="jI1-q5-FyI" secondAttribute="top" constant="8" id="S9t-Va-ZHd"/>
                                     <constraint firstItem="WRQ-GM-3SJ" firstAttribute="top" secondItem="KxC-dj-Ff7" secondAttribute="bottom" constant="15" id="VFe-Zd-oH2"/>
                                     <constraint firstAttribute="bottom" secondItem="WRQ-GM-3SJ" secondAttribute="bottom" constant="17" id="ZGE-Ui-Bke"/>
-                                    <constraint firstItem="WRQ-GM-3SJ" firstAttribute="top" secondItem="KxC-dj-Ff7" secondAttribute="bottom" constant="15" id="aDF-F6-4D8"/>
                                     <constraint firstItem="WRQ-GM-3SJ" firstAttribute="leading" secondItem="jI1-q5-FyI" secondAttribute="leading" id="haT-Nk-1jp"/>
                                     <constraint firstAttribute="trailing" secondItem="KxC-dj-Ff7" secondAttribute="trailing" constant="153" id="l3A-z9-HAd"/>
                                 </constraints>
@@ -604,6 +605,7 @@
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="awd-Mk-cN6" id="4RT-7o-qmE"/>
+                                            <outlet property="delegate" destination="awd-Mk-cN6" id="Bej-6C-amB"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -729,6 +731,7 @@
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="QQE-Ux-Dsd" id="9r7-bY-gnO"/>
+                                            <outlet property="delegate" destination="QQE-Ux-Dsd" id="Hwh-NZ-UIW"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
@@ -874,6 +877,7 @@
                                         </prototypes>
                                         <connections>
                                             <outlet property="dataSource" destination="Co7-qI-MdR" id="lSb-ZY-xdG"/>
+                                            <outlet property="delegate" destination="Co7-qI-MdR" id="tTM-zH-SMl"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
