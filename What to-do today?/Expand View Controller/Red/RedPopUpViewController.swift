@@ -91,7 +91,6 @@ class RedPopUpViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func updated(height: CGFloat) {
-        expandingCellHeight = height
         UIView.setAnimationsEnabled(false)
         tableView.beginUpdates()
         tableView.endUpdates()

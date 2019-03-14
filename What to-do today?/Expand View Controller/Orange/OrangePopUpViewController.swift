@@ -88,7 +88,6 @@ class OrangePopUpViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func updated(height: CGFloat) {
-        expandingCellHeight = height
         UIView.setAnimationsEnabled(false)
         tableView.beginUpdates()
         tableView.endUpdates()

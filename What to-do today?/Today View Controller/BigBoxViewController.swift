@@ -62,8 +62,10 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     
+    
     func updated(height: CGFloat) {
-        expandingCellHeight = height
+        // expandingCellHeight = height
+        print("height passed in: ", height)
         UIView.setAnimationsEnabled(false)
         tableView.beginUpdates()
         tableView.endUpdates()
