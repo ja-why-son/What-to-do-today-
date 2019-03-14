@@ -37,7 +37,7 @@ extension UITextView {
 }
 
 class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
-    
+        
     var expandCellDelegate: ExpandingCellDelegate?
     
     override func awakeFromNib() {

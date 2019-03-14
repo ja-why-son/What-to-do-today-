@@ -64,6 +64,30 @@ class GreenPopUpViewController: UIViewController, UITableViewDataSource, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            print("Delete item")
+            success(true)
+        })
+        deleteAction.backgroundColor = .red
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction])
+    }
+    
+    func tableView(_ tableView: UITableView,
+                   leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let todayAction = UIContextualAction(style: .normal, title:  "Update", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            print("Move to today")
+            success(true)
+        })
+        todayAction.backgroundColor = .blue
+        
+        return UISwipeActionsConfiguration(actions: [todayAction])
+    }
+    
     func updated(height: CGFloat) {
         expandingCellHeight = height
         UIView.setAnimationsEnabled(false)
@@ -96,6 +120,7 @@ class GreenPopUpViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func showAnimate() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
         self.view.alpha = 0.0
         UIView.animate(withDuration: 0.25, animations: {
@@ -105,6 +130,7 @@ class GreenPopUpViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     func removeAnimate() {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enableSwipe"), object: nil)
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
             self.view.alpha = 0.0;

@@ -38,11 +38,23 @@ class ToDoViewController: UIPageViewController {
                                animated: true,
                                completion: nil)
         }
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.enableSwipe), name:NSNotification.Name(rawValue: "enableSwipe"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.disableSwipe), name:NSNotification.Name(rawValue: "disableSwipe"), object: nil)
     }
     
 }
 
 extension ToDoViewController: UIPageViewControllerDataSource {
+    
+    
+    @objc func disableSwipe(){
+        self.dataSource = nil
+    }
+    
+    @objc func enableSwipe(){
+        self.dataSource = self
+    }
     
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {

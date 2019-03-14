@@ -538,13 +538,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="258" height="36.666666666666664"/>
+                                                            <rect key="frame" x="30" y="0.0" width="257" height="36.666666666666664"/>
                                                             <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-NL-4E6">
-                                                            <rect key="frame" x="-1" y="5" width="22" height="22"/>
+                                                            <rect key="frame" x="0.0" y="5" width="22" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="lwJ-QO-QxH"/>
                                                                 <constraint firstAttribute="width" constant="22" id="tCs-1i-nA9"/>
@@ -659,7 +659,7 @@
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tuple" id="h9z-Wa-gil" customClass="BlueTupleTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="314" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h9z-Wa-gil" id="Cmj-aw-TEe">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h9z-Wa-gil" id="Cmj-aw-TEe">
                                                     <rect key="frame" x="0.0" y="0.0" width="314" height="43.666666666666664"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -673,8 +673,8 @@
                                                                 <action selector="checkCheckBox:" destination="h9z-Wa-gil" eventType="touchUpInside" id="tCt-bL-IMH"/>
                                                             </connections>
                                                         </button>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-pi-VwC">
-                                                            <rect key="frame" x="40" y="5" width="254" height="34"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="GCO-pi-VwC">
+                                                            <rect key="frame" x="40" y="5" width="254" height="33"/>
                                                             <color key="backgroundColor" red="0.62352941179999999" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>

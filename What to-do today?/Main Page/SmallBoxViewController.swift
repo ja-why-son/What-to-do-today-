@@ -15,6 +15,7 @@ class SmallBoxViewController: UIViewController {
     @IBOutlet weak var blueBox: UIView!
     @IBOutlet weak var greenBox: UIView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         redBox.layer.cornerRadius = 10
