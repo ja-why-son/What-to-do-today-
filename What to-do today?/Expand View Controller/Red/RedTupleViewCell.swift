@@ -16,11 +16,9 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
-        checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
-        checkBox.setImage(UIImage(named: "checked_checkbox"), for: .selected)
     }
     
-    @IBAction func checkCheckBox(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
-    }
+//    @IBAction func checkCheckBox(_ sender: UIButton) {
+//        sender.isSelected = !sender.isSelected
+//    }
 }

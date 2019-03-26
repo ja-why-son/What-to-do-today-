@@ -25,39 +25,39 @@ class SmallBoxViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showRedPopUp(_ sender: Any) {
-        let redPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "RedPopUp") as! RedPopUpViewController
-        self.addChild(redPopUp)
-        redPopUp.view.frame = self.view.frame
-        self.view.addSubview(redPopUp.view)
-        redPopUp.didMove(toParent: self)
+    
+    @IBAction func showBox (_ sender :  Any) {
+        print(sender)
+        var senderTag : Int = -1
+        var popUp : UIViewController? = nil
+        var category : String? = nil
         
+        print(type(of: sender))
+        let gesture = sender as? UITapGestureRecognizer
+        print(gesture?.view?.tag)
+        senderTag = (gesture?.view!.tag)!
+        
+        switch senderTag {
+            case 0: // do red
+                category = "RedPopUp"
+                popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: category!) as! RedPopUpViewController
+            case 1:  // do orange
+                category = "OrangePopUp"
+                popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: category!) as! OrangePopUpViewController
+            case 2:  // do blue
+                category = "BluePopUp"
+                popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: category!) as! BluePopUpViewController
+            case 3:  // do green
+                category = "GreenPopUp"
+                popUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: category!) as! GreenPopUpViewController
+
+
+            default: return // do last one
+        }
+        
+        self.addChild(popUp!)
+        popUp!.view.frame = self.view.frame
+        self.view.addSubview(popUp!.view)
+        popUp!.didMove(toParent: self)
     }
-    
-    
-    @IBAction func showOrangeBox(_ sender: Any) {
-        let orangePopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OrangePopUp") as! OrangePopUpViewController
-        self.addChild(orangePopUp)
-        orangePopUp.view.frame = self.view.frame
-        self.view.addSubview(orangePopUp.view)
-        orangePopUp.didMove(toParent: self)
-    }
-    
-    @IBAction func showBlueBox(_ sender: Any) {
-        let bluePopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "BluePopUp") as! BluePopUpViewController
-        self.addChild(bluePopUp)
-        bluePopUp.view.frame = self.view.frame
-        self.view.addSubview(bluePopUp.view)
-        bluePopUp.didMove(toParent: self)
-    }
-    
-    @IBAction func showGreenBox(_ sender: Any) {
-        let greenPopUp = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "GreenPopUp") as! GreenPopUpViewController
-        self.addChild(greenPopUp)
-        greenPopUp.view.frame = self.view.frame
-        self.view.addSubview(greenPopUp.view)
-        greenPopUp.didMove(toParent: self)
-    }
-    
-    
 }

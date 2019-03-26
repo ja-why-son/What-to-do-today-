@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB521FC15FF00642F56 /* AppDelegate.swift */; };
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
-		9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFBC21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
 		9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */; };
 		9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */; };
@@ -22,6 +21,9 @@
 		9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* RedAddSection.swift */; };
 		9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */; };
 		9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434592231FB4400A8B923 /* OrangeAddSection.swift */; };
+		9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124622475ABC003A7FD9 /* Todo.swift */; };
+		9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */; };
+		9C6D125022476788003A7FD9 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124F22476787003A7FD9 /* PersistenceService.swift */; };
 		9C7C72602238B7720026FE67 /* BlueTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */; };
 		9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72612238B78B0026FE67 /* BlueAddSection.swift */; };
 		9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */; };
@@ -56,7 +58,6 @@
 		9C13EFB221FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFB521FC15FF00642F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C13EFBA21FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9C13EFBD21FC15FF00642F56 /* What_to_do_today_.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = What_to_do_today_.xcdatamodel; sourceTree = "<group>"; };
 		9C13EFBF21FC15FF00642F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C13EFC221FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C13EFC421FC15FF00642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +75,9 @@
 		9C34345522319CCA00A8B923 /* RedAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAddSection.swift; sourceTree = "<group>"; };
 		9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTupleViewCell.swift; sourceTree = "<group>"; };
 		9C3434592231FB4400A8B923 /* OrangeAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAddSection.swift; sourceTree = "<group>"; };
+		9C6D124622475ABC003A7FD9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
+		9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		9C6D124F22476787003A7FD9 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceService.swift; path = ../../../Downloads/PersistenceService.swift; sourceTree = "<group>"; };
 		9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9C7C72612238B78B0026FE67 /* BlueAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAddSection.swift; sourceTree = "<group>"; };
 		9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenTupleTableViewCell.swift; sourceTree = "<group>"; };
@@ -138,7 +142,10 @@
 				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
 				9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */,
 				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
+				9C6D124622475ABC003A7FD9 /* Todo.swift */,
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
+				9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */,
+				9C6D124F22476787003A7FD9 /* PersistenceService.swift */,
 				9CF9D371220CEE6900688F21 /* Main Page */,
 				9CF9D36F220CEE2800688F21 /* Page View Controller */,
 				9CF9D36D220CED9B00688F21 /* Expand View Controller */,
@@ -146,7 +153,6 @@
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
 				9C13EFC421FC15FF00642F56 /* Info.plist */,
-				9C13EFBC21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld */,
 			);
 			path = "What to-do today?";
 			sourceTree = "<group>";
@@ -378,9 +384,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */,
+				9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */,
 				9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */,
 				9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */,
 				9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */,
+				9C6D125022476788003A7FD9 /* PersistenceService.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
 				9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */,
@@ -388,8 +396,8 @@
 				9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */,
 				9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */,
 				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
+				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
-				9C13EFBE21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
 				9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */,
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
@@ -573,6 +581,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 442555B9HD;
 				INFOPLIST_FILE = "What to-do today?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -590,6 +599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 442555B9HD;
 				INFOPLIST_FILE = "What to-do today?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -722,13 +732,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9C13EFBC21FC15FF00642F56 /* What_to_do_today_.xcdatamodeld */ = {
+		9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9C13EFBD21FC15FF00642F56 /* What_to_do_today_.xcdatamodel */,
+				9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */,
 			);
-			currentVersion = 9C13EFBD21FC15FF00642F56 /* What_to_do_today_.xcdatamodel */;
-			path = What_to_do_today_.xcdatamodeld;
+			currentVersion = 9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */;
+			path = DataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

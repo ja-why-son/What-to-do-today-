@@ -16,6 +16,7 @@ class GreenPopUpViewController: UIViewController, UITableViewDataSource, UITable
     var list = [String]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
+    var category : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,9 @@ class GreenPopUpViewController: UIViewController, UITableViewDataSource, UITable
         backButton.backgroundColor = UIColor.clear
         expandGreenBox.layer.cornerRadius = 15
         self.showAnimate()
+        
+        print(category)
+        
         list.append("SLEEP EARLY")
         list.append("figure the stuff out")
         list.append("grocery shopping!!")

@@ -60,7 +60,7 @@
                                                                 <constraint firstAttribute="width" constant="22" id="Gid-aM-gJS"/>
                                                             </constraints>
                                                             <connections>
-                                                                <action selector="checkCheckBox:" destination="LVB-R9-dc9" eventType="touchUpInside" id="wyX-UD-N9Y"/>
+                                                                <action selector="checkCheckbox:" destination="ACt-8f-EQn" eventType="touchUpInside" id="0Gf-I4-pwg"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -343,7 +343,7 @@
                                     <outletCollection property="gestureRecognizers" destination="A4T-NA-Vmh" appends="YES" id="pba-cg-rwF"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
+                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
                                 <rect key="frame" x="191" y="94" width="168" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -354,7 +354,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
                                         <rect key="frame" x="9" y="28" width="150" height="269"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.56078431370000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -375,7 +375,7 @@
                                     <outletCollection property="gestureRecognizers" destination="Wsm-8Y-tgy" appends="YES" id="k7q-6m-fgK"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
+                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
                                 <rect key="frame" x="16" y="440" width="167" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
@@ -386,7 +386,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
                                         <rect key="frame" x="8" y="34" width="150" height="252"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.62352941179999999" green="0.86666666670000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -406,7 +406,7 @@
                                     <outletCollection property="gestureRecognizers" destination="G9p-oG-BCc" appends="YES" id="xwF-IP-qA4"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
+                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
                                 <rect key="frame" x="191" y="440" width="168" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                 <subviews>
@@ -417,7 +417,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
                                         <rect key="frame" x="8" y="34" width="150" height="252"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.6588235294" green="1" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -451,44 +451,44 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x7Y-Tu-hMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="A4T-NA-Vmh">
-                    <connections>
-                        <action selector="showRedPopUp:" destination="G3W-Cm-XPX" id="Ka4-iq-seL"/>
-                    </connections>
-                </tapGestureRecognizer>
-                <tapGestureRecognizer id="get-xx-jWh">
-                    <connections>
-                        <action selector="showRedPopUp:" destination="G3W-Cm-XPX" id="4Pt-4o-zXV"/>
-                    </connections>
-                </tapGestureRecognizer>
                 <tapGestureRecognizer id="WSw-GZ-2ZD">
                     <connections>
-                        <action selector="showOrangeBox:" destination="G3W-Cm-XPX" id="ngd-0e-Xb8"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="ORe-U7-est"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Wsm-8Y-tgy">
                     <connections>
-                        <action selector="showOrangeBox:" destination="G3W-Cm-XPX" id="HDK-86-X7J"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="xnR-Zs-WBa"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="G9p-oG-BCc">
                     <connections>
-                        <action selector="showBlueBox:" destination="G3W-Cm-XPX" id="4pS-QJ-IQO"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="w5n-yg-0mh"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="mDu-mg-fil">
                     <connections>
-                        <action selector="showBlueBox:" destination="G3W-Cm-XPX" id="Pjp-3s-tyg"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="LcP-xf-IYA"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Ojp-Te-PpX">
                     <connections>
-                        <action selector="showGreenBox:" destination="G3W-Cm-XPX" id="cSR-pI-nco"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="wS1-xv-HjV"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="64G-fK-KWY">
                     <connections>
-                        <action selector="showGreenBox:" destination="G3W-Cm-XPX" id="WtB-Xx-leU"/>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="gOa-NY-Km6"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="A4T-NA-Vmh">
+                    <connections>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="z6X-W2-yNr"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="get-xx-jWh">
+                    <connections>
+                        <action selector="showBox:" destination="G3W-Cm-XPX" id="Q5T-YC-5m6"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
@@ -535,13 +535,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="258" height="36.666666666666664"/>
+                                                            <rect key="frame" x="30" y="0.0" width="257" height="36.666666666666664"/>
                                                             <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-NL-4E6">
-                                                            <rect key="frame" x="-1" y="5" width="22" height="22"/>
+                                                            <rect key="frame" x="0.0" y="5" width="22" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="lwJ-QO-QxH"/>
                                                                 <constraint firstAttribute="width" constant="22" id="tCs-1i-nA9"/>
