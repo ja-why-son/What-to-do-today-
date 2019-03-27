@@ -55,7 +55,8 @@ class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        textView.text = textView.text!.replacingOccurrences(of: "\n", with: " ")
+        let newText = textView.text!.replacingOccurrences(of: "\n", with: " ")
+        textView.text = newText
         expandCellDelegate?.updated(height: 100)
     }
 }

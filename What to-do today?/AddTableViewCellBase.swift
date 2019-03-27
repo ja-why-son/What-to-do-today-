@@ -20,6 +20,7 @@ class addTableViewCell: ExpandableTableViewCell {
             var addString = textView.text!
             addString = addString.replacingOccurrences(of: "\n", with: " ")
             addRowDelegate?.addRow(self, addString)
+            print(addString)
             textView.text = ""
         }
         expandCellDelegate?.updated(height: 100)

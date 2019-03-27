@@ -13,26 +13,17 @@
 		9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */; };
 		9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */; };
 		9C13EFD921FC160000642F56 /* What_to_do_today_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */; };
-		9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* ToDoViewController.swift */; };
+		9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* PageViewController.swift */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
 		9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */; };
-		9C3434542230E5AA00A8B923 /* RedTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434532230E5AA00A8B923 /* RedTupleViewCell.swift */; };
-		9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* RedAddSection.swift */; };
-		9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */; };
-		9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434592231FB4400A8B923 /* OrangeAddSection.swift */; };
+		9C3434542230E5AA00A8B923 /* PopUpTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */; };
+		9C34345622319CCA00A8B923 /* PopUpAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* PopUpAddSection.swift */; };
 		9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124622475ABC003A7FD9 /* Todo.swift */; };
 		9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */; };
 		9C6D125022476788003A7FD9 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124F22476787003A7FD9 /* PersistenceService.swift */; };
-		9C7C72602238B7720026FE67 /* BlueTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */; };
-		9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72612238B78B0026FE67 /* BlueAddSection.swift */; };
-		9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */; };
-		9C7C72662238BF9F0026FE67 /* GreenAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
-		9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */; };
-		9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */; };
-		9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */; };
-		9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */; };
+		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
 		9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3762229A9DD00688F21 /* TodayAddSection.swift */; };
 /* End PBXBuildFile section */
@@ -67,26 +58,17 @@
 		9C13EFD421FC160000642F56 /* What to-do today?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
 		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFE621FC170600642F56 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		9C13EFE621FC170600642F56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCellBase.swift; sourceTree = "<group>"; };
-		9C3434532230E5AA00A8B923 /* RedTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedTupleViewCell.swift; sourceTree = "<group>"; };
-		9C34345522319CCA00A8B923 /* RedAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedAddSection.swift; sourceTree = "<group>"; };
-		9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeTupleViewCell.swift; sourceTree = "<group>"; };
-		9C3434592231FB4400A8B923 /* OrangeAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeAddSection.swift; sourceTree = "<group>"; };
+		9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTupleViewCell.swift; sourceTree = "<group>"; };
+		9C34345522319CCA00A8B923 /* PopUpAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAddSection.swift; sourceTree = "<group>"; };
 		9C6D124622475ABC003A7FD9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9C6D124F22476787003A7FD9 /* PersistenceService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PersistenceService.swift; path = ../../../Downloads/PersistenceService.swift; sourceTree = "<group>"; };
-		9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueTupleTableViewCell.swift; sourceTree = "<group>"; };
-		9C7C72612238B78B0026FE67 /* BlueAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueAddSection.swift; sourceTree = "<group>"; };
-		9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenTupleTableViewCell.swift; sourceTree = "<group>"; };
-		9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenAddSection.swift; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
-		9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPopUpViewController.swift; sourceTree = "<group>"; };
-		9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangePopUpViewController.swift; sourceTree = "<group>"; };
-		9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluePopUpViewController.swift; sourceTree = "<group>"; };
-		9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenPopUpViewController.swift; sourceTree = "<group>"; };
+		9CF9D364220BBCC100688F21 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
 		9CF9D3762229A9DD00688F21 /* TodayAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAddSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,9 +128,9 @@
 				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
 				9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */,
 				9C6D124F22476787003A7FD9 /* PersistenceService.swift */,
-				9CF9D371220CEE6900688F21 /* Main Page */,
-				9CF9D36F220CEE2800688F21 /* Page View Controller */,
-				9CF9D36D220CED9B00688F21 /* Expand View Controller */,
+				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+				9C13EFE621FC170600642F56 /* PageViewController.swift */,
+				9CA392BC224AF479008E4622 /* PopUp View Controller */,
 				9CF9D36E220CEDE800688F21 /* Today View Controller */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
@@ -175,55 +157,14 @@
 			path = "What to-do today?UITests";
 			sourceTree = "<group>";
 		};
-		9C34344D2230ABE700A8B923 /* Red */ = {
+		9CA392BC224AF479008E4622 /* PopUp View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9C3434532230E5AA00A8B923 /* RedTupleViewCell.swift */,
-				9CF9D364220BBCC100688F21 /* RedPopUpViewController.swift */,
-				9C34345522319CCA00A8B923 /* RedAddSection.swift */,
+				9CF9D364220BBCC100688F21 /* PopUpViewController.swift */,
+				9C34345522319CCA00A8B923 /* PopUpAddSection.swift */,
+				9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */,
 			);
-			path = Red;
-			sourceTree = "<group>";
-		};
-		9C34344E2230ABF700A8B923 /* Blue */ = {
-			isa = PBXGroup;
-			children = (
-				9CF9D368220C11F500688F21 /* BluePopUpViewController.swift */,
-				9C7C725F2238B7720026FE67 /* BlueTupleTableViewCell.swift */,
-				9C7C72612238B78B0026FE67 /* BlueAddSection.swift */,
-			);
-			path = Blue;
-			sourceTree = "<group>";
-		};
-		9C34344F2230AC0100A8B923 /* Orange */ = {
-			isa = PBXGroup;
-			children = (
-				9CF9D366220BF7B100688F21 /* OrangePopUpViewController.swift */,
-				9C3434572231FB3500A8B923 /* OrangeTupleViewCell.swift */,
-				9C3434592231FB4400A8B923 /* OrangeAddSection.swift */,
-			);
-			path = Orange;
-			sourceTree = "<group>";
-		};
-		9C3434502230AC0A00A8B923 /* Green */ = {
-			isa = PBXGroup;
-			children = (
-				9CF9D36A220C16D000688F21 /* GreenPopUpViewController.swift */,
-				9C7C72632238BF5A0026FE67 /* GreenTupleTableViewCell.swift */,
-				9C7C72652238BF9F0026FE67 /* GreenAddSection.swift */,
-			);
-			path = Green;
-			sourceTree = "<group>";
-		};
-		9CF9D36D220CED9B00688F21 /* Expand View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C3434502230AC0A00A8B923 /* Green */,
-				9C34344F2230AC0100A8B923 /* Orange */,
-				9C34344E2230ABF700A8B923 /* Blue */,
-				9C34344D2230ABE700A8B923 /* Red */,
-			);
-			path = "Expand View Controller";
+			path = "PopUp View Controller";
 			sourceTree = "<group>";
 		};
 		9CF9D36E220CEDE800688F21 /* Today View Controller */ = {
@@ -234,22 +175,6 @@
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
 			);
 			path = "Today View Controller";
-			sourceTree = "<group>";
-		};
-		9CF9D36F220CEE2800688F21 /* Page View Controller */ = {
-			isa = PBXGroup;
-			children = (
-				9C13EFE621FC170600642F56 /* ToDoViewController.swift */,
-			);
-			path = "Page View Controller";
-			sourceTree = "<group>";
-		};
-		9CF9D371220CEE6900688F21 /* Main Page */ = {
-			isa = PBXGroup;
-			children = (
-				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
-			);
-			path = "Main Page";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,27 +310,18 @@
 			files = (
 				9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */,
 				9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */,
-				9CF9D36B220C16D000688F21 /* GreenPopUpViewController.swift in Sources */,
-				9C7C72642238BF5A0026FE67 /* GreenTupleTableViewCell.swift in Sources */,
-				9CF9D367220BF7B100688F21 /* OrangePopUpViewController.swift in Sources */,
 				9C6D125022476788003A7FD9 /* PersistenceService.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
-				9C7C72622238B78B0026FE67 /* BlueAddSection.swift in Sources */,
-				9C7C72662238BF9F0026FE67 /* GreenAddSection.swift in Sources */,
-				9C3434582231FB3500A8B923 /* OrangeTupleViewCell.swift in Sources */,
-				9C34345622319CCA00A8B923 /* RedAddSection.swift in Sources */,
-				9C13EFE721FC170600642F56 /* ToDoViewController.swift in Sources */,
+				9C34345622319CCA00A8B923 /* PopUpAddSection.swift in Sources */,
+				9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */,
 				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
-				9C34345A2231FB4400A8B923 /* OrangeAddSection.swift in Sources */,
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
-				9CF9D369220C11F500688F21 /* BluePopUpViewController.swift in Sources */,
-				9CF9D365220BBCC100688F21 /* RedPopUpViewController.swift in Sources */,
+				9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */,
 				9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */,
-				9C7C72602238B7720026FE67 /* BlueTupleTableViewCell.swift in Sources */,
-				9C3434542230E5AA00A8B923 /* RedTupleViewCell.swift in Sources */,
+				9C3434542230E5AA00A8B923 /* PopUpTupleViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
