@@ -12,6 +12,7 @@ import CoreData
 protocol SmallBoxPopUpDelegate {
     func appendTodo(_ newTodo : Todo) -> Int
     func editContent (_ newText : String, ogIndex index : Int)
+    func checkBox(ogIndex index : Int)
 }
 
 class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
@@ -25,7 +26,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     
     // Variables
     var user : User? = nil
-    var list = [Todo]()
+    var mainList = [Todo]()
     var redList = [Todo]()
     var redIndexList = [Int]()
     var orangeList = [Todo]()
@@ -65,10 +66,12 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         } catch {
             print("FATAL: Couldn't fetch Coredata")
         }
-        list = (user?.todoList)!
+        mainList = (user?.todoList)!
         classify()
     }
     
+    // CLASSIFY THE WHOLE LIST INTO CATEGORIES
+    // ALSO USED DURING RELOAD
     func classify () {
         redList = []
         orangeList = []
@@ -78,32 +81,33 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         orangeIndexList = []
         blueIndexList = []
         greenIndexList = []
-        for i in stride(from: 0, to: list.count, by: 1) {
-            switch list[i].category {
+        for i in stride(from: 0, to: mainList.count, by: 1) {
+            switch mainList[i].category {
             case "red":
                 // do red
-                redList.append(list[i])
+                redList.append(mainList[i])
                 redIndexList.append(i)
             case "orange":
                 // do orange
-                orangeList.append(list[i])
+                orangeList.append(mainList[i])
                 orangeIndexList.append(i)
             case "blue":
                 // do blue
-                blueList.append(list[i])
+                blueList.append(mainList[i])
                 blueIndexList.append(i)
             case "green":
                 // do green
-                greenList.append(list[i])
+                greenList.append(mainList[i])
                 greenIndexList.append(i)
             default:
                 print("error")
             }
         }
-        list = (user?.todoList)!
+        mainList = (user?.todoList)!
     }
     
     
+    // OPEN EACH OF THE POPUP
     @IBAction func showBox (_ sender :  Any) {
 //        print(sender)
         var senderTag : Int = -1
@@ -146,33 +150,60 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         popUp!.delegate = self
     }
     
-    func appendTodo (_ newTodo : Todo) -> Int{
-        list.append(newTodo)
-        user?.todoList = list
-        PersistenceService.saveContext()
-        classify() // re-classify
-        return list.count - 1
-    }
-    
-    func editContent (_ newText : String, ogIndex index : Int) {
-        // change main data
-        list[index].content = newText
-        user?.todoList = []
-        PersistenceService.saveContext()
-        user?.todoList = list
-        PersistenceService.saveContext()
-        classify()
-    }
-    
+    /**********************************************************************************************************/
+    // SETTING METHOD & DEBUGGING METHOD
     
     @IBAction func eraseData(_ sender: Any) {
         let alert = UIAlertController(title: "Delete Data", message: "Data Cleared", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true)
         user?.todoList =  []
-        list = []
+        mainList = []
         PersistenceService.saveContext()
         classify()
-    
+        
     }
+    
+    /**********************************************************************************************************/
+    // DELEGATE METHOD BETWEEN SMALL BOX AND POP UP
+    // CORE DATA USING METHOD
+    
+    func appendTodo (_ newTodo : Todo) -> Int{
+        mainList.append(newTodo)
+        user?.todoList = mainList
+        PersistenceService.saveContext()
+        classify() // re-classify
+        return mainList.count - 1
+    }
+    
+    func editContent (_ newText : String, ogIndex index : Int) {
+        // change main data
+        mainList[index].content = newText
+        user?.todoList = []
+        PersistenceService.saveContext()
+        user?.todoList = mainList
+        PersistenceService.saveContext()
+        classify()
+    }
+    
+    // PROBLEM HERE TO BE FIXED!!
+    func checkBox(ogIndex index : Int) {
+        print("Start of saving...\n.\n.\n.\n")
+        print("The index for this checkbox is \(index)")
+        print("The content for this object is \(mainList[index].content!)")
+        print("Made this checkbox into \(mainList[index].done!)")
+//        mainList[index].done! = !mainList[index].done!
+        user?.todoList = []
+        PersistenceService.saveContext() // Save newly created user
+        print("During saving this checkbox is \(mainList[index].done!)")
+        user?.todoList = mainList
+        PersistenceService.saveContext() // Save newly created user
+        print("After saving this checkbox is \(mainList[index].done!)")
+        print("saved checkbox")
+        classify()
+        print("After classify this checkbox is \(mainList[index].done!)")
+    }
+    
+    
+    
 }

@@ -28,7 +28,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Styling
+        
+        // STYLING
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         backButton.backgroundColor = UIColor.clear
         expandBox.layer.cornerRadius = 15
@@ -38,6 +39,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         expandingIndexRow = list.count - offset
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
+        
         //Misc
         NotificationCenter.default.addObserver(
             self,
@@ -49,10 +51,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             selector:#selector(PopUpViewController.keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
-//        list.append(Todo(content: "schedule chipotle fundraiser", category: "red", isToday: false))
-//        list.append(Todo(content: "fiuts cultural fest details make sure", category: "red", isToday: false))
-        
-        
     }
     
     /**********************************************************************************************************/
@@ -110,9 +108,11 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let currTodo = list[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row
-        if !currTodo.done { cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal) }
-        else { cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal) }
-        
+        if currTodo.done! == false {
+            cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
+        } else {
+            cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
+        }
         return cell
     }
     
@@ -185,32 +185,26 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.endUpdates()
     }
     
-    // DONE OR NOT DONE
-    // TBF
-    @IBAction func checkCheckbox(_ sender : UIButton) {
-        print(sender.tag)
-        list[sender.tag].done = !list[sender.tag].done
-        user?.todoList = []
-        PersistenceService.saveContext() // Save newly created user
-        
-        user?.todoList = list
-        PersistenceService.saveContext() // Save newly created user
-        print("saved chekcbox")
-        tableView.reloadData()
-        
-    }
     
     // EDIT CONTENT
     // Send the new text and the original index back to small box view controller to edit the main data
     // also edit local(popup) list
     func doneEditting(_ newText : String, _ sender : RedTupleTableViewCell) {
         let index = tableView.indexPath(for: sender)![1]
-        print(index)
+        //print(index)
         list[index].content = newText
-        print(indexList[index])
+        //print(indexList[index])
         delegate?.editContent(newText, ogIndex: indexList[index])
     }
     
+    // DONE OR NOT DONE
+    @IBAction func checkCheckbox(_ sender : UIButton) {
+        let index = sender.tag
+        list[index].done! = !list[index].done!
+        // FOR SOME REASON THE LIST IS CORRUPTED SOME WHERE HERE
+        delegate?.checkBox(ogIndex: indexList[index])
+        print("After delegation the the checkbox is \(list[index].done!)")
+        tableView.reloadData()
+    }
     
-
 }

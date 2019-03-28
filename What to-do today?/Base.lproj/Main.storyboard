@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RE2-YK-IkS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RE2-YK-IkS">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,14 +29,14 @@
                                 <rect key="frame" x="30.666666666666657" y="97" width="314" height="644"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TSA" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-7I-OrB">
-                                        <rect key="frame" x="8" y="15" width="74" height="40"/>
+                                        <rect key="frame" x="8" y="13" width="74" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                     </textField>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="f4U-03-VRs">
-                                        <rect key="frame" x="0.0" y="75" width="314" height="551"/>
+                                        <rect key="frame" x="0.0" y="61" width="314" height="565"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="1" green="0.64943163569999995" blue="0.68747366720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
@@ -48,16 +48,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sfz-Ko-erf">
-                                                            <rect key="frame" x="42" y="0.0" width="257" height="36.666666666666664"/>
+                                                            <rect key="frame" x="45" y="0.0" width="254" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-gG-Prt">
-                                                            <rect key="frame" x="9" y="11" width="22" height="22"/>
+                                                            <rect key="frame" x="4" y="3" width="30" height="30"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="22" id="G3g-Dl-qMh"/>
-                                                                <constraint firstAttribute="width" constant="22" id="Gid-aM-gJS"/>
+                                                                <constraint firstAttribute="height" constant="30" id="G3g-Dl-qMh"/>
+                                                                <constraint firstAttribute="width" constant="30" id="Gid-aM-gJS"/>
                                                             </constraints>
                                                             <connections>
                                                                 <action selector="checkCheckbox:" destination="ACt-8f-EQn" eventType="touchUpInside" id="0Gf-I4-pwg"/>
@@ -65,10 +65,10 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="top" secondItem="EBo-cR-Azo" secondAttribute="top" constant="11" id="H5H-oq-bh3"/>
+                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="top" secondItem="EBo-cR-Azo" secondAttribute="top" constant="3" id="H5H-oq-bh3"/>
                                                         <constraint firstItem="sfz-Ko-erf" firstAttribute="top" secondItem="EBo-cR-Azo" secondAttribute="top" id="SdF-um-j8V"/>
                                                         <constraint firstAttribute="bottom" secondItem="sfz-Ko-erf" secondAttribute="bottom" id="kKa-gC-awq"/>
-                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="leading" secondItem="EBo-cR-Azo" secondAttribute="leading" constant="9" id="tKw-g3-QIx"/>
+                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="leading" secondItem="EBo-cR-Azo" secondAttribute="leading" constant="4" id="tKw-g3-QIx"/>
                                                         <constraint firstItem="sfz-Ko-erf" firstAttribute="leading" secondItem="1cY-gG-Prt" secondAttribute="trailing" constant="11" id="tWy-hv-1OY"/>
                                                         <constraint firstAttribute="trailing" secondItem="sfz-Ko-erf" secondAttribute="trailing" constant="15" id="yjV-qp-9t4"/>
                                                     </constraints>
@@ -123,9 +123,9 @@
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.64943163569999995" blue="0.68747366720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstItem="vWi-7I-OrB" firstAttribute="top" secondItem="Fri-h6-rHS" secondAttribute="top" constant="15" id="1ZY-zc-Ioa"/>
-                                    <constraint firstItem="f4U-03-VRs" firstAttribute="top" secondItem="vWi-7I-OrB" secondAttribute="bottom" constant="20" id="GdC-yy-FEC"/>
+                                    <constraint firstItem="vWi-7I-OrB" firstAttribute="top" secondItem="Fri-h6-rHS" secondAttribute="top" constant="13" id="1ZY-zc-Ioa"/>
                                     <constraint firstAttribute="trailing" secondItem="f4U-03-VRs" secondAttribute="trailing" id="H0V-Ye-p4Z"/>
+                                    <constraint firstItem="f4U-03-VRs" firstAttribute="top" secondItem="vWi-7I-OrB" secondAttribute="bottom" constant="8" id="TeN-2O-0zk"/>
                                     <constraint firstItem="vWi-7I-OrB" firstAttribute="leading" secondItem="Fri-h6-rHS" secondAttribute="leading" constant="8" id="WEI-gQ-6Oi"/>
                                     <constraint firstItem="f4U-03-VRs" firstAttribute="leading" secondItem="Fri-h6-rHS" secondAttribute="leading" id="XxW-MP-OWr"/>
                                     <constraint firstAttribute="bottom" secondItem="f4U-03-VRs" secondAttribute="bottom" constant="18" id="lvJ-XF-KqJ"/>
@@ -176,7 +176,7 @@
                                         <gestureRecognizers/>
                                         <string key="text">– schedule chipotle fundraiser
 –fiuts cultural fest details make sure</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="get-xx-jWh" appends="YES" id="WT2-eK-foS"/>
@@ -215,7 +215,7 @@
                                         <string key="text">– ECON Sapling
 – 日本語 日期
 – AIS Response</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="WSw-GZ-2ZD" appends="YES" id="VY6-iG-WSe"/>
@@ -246,7 +246,7 @@
                                         <gestureRecognizers/>
                                         <string key="text">– make expansion for each of the small box
 </string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="mDu-mg-fil" appends="YES" id="axs-io-b7K"/>
@@ -279,7 +279,7 @@
 – figure the stuff out 
 – grocery shopping!!
 – 我想吃燒臘</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="64G-fK-KWY" appends="YES" id="NE0-fL-s7l"/>
@@ -404,13 +404,13 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="258" height="36.666666666666664"/>
+                                                            <rect key="frame" x="30" y="0.0" width="257" height="36.666666666666664"/>
                                                             <color key="backgroundColor" red="1" green="0.99542899389999995" blue="0.66037085230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-NL-4E6">
-                                                            <rect key="frame" x="-1" y="5" width="22" height="22"/>
+                                                            <rect key="frame" x="0.0" y="5" width="22" height="22"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="22" id="lwJ-QO-QxH"/>
                                                                 <constraint firstAttribute="width" constant="22" id="tCs-1i-nA9"/>
@@ -495,7 +495,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="plus_sign" width="75" height="75"/>
+        <image name="plus_sign" width="100" height="100"/>
         <image name="plus_sign.png" width="100" height="100"/>
     </resources>
 </document>
