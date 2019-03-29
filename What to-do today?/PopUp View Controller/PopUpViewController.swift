@@ -119,23 +119,40 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
+        if list.isEmpty {
+            return nil
+        }
         let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Delete item")
+            self.deleteTodo(indexPath)
             success(true)
         })
-        deleteAction.backgroundColor = .red
+        deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let todayAction = UIContextualAction(style: .normal, title:  "Update", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-            print("Move to today")
+        if list.isEmpty {
+            return nil
+        }
+        if !list[indexPath.row].isToday {
+            let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+                print("Move to today")
+                self.todayOrNot(indexPath)
+                success(true)
+            })
+            todayAction.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+            return UISwipeActionsConfiguration(actions: [todayAction])
+        }
+        let notTodayAction = UIContextualAction(style: .normal, title: "Later", handler: {
+            (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            print("Move out from today")
+            self.todayOrNot(indexPath)
             success(true)
         })
-        todayAction.backgroundColor = .blue
-        
-        return UISwipeActionsConfiguration(actions: [todayAction])
+        notTodayAction.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        return UISwipeActionsConfiguration(actions: [notTodayAction])
     }
     
     /**********************************************************************************************************/
@@ -177,12 +194,9 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         self.list.append(newTodo)
         let newIndex = delegate?.appendTodo(newTodo)
         self.indexList.append(newIndex!)
-        print(indexList)
-        tableView.beginUpdates()
         let offset = list.count == 0 ? 0 : 1
-        // if list.count == 0 -> offset = 0, else offset = 1
-        tableView.insertRows(at: [IndexPath(row: list.count - offset, section: 0)], with: .automatic)
-        tableView.endUpdates()
+        let indexPath = IndexPath(item: list.count - offset, section: 0)
+        tableView.insertRows(at: [indexPath], with: .fade)
     }
     
     
@@ -201,10 +215,24 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBAction func checkCheckbox(_ sender : UIButton) {
         let index = sender.tag
         list[index].done! = !list[index].done!
-        // FOR SOME REASON THE LIST IS CORRUPTED SOME WHERE HERE
         delegate?.checkBox(ogIndex: indexList[index])
-        print("After delegation the the checkbox is \(list[index].done!)")
         tableView.reloadData()
+    }
+    
+    // MOVE TO TODAY OR MOVE OUT OF TODAY
+    func todayOrNot(_ indexPath : IndexPath) {
+        let cellIndex = indexPath.row
+        list[cellIndex].isToday = !list[cellIndex].isToday
+//        tableView(tableView, cellForRowAt: indexPath)
+        delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
+    }
+    
+    // DELETE ROW
+    func deleteTodo(_ indexPath : IndexPath) {
+        print("Indexpath is \(indexPath)")
+        list.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .fade)
+        indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
     }
     
 }

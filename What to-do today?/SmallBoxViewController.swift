@@ -13,6 +13,8 @@ protocol SmallBoxPopUpDelegate {
     func appendTodo(_ newTodo : Todo) -> Int
     func editContent (_ newText : String, ogIndex index : Int)
     func checkBox(ogIndex index : Int)
+    func moveTodayOrOut(ogIndex index : Int)
+    func deleteTodo(ogIndex index : Int, _ category : String) -> [Int]
 }
 
 class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
@@ -49,30 +51,27 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
         do {
             var result = try PersistenceService.context.fetch(fetchRequest)
-//            print("There are \(result.count) user(s)")
-//            print(result)
+            print("There are \(result.count) user(s)")
             // No user profile is found
             if result.count == 0 { // []
-//                print("Creating initial user")
+                print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
                 newUser.todoList = []
-                // Todo(content: "First todo", category: "red", isToday: false)
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
-            
-//            print(result[0])
             user = result[0]
         } catch {
             print("FATAL: Couldn't fetch Coredata")
         }
         mainList = (user?.todoList)!
-        classify()
+        reload() // classify for the first time
     }
     
     // CLASSIFY THE WHOLE LIST INTO CATEGORIES
     // ALSO USED DURING RELOAD
-    func classify () {
+    func reload () {
+        mainList = (user?.todoList)!
         redList = []
         orangeList = []
         blueList = []
@@ -103,7 +102,6 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 print("error")
             }
         }
-        mainList = (user?.todoList)!
     }
     
     
@@ -160,7 +158,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         user?.todoList =  []
         mainList = []
         PersistenceService.saveContext()
-        classify()
+        reload()
         
     }
     
@@ -172,7 +170,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         mainList.append(newTodo)
         user?.todoList = mainList
         PersistenceService.saveContext()
-        classify() // re-classify
+        reload() // re-classify
         return mainList.count - 1
     }
     
@@ -183,27 +181,37 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         PersistenceService.saveContext()
         user?.todoList = mainList
         PersistenceService.saveContext()
-        classify()
+        reload()
     }
     
     // PROBLEM HERE TO BE FIXED!!
     func checkBox(ogIndex index : Int) {
-        print("Start of saving...\n.\n.\n.\n")
-        print("The index for this checkbox is \(index)")
-        print("The content for this object is \(mainList[index].content!)")
-        print("Made this checkbox into \(mainList[index].done!)")
-//        mainList[index].done! = !mainList[index].done!
         user?.todoList = []
         PersistenceService.saveContext() // Save newly created user
-        print("During saving this checkbox is \(mainList[index].done!)")
         user?.todoList = mainList
         PersistenceService.saveContext() // Save newly created user
-        print("After saving this checkbox is \(mainList[index].done!)")
-        print("saved checkbox")
-        classify()
-        print("After classify this checkbox is \(mainList[index].done!)")
+        reload()
     }
     
+    func moveTodayOrOut(ogIndex index : Int) {
+        user?.todoList = []
+        PersistenceService.saveContext() // Save newly created user
+        user?.todoList = mainList
+        PersistenceService.saveContext() // Save newly created user
+        reload()
+    }
     
-    
+    func deleteTodo(ogIndex index : Int, _ category : String) -> [Int] {
+        mainList.remove(at: index)
+        user?.todoList = mainList
+        PersistenceService.saveContext()
+        reload()
+        switch category {
+        case "red" : return redIndexList
+        case "orange" : return orangeIndexList
+        case "blue" : return blueIndexList
+        case "green" : return greenIndexList
+        default : return [0]
+        }
+    }
 }
