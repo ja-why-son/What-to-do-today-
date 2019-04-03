@@ -9,12 +9,14 @@
 import UIKit
 import CoreData
 
-class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, tableCellTodoDelegate {
+
+class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate {
     
     // UI Components
     @IBOutlet weak var expandBox: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var label: UITextField!
     
     // Variables
     var user : User? = nil
@@ -25,11 +27,13 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     var color : UIColor? = nil
     var category : String? = nil
     var delegate : SmallBoxPopUpDelegate?
+    var categoryName : String? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // STYLING
+        label.text = categoryName
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         backButton.backgroundColor = UIColor.clear
         expandBox.layer.cornerRadius = 15
@@ -104,7 +108,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "tuple", for: indexPath) as! RedTupleTableViewCell
         cell.expandCellDelegate = self
-        cell.tableCellTodoDelegate = self
+        cell.tableCellTodoSmallBoxDelegate = self
         let currTodo = list[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row
@@ -178,8 +182,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.beginUpdates()
         tableView.endUpdates()
         UIView.setAnimationsEnabled(true)
-        let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
+//        let indexPath = IndexPath(row: expandingIndexRow, section: 0)
+//        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
     
     /**********************************************************************************************************/
@@ -209,6 +213,9 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         list[index].content = newText
         //print(indexList[index])
         delegate?.editContent(newText, ogIndex: indexList[index])
+        if list[index].isToday {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+        }
     }
     
     // DONE OR NOT DONE
@@ -217,6 +224,9 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])
         tableView.reloadData()
+        if list[index].isToday {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+        }
     }
     
     // MOVE TO TODAY OR MOVE OUT OF TODAY
@@ -225,14 +235,19 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         list[cellIndex].isToday = !list[cellIndex].isToday
 //        tableView(tableView, cellForRowAt: indexPath)
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
     
     // DELETE ROW
     func deleteTodo(_ indexPath : IndexPath) {
         print("Indexpath is \(indexPath)")
+        let isToday : Bool = list[indexPath.row].isToday
         list.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
         indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
+        if isToday {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+        }
     }
     
 }

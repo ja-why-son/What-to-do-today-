@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol tableCellTodoDelegate {
+protocol TableCellTodoSmallBoxDelegate {
     func doneEditting(_ newText : String, _ sender : RedTupleTableViewCell)
 }
 
@@ -19,7 +19,7 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
     
     var originalText : String?
     
-    var tableCellTodoDelegate : tableCellTodoDelegate?
+    var tableCellTodoSmallBoxDelegate : TableCellTodoSmallBoxDelegate?
  
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,7 +32,7 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
     
     override func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != originalText {
-            tableCellTodoDelegate?.doneEditting(textView.text, self)
+            tableCellTodoSmallBoxDelegate?.doneEditting(textView.text, self)
         }
     }
     

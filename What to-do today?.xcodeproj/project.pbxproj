@@ -16,6 +16,7 @@
 		9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* PageViewController.swift */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
+		9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */; };
 		9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */; };
 		9C3434542230E5AA00A8B923 /* PopUpTupleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */; };
 		9C34345622319CCA00A8B923 /* PopUpAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C34345522319CCA00A8B923 /* PopUpAddSection.swift */; };
@@ -61,6 +62,7 @@
 		9C13EFE621FC170600642F56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
+		9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTextField.swift; sourceTree = "<group>"; };
 		9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCellBase.swift; sourceTree = "<group>"; };
 		9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTupleViewCell.swift; sourceTree = "<group>"; };
 		9C34345522319CCA00A8B923 /* PopUpAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAddSection.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D364220BBCC100688F21 /* PopUpViewController.swift */,
+				9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */,
 				9C34345522319CCA00A8B923 /* PopUpAddSection.swift */,
 				9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */,
 			);
@@ -318,6 +321,7 @@
 				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
+				9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */,
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */,
 				9CF9D3772229A9DD00688F21 /* TodayAddSection.swift in Sources */,

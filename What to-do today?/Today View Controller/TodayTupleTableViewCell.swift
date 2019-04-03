@@ -8,25 +8,20 @@
 
 import UIKit
 
+
+
 class TodayTupleTableViewCell: ExpandableTableViewCell {
 
     
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var checkBox: UIButton!
     
+    var originalText : String?
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
-        checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
-        checkBox.setImage(UIImage(named: "checked_checkbox"), for: .selected)
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
-    @IBAction func checkCheckBox(_ sender: UIButton) {
-        sender.isSelected = !sender.isSelected
     }
     
 }

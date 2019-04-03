@@ -25,6 +25,14 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     @IBOutlet weak var blueBox: UIView!
     @IBOutlet weak var greenBox: UIView!
     @IBOutlet weak var erasebutton: UIButton!
+    @IBOutlet weak var redTextView: UITextView!
+    @IBOutlet weak var orangeTextView: UITextView!
+    @IBOutlet weak var blueTextView: UITextView!
+    @IBOutlet weak var greenTextView: UITextView!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var orangeLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
     
     // Variables
     var user : User? = nil
@@ -38,6 +46,8 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     var greenList = [Todo]()
     var greenIndexList = [Int]()
     var popUp : PopUpViewController? = nil
+    var tempTodo = [Todo]()
+    var categoriesList = [String]()
 
     
     override func viewDidLoad() {
@@ -57,6 +67,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
                 newUser.todoList = []
+                newUser.categoryList = ["Red", "Orange", "Blue", "Green" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -65,13 +76,22 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
             print("FATAL: Couldn't fetch Coredata")
         }
         mainList = (user?.todoList)!
+        categoriesList = (user?.categoryList)!
+        
+        
+        // load the interface information
         reload() // classify for the first time
+        redLabel.text = categoriesList[0]
+        orangeLabel.text = categoriesList[1]
+        blueLabel.text = categoriesList[2]
+        greenLabel.text = categoriesList[3]
     }
     
     // CLASSIFY THE WHOLE LIST INTO CATEGORIES
     // ALSO USED DURING RELOAD
     func reload () {
         mainList = (user?.todoList)!
+        categoriesList = (user?.categoryList)!
         redList = []
         orangeList = []
         blueList = []
@@ -80,28 +100,39 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         orangeIndexList = []
         blueIndexList = []
         greenIndexList = []
+        var redText : String = ""
+        var orangeText : String = ""
+        var blueText : String = ""
+        var greenText : String = ""
         for i in stride(from: 0, to: mainList.count, by: 1) {
             switch mainList[i].category {
             case "red":
                 // do red
                 redList.append(mainList[i])
                 redIndexList.append(i)
+                redText = redText + "-" + mainList[i].content! + "\n"
             case "orange":
                 // do orange
                 orangeList.append(mainList[i])
                 orangeIndexList.append(i)
+                orangeText = orangeText + "-" + mainList[i].content! + "\n"
             case "blue":
                 // do blue
                 blueList.append(mainList[i])
                 blueIndexList.append(i)
+                blueText = blueText + "-" + mainList[i].content! + "\n"
             case "green":
                 // do green
                 greenList.append(mainList[i])
                 greenIndexList.append(i)
-            default:
-                print("error")
+                greenText = greenText + "-" + mainList[i].content! + "\n"
+            default: break
             }
         }
+        redTextView.text = redText
+        orangeTextView.text = orangeText
+        blueTextView.text = blueText
+        greenTextView.text = greenText
     }
     
     
@@ -124,21 +155,25 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 popUp?.list = redList
                 popUp?.indexList = redIndexList
                 popUp?.category = "red"
+                popUp?.categoryName = categoriesList[0]
             case 1:  // do orange
                 popUp?.color = #colorLiteral(red: 1, green: 0.7859908342, blue: 0.5220321417, alpha: 1)
                 popUp?.list = orangeList
                 popUp?.indexList = orangeIndexList
                 popUp?.category = "orange"
+            popUp?.categoryName = categoriesList[1]
             case 2:  // do blue
                 popUp?.color = #colorLiteral(red: 0.5487036109, green: 0.8750793338, blue: 1, alpha: 1)
                 popUp?.list = blueList
                 popUp?.indexList = blueIndexList
                 popUp?.category = "blue"
+            popUp?.categoryName = categoriesList[2]
             case 3:  // do green
                 popUp?.color = #colorLiteral(red: 0.5415468216, green: 1, blue: 0.6116992235, alpha: 1)
                 popUp?.list = greenList
                 popUp?.indexList = greenIndexList
                 popUp?.category = "green"
+                popUp?.categoryName = categoriesList[3]
             default: return // do last one
         }
         self.addChild(popUp!)
@@ -161,6 +196,23 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         reload()
         
     }
+    
+    @IBAction func clearDone(_ sender: Any) {
+        
+        tempTodo = []
+        for i in stride(from: 0, to: mainList.count, by: 1) {
+            if !mainList[i].done {
+                tempTodo.append(mainList[i])
+            }
+        }
+        user?.todoList = []
+        PersistenceService.saveContext()
+        user?.todoList = tempTodo
+        PersistenceService.saveContext()
+        reload()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+    }
+    
     
     /**********************************************************************************************************/
     // DELEGATE METHOD BETWEEN SMALL BOX AND POP UP

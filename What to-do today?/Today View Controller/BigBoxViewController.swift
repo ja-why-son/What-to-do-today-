@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate {
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate{
+    
+    
     
     // UI Components
     @IBOutlet weak var tableView: UITableView!
@@ -51,7 +53,8 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         todayBox.layer.cornerRadius = 10
         
         // Misc things
-        expandingIndexRow = list.count - 1
+        let offset = todayList.count == 0 ? 0 : 1
+        expandingIndexRow = todayList.count - offset
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         NotificationCenter.default.addObserver(
@@ -64,9 +67,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             selector:#selector(BigBoxViewController.keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(BigBoxViewController.reloadToday),
+            name:NSNotification.Name(rawValue: "reloadToday"),
+            object: nil)
+        
     }
     
-    func reloadToday() {
+    // call everytime when popup modification method is called
+    @objc func reloadToday() {
         list = (user?.todoList)!
         todayList = []
         todayIndexList = []
@@ -76,28 +86,22 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
                 todayIndexList.append(i)
             }
         }
-        print("Total count \(todayList.count)")
+        tableView.reloadData()
+//        print("Total count \(todayList.count)")
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
-    
+    /**********************************************************************************************************/
+    // table view presentation
+    //
+    //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todayList.count + 1
+        return todayList.count
     }
     
     // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == todayList.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as!TodayAddTableViewCell
-            cell.expandCellDelegate = self
-            cell.addRowDelegate = self
-            return cell
-        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.expandCellDelegate = self
-        print(indexPath.row)
         let currTodo = todayList[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row
@@ -140,19 +144,21 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.beginUpdates()
         tableView.endUpdates()
         UIView.setAnimationsEnabled(true)
-        let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
     
     /**********************************************************************************************************/
     // USE CORE DATA
     //
-    //
-    func addRow(_ sender:UITableViewCell, _ newString:String) {
-//        list.append(newString)
-        tableView.beginUpdates()
-        tableView.insertRows(at: [IndexPath(row: list.count - 1, section: 0)], with: .automatic)
-        tableView.endUpdates()
+    // Check the checkbox
+    @IBAction func checkCheckBox(_ sender: UIButton) {
+        let index = sender.tag
+//        todayList[index].done! = !todayList[index].done!
+        list[todayIndexList[index]].done! = !list[todayIndexList[index]].done!
+        user?.todoList! = []
+        PersistenceService.saveContext()
+        user?.todoList! = list
+        PersistenceService.saveContext()
+        tableView.reloadData()
+        
     }
-    
 }
