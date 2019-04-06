@@ -23,6 +23,6 @@ class addTableViewCell: ExpandableTableViewCell {
             print(addString)
             textView.text = ""
         }
-        expandCellDelegate?.updated(height: 100)
+        expandCellDelegate?.updated()
     }
 }

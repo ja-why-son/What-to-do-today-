@@ -12,7 +12,7 @@ protocol TableCellTodoSmallBoxDelegate {
     func doneEditting(_ newText : String, _ sender : RedTupleTableViewCell)
 }
 
-class RedTupleTableViewCell: ExpandableTableViewCell {
+class RedTupleTableViewCell: ExpandableTableViewCell, UITextFieldDelegate {
     
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var textView: UITextView!
@@ -24,7 +24,9 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
+        
     }
+    
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         originalText = textView.text
@@ -34,6 +36,11 @@ class RedTupleTableViewCell: ExpandableTableViewCell {
         if textView.text != originalText {
             tableCellTodoSmallBoxDelegate?.doneEditting(textView.text, self)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
+        self.textView.resignFirstResponder()
+        return true
     }
     
 }

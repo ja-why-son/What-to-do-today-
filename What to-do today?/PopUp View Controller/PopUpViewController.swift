@@ -23,7 +23,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     var list = [Todo]()
     var indexList = [Int]()
     var expandingCellHeight: CGFloat = 200
-    var expandingIndexRow: Int = 0
     var color : UIColor? = nil
     var category : String? = nil
     var delegate : SmallBoxPopUpDelegate?
@@ -39,8 +38,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         expandBox.layer.cornerRadius = 15
         expandBox.backgroundColor = color
         self.showAnimate()
-        let offset = list.count == 0 ? 0 : 1
-        expandingIndexRow = list.count - offset
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         
@@ -123,7 +120,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView,
                    trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
     {
-        if list.isEmpty {
+        if list.isEmpty || indexPath.row == list.count {
             return nil
         }
         let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
@@ -137,9 +134,10 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        if list.isEmpty {
+        if list.isEmpty || indexPath.row == list.count {
             return nil
         }
+        // index out of range here
         if !list[indexPath.row].isToday {
             let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
                 print("Move to today")
@@ -165,25 +163,25 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     //
     //
     @objc func keyboardWillShow(notification: NSNotification) {
+        backButton.isEnabled = false
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
+        backButton.isEnabled = true
         // implement here?
     }
     
     /**********************************************************************************************************/
     // customized method
     
-    func updated(height: CGFloat) {
+    func updated() {
         UIView.setAnimationsEnabled(false)
         tableView.beginUpdates()
         tableView.endUpdates()
         UIView.setAnimationsEnabled(true)
-//        let indexPath = IndexPath(row: expandingIndexRow, section: 0)
-//        tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
     }
     
     /**********************************************************************************************************/

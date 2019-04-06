@@ -138,7 +138,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     /**********************************************************************************************************/
     // customized method
     
-    func updated(height: CGFloat) {
+    func updated() {
         // expandingCellHeight = height
         UIView.setAnimationsEnabled(false)
         tableView.beginUpdates()

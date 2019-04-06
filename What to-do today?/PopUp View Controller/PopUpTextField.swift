@@ -16,13 +16,17 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        print("awake from nib")
         delegate = self
     }
-//
-//    func textFieldDidBeginEditing(_ textField : UITextField) {
-//        orginalLabel = self.text
-//    }
+
+    func textFieldDidBeginEditing(_ textField : UITextField) {
+        orginalLabel = self.text
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.resignFirstResponder()
+        return true
+    }
     
     func textFieldDidEndEditing(_ textField : UITextField) {
         print("hellO")
