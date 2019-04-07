@@ -40,7 +40,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="sectionIndexBackgroundColor" red="1" green="0.64943163569999995" blue="0.68747366720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tuple" rowHeight="37" id="LVB-R9-dc9" customClass="RedTupleTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="tuple" rowHeight="37" id="LVB-R9-dc9" customClass="PopUpTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="314" height="37"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LVB-R9-dc9" id="EBo-cR-Azo">

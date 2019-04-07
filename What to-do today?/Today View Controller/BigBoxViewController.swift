@@ -9,8 +9,7 @@
 import UIKit
 import CoreData
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate{
-    
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TableCellTodoTodayBoxDelegate{
     
     
     // UI Components
@@ -102,6 +101,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.expandCellDelegate = self
+        cell.tableCellTodoTodayBoxDelegate = self
         let currTodo = todayList[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row
@@ -152,13 +152,24 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     // Check the checkbox
     @IBAction func checkCheckBox(_ sender: UIButton) {
         let index = sender.tag
-//        todayList[index].done! = !todayList[index].done!
         list[todayIndexList[index]].done! = !list[todayIndexList[index]].done!
         user?.todoList! = []
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
         tableView.reloadData()
-        
     }
+    
+    // edit the text in the today box
+    func doneEdittingTodayCell(_ newText: String, _ sender : TodayTupleTableViewCell) {
+        let index = tableView.indexPath(for: sender)?.row
+        list[todayIndexList[index!]].content = newText
+        user?.todoList! = []
+        PersistenceService.saveContext()
+        user?.todoList! = list
+        PersistenceService.saveContext()
+        tableView.reloadData()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+    }
+    
 }

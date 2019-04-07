@@ -20,18 +20,17 @@ class ExpandableTableViewCell: UITableViewCell, UITextViewDelegate {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
     
     func textViewDidChange(_ textView: UITextView) {
         expandCellDelegate?.updated()
-        print("textViewDidChange works")
     }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        let newText = textView.text!.replacingOccurrences(of: "\n", with: " ")
-        textView.text = newText
-        expandCellDelegate?.updated()
+        
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+        }
+        return true
     }
     
 }

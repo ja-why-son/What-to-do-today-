@@ -81,6 +81,29 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         
         // load the interface information
         reload() // classify for the first time
+        reloadLabel()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
+    }
+    
+    @objc func editLabel(_ notification : NSNotification) {
+        if let userInfo = notification.userInfo as? [String : Int] {
+            print(userInfo)
+            let newLabelName = Array(userInfo.keys)[0]
+            let labelCategory = Array(userInfo.values)[0]
+            print(newLabelName)
+            print(labelCategory)
+            categoriesList[labelCategory] = newLabelName
+            user?.categoryList = []
+            PersistenceService.saveContext()
+            user?.categoryList = categoriesList
+            PersistenceService.saveContext()
+            reloadLabel()
+        }
+    }
+    
+    func reloadLabel () {
         redLabel.text = categoriesList[0]
         orangeLabel.text = categoriesList[1]
         blueLabel.text = categoriesList[2]
@@ -89,7 +112,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     
     // CLASSIFY THE WHOLE LIST INTO CATEGORIES
     // ALSO USED DURING RELOAD
-    func reload () {
+    @objc func reload () {
         mainList = (user?.todoList)!
         categoriesList = (user?.categoryList)!
         redList = []
@@ -148,6 +171,8 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         
         popUp = (UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PopUp") as! PopUpViewController)
         popUp?.user = user
+//        popUp?.label.tag = senderTag
+        popUp?.labelTag = senderTag
         
         switch senderTag {
             case 0: // do red
@@ -161,13 +186,13 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 popUp?.list = orangeList
                 popUp?.indexList = orangeIndexList
                 popUp?.category = "orange"
-            popUp?.categoryName = categoriesList[1]
+                popUp?.categoryName = categoriesList[1]
             case 2:  // do blue
                 popUp?.color = #colorLiteral(red: 0.5487036109, green: 0.8750793338, blue: 1, alpha: 1)
                 popUp?.list = blueList
                 popUp?.indexList = blueIndexList
                 popUp?.category = "blue"
-            popUp?.categoryName = categoriesList[2]
+                popUp?.categoryName = categoriesList[2]
             case 3:  // do green
                 popUp?.color = #colorLiteral(red: 0.5415468216, green: 1, blue: 0.6116992235, alpha: 1)
                 popUp?.list = greenList

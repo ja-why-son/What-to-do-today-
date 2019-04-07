@@ -9,9 +9,14 @@
 import UIKit
 import CoreData
 
+protocol LabelSmallBoxDelegate {
+    func editLabel(_ newLabel : String, _ index : Int)
+}
+
 class PopUpTextField: UITextField, UITextFieldDelegate {
     
-    var orginalLabel : String?
+    var originalLabel : String?
+    var labelSmallBoxDelegate : LabelSmallBoxDelegate?
     
     
     override func awakeFromNib() {
@@ -20,7 +25,7 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     }
 
     func textFieldDidBeginEditing(_ textField : UITextField) {
-        orginalLabel = self.text
+        originalLabel = self.text
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -29,7 +34,10 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField : UITextField) {
-        print("hellO")
+        if textField.text != originalLabel {
+            let info : [String : Int] = [textField.text!: textField.tag]
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload label"), object: nil, userInfo: info)
+        }
     }
     
     

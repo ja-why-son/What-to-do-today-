@@ -27,11 +27,13 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     var category : String? = nil
     var delegate : SmallBoxPopUpDelegate?
     var categoryName : String? = nil
+    var labelTag : Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // STYLING
+        label.tag = labelTag!
         label.text = categoryName
         self.view.backgroundColor = UIColor.white.withAlphaComponent(0.6)
         backButton.backgroundColor = UIColor.clear
@@ -103,7 +105,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.addRowDelegate = self
             return cell
         }
-        let cell = tableView.dequeueReusableCell(withIdentifier: "tuple", for: indexPath) as! RedTupleTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "tuple", for: indexPath) as! PopUpTableViewCell
         cell.expandCellDelegate = self
         cell.tableCellTodoSmallBoxDelegate = self
         let currTodo = list[indexPath.row]
@@ -205,7 +207,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     // EDIT CONTENT
     // Send the new text and the original index back to small box view controller to edit the main data
     // also edit local(popup) list
-    func doneEditting(_ newText : String, _ sender : RedTupleTableViewCell) {
+    func doneEdittingPopUpCell(_ newText : String, _ sender : PopUpTableViewCell) {
         let index = tableView.indexPath(for: sender)![1]
         //print(index)
         list[index].content = newText

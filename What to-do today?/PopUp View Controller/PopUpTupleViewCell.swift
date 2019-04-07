@@ -9,10 +9,10 @@
 import UIKit
 
 protocol TableCellTodoSmallBoxDelegate {
-    func doneEditting(_ newText : String, _ sender : RedTupleTableViewCell)
+    func doneEdittingPopUpCell(_ newText : String, _ sender : PopUpTableViewCell)
 }
 
-class RedTupleTableViewCell: ExpandableTableViewCell, UITextFieldDelegate {
+class PopUpTableViewCell: ExpandableTableViewCell {
     
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var textView: UITextView!
@@ -32,15 +32,10 @@ class RedTupleTableViewCell: ExpandableTableViewCell, UITextFieldDelegate {
         originalText = textView.text
     }
     
-    override func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != originalText {
-            tableCellTodoSmallBoxDelegate?.doneEditting(textView.text, self)
+            tableCellTodoSmallBoxDelegate?.doneEdittingPopUpCell(textView.text, self)
         }
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextView) -> Bool {
-        self.textView.resignFirstResponder()
-        return true
     }
     
 }

@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol TableCellTodoTodayBoxDelegate {
+    func doneEdittingTodayCell(_ newText : String, _ sender : TodayTupleTableViewCell)
+}
 
 
 class TodayTupleTableViewCell: ExpandableTableViewCell {
@@ -17,13 +20,22 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     @IBOutlet weak var checkBox: UIButton!
     
     var originalText : String?
-    
+    var tableCellTodoTodayBoxDelegate : TableCellTodoTodayBoxDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        originalText = textView.text
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text != originalText {
+            tableCellTodoTodayBoxDelegate?.doneEdittingTodayCell(textView.text, self)
+        }
+    }
 }
 
 
