@@ -139,7 +139,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         if list.isEmpty || indexPath.row == list.count {
             return nil
         }
-        // index out of range here
         if !list[indexPath.row].isToday {
             let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
                 print("Move to today")
@@ -165,6 +164,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     //
     //
     @objc func keyboardWillShow(notification: NSNotification) {
+        adjustForKeyboard(notification: notification);
         backButton.isEnabled = false
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
@@ -172,8 +172,23 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
+        adjustForKeyboard(notification: notification);
         backButton.isEnabled = true
-        // implement here?
+    }
+    
+    func adjustForKeyboard(notification: NSNotification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableView.estimatedRowHeight, right: 0) // if there's a problem think about using the frame and content size
+            tableView.scrollIndicatorInsets = .zero
+        } else {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+            tableView.scrollIndicatorInsets = tableView.contentInset
+        }
+        let tableRect = tableView.rect(forSection: 0)
+        tableView.scrollRectToVisible(tableRect, animated: true)
     }
     
     /**********************************************************************************************************/

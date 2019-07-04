@@ -118,21 +118,29 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     //
     //
     @objc func keyboardWillShow(notification: NSNotification) {
-//        guard let userInfo = notification.userInfo else {return}
-//        guard let keyboardSize = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {return}
-//        let keyBoardFrame = keyboardSize.cgRectValue
-//        if self.view.frame.origin.y == 0 {
-//            self.view.frame.origin.y -= keyBoardFrame.height
-//        }
+        adjustForKeyboard(notification: notification);
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
         tap.cancelsTouchesInView = false
         self.view.addGestureRecognizer(tap)
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-//        if self.view.frame.origin.y != 0 {
-//            self.view.frame.origin.y -= 0
-//        }
+        adjustForKeyboard(notification: notification);
+    }
+    
+    func adjustForKeyboard(notification: NSNotification) {
+        guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableView.estimatedRowHeight, right: 0) // if there's a problem think about using the frame and content size
+            tableView.scrollIndicatorInsets = .zero
+        } else {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+            tableView.scrollIndicatorInsets = tableView.contentInset
+        }
+        let tableRect = tableView.rect(forSection: 0)
+        tableView.scrollRectToVisible(tableRect, animated: true)
     }
     
     /**********************************************************************************************************/

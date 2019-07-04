@@ -14,8 +14,9 @@ class RedAddTableViewCell: addTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        textView.text = "Add new todo here";
+        textView.textColor = UIColor.gray
         textView.delegate = self
     }
-    
     
 }
