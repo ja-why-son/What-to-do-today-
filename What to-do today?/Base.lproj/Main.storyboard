@@ -167,8 +167,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Pu-SXZ">
+                                <rect key="frame" x="24" y="45" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-xL-jcs">
-                                <rect key="frame" x="16" y="74" width="168" height="340"/>
+                                <rect key="frame" x="16" y="76" width="168" height="340"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
@@ -197,7 +201,7 @@
                                 </connections>
                             </view>
                             <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
-                                <rect key="frame" x="192" y="74" width="167" height="340"/>
+                                <rect key="frame" x="192" y="76" width="167" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Academic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxw-G5-GxB">
@@ -226,7 +230,7 @@
                                 </connections>
                             </view>
                             <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
-                                <rect key="frame" x="16" y="436" width="168" height="340"/>
+                                <rect key="frame" x="16" y="438" width="168" height="340"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Project" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsr-bl-x4I">
@@ -255,7 +259,7 @@
                                 </connections>
                             </view>
                             <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
-                                <rect key="frame" x="192" y="436" width="167" height="340"/>
+                                <rect key="frame" x="192" y="438" width="167" height="340"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Life?! LOL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM5-qt-86g">
@@ -284,14 +288,6 @@
                                     <outletCollection property="gestureRecognizers" destination="Ojp-Te-PpX" appends="YES" id="EBD-AT-pQi"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIE-3n-tWO">
-                                <rect key="frame" x="287" y="39" width="61" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                <state key="normal" title="New Day"/>
-                                <connections>
-                                    <action selector="clearDone:" destination="G3W-Cm-XPX" eventType="touchUpInside" id="Eo1-GW-hoJ"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8dX-hi-KHU"/>
@@ -435,6 +431,14 @@
                                             <outlet property="delegate" destination="awd-Mk-cN6" id="Bej-6C-amB"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ca-Rw-ld9">
+                                        <rect key="frame" x="232" y="16" width="61" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="New Day"/>
+                                        <connections>
+                                            <action selector="clearDone:" destination="awd-Mk-cN6" eventType="touchUpInside" id="8pO-3b-rhR"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.99542899389307038" blue="0.66037085233879722" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
@@ -453,6 +457,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="menu_icon" width="512" height="512"/>
         <image name="plus_sign" width="100" height="100"/>
     </resources>
 </document>

@@ -23,6 +23,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     var todayIndexList = [Int]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
+    var tempTodo = [Todo]()
 
     
     override func viewDidLoad() {
@@ -87,6 +88,22 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         }
         tableView.reloadData()
 //        print("Total count \(todayList.count)")
+    }
+    
+    @IBAction func clearDone(_ sender: Any) {
+        
+        tempTodo = []
+        for i in stride(from: 0, to: list.count, by: 1) {
+            if !list[i].done {
+                tempTodo.append(list[i])
+            }
+        }
+        user?.todoList = []
+        PersistenceService.saveContext()
+        user?.todoList = tempTodo
+        PersistenceService.saveContext()
+        reloadToday()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     
     /**********************************************************************************************************/

@@ -208,36 +208,6 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         popUp!.delegate = self
     }
     
-    /**********************************************************************************************************/
-    // SETTING METHOD & DEBUGGING METHOD
-    
-    @IBAction func eraseData(_ sender: Any) {
-        let alert = UIAlertController(title: "Delete Data", message: "Data Cleared", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alert, animated: true)
-        user?.todoList =  []
-        mainList = []
-        PersistenceService.saveContext()
-        reload()
-        
-    }
-    
-    @IBAction func clearDone(_ sender: Any) {
-        
-        tempTodo = []
-        for i in stride(from: 0, to: mainList.count, by: 1) {
-            if !mainList[i].done {
-                tempTodo.append(mainList[i])
-            }
-        }
-        user?.todoList = []
-        PersistenceService.saveContext()
-        user?.todoList = tempTodo
-        PersistenceService.saveContext()
-        reload()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
-    }
-    
     
     /**********************************************************************************************************/
     // DELEGATE METHOD BETWEEN SMALL BOX AND POP UP
