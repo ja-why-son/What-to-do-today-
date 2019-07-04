@@ -135,6 +135,13 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+//        print("the method is working")
+//        print(indexPath.row);
+//        print(list.count);
+        return !(list.isEmpty || indexPath.row == list.count)
+    }
+    
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         if list.isEmpty || indexPath.row == list.count {
             return nil
