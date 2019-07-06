@@ -62,7 +62,7 @@
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTextField.swift; sourceTree = "<group>"; };
-		9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PersistenceService.swift; path = "/Users/chenyitong/Project/What to-do today?/What to-do today?/PersistenceService.swift"; sourceTree = "<absolute>"; };
+		9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 		9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTableViewCellBase.swift; sourceTree = "<group>"; };
 		9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTupleViewCell.swift; sourceTree = "<group>"; };
 		9C34345522319CCA00A8B923 /* PopUpAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpAddSection.swift; sourceTree = "<group>"; };
