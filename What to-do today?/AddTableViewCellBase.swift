@@ -27,9 +27,9 @@ class addTableViewCell: ExpandableTableViewCell {
             addString = addString.replacingOccurrences(of: "\n", with: " ")
             addRowDelegate?.addRow(self, addString)
             print(addString)
-            textView.text = "Add new todo here"
-            textView.textColor = UIColor.gray;
         }
+        textView.text = "Add new todo here"
+        textView.textColor = UIColor.gray;
         expandCellDelegate?.updated()
     }
     

@@ -110,6 +110,9 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.tableCellTodoSmallBoxDelegate = self
         let currTodo = list[indexPath.row]
         cell.textView.text = currTodo.content
+        if currTodo.isToday == true {
+            cell.textView.font = UIFont.systemFont(ofSize: cell.textView.font!.pointSize, weight: UIFont.Weight.heavy)
+        }
         cell.checkBox.tag = indexPath.row
         if currTodo.done! == false {
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
@@ -136,9 +139,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-//        print("the method is working")
-//        print(indexPath.row);
-//        print(list.count);
         return !(list.isEmpty || indexPath.row == list.count)
     }
     
@@ -146,15 +146,14 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         if list.isEmpty || indexPath.row == list.count {
             return nil
         }
-        if !list[indexPath.row].isToday {
-            let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
-                print("Move to today")
-                self.todayOrNot(indexPath)
-                success(true)
-            })
-            todayAction.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-            return UISwipeActionsConfiguration(actions: [todayAction])
-        }
+        
+        let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+            print("Move to today")
+            self.todayOrNot(indexPath)
+            success(true)
+        })
+        todayAction.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+        
         let notTodayAction = UIContextualAction(style: .normal, title: "Later", handler: {
             (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Move out from today")
@@ -162,7 +161,13 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             success(true)
         })
         notTodayAction.backgroundColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
-        return UISwipeActionsConfiguration(actions: [notTodayAction])
+        
+        if !list[indexPath.row].isToday {
+            return UISwipeActionsConfiguration(actions: [todayAction])
+        } else if list[indexPath.row].isToday {
+            return UISwipeActionsConfiguration(actions: [notTodayAction])
+        }
+        return nil
     }
     
     /**********************************************************************************************************/
@@ -242,6 +247,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // DONE OR NOT DONE
     @IBAction func checkCheckbox(_ sender : UIButton) {
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
         let index = sender.tag
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])
@@ -255,7 +262,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     func todayOrNot(_ indexPath : IndexPath) {
         let cellIndex = indexPath.row
         list[cellIndex].isToday = !list[cellIndex].isToday
-//        tableView(tableView, cellForRowAt: indexPath)
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
