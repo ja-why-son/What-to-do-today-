@@ -112,6 +112,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.textView.text = currTodo.content
         if currTodo.isToday == true {
             cell.textView.font = UIFont.systemFont(ofSize: cell.textView.font!.pointSize, weight: UIFont.Weight.heavy)
+        } else {
+            cell.textView.font = UIFont.systemFont(ofSize: cell.textView.font!.pointSize, weight: UIFont.Weight.regular)
         }
         cell.checkBox.tag = indexPath.row
         if currTodo.done! == false {
@@ -263,6 +265,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cellIndex = indexPath.row
         list[cellIndex].isToday = !list[cellIndex].isToday
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
+        tableView.reloadData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
     
