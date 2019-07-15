@@ -17,6 +17,7 @@ protocol SmallBoxPopUpDelegate {
     func deleteTodo(ogIndex index : Int, _ category : String) -> [Int]
 }
 
+
 class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     
     // UI Components
@@ -48,6 +49,18 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     var popUp : PopUpViewController? = nil
     var tempTodo = [Todo]()
     var categoriesList = [String]()
+    
+    func isAppAlreadyLaunchedOnce()->Bool{
+        let defaults = UserDefaults.standard
+        if let _ = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
+            print("App already launched")
+            return true
+        }else{
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            print("App launched first time")
+            return false
+        }
+    }
 
     
     override func viewDidLoad() {
@@ -85,6 +98,8 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
+        
+        isAppAlreadyLaunchedOnce() 
     }
     
     @objc func editLabel(_ notification : NSNotification) {

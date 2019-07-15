@@ -167,10 +167,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="setting_icon" translatesAutoresizingMaskIntoConstraints="NO" id="PWL-Pu-SXZ">
-                                <rect key="frame" x="324" y="54" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-xL-jcs">
                                 <rect key="frame" x="16" y="90" width="168" height="340"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -472,6 +468,5 @@
     </scenes>
     <resources>
         <image name="plus_sign" width="100" height="100"/>
-        <image name="setting_icon" width="512" height="512"/>
     </resources>
 </document>
