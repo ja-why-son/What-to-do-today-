@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0EB16622E17C810098C9D5 /* TodayAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */; };
 		9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB521FC15FF00642F56 /* AppDelegate.swift */; };
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAddSection.swift; sourceTree = "<group>"; };
 		9C13EFB221FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFB521FC15FF00642F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C13EFBA21FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
+				9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */,
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
 			);
 			path = "Today View Controller";
@@ -316,6 +319,7 @@
 				9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */,
 				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
+				9C0EB16622E17C810098C9D5 /* TodayAddSection.swift in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
 				9C32FCEB2257FDEE00B9AEEF /* PersistenceService.swift in Sources */,
 				9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */,

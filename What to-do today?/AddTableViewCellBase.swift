@@ -12,25 +12,18 @@ protocol AddTableViewCellDelegate {
     func addRow(_ sender:UITableViewCell, _ newString:String)
 }
 
+protocol AddTodayTodoDelegate {
+    func addRow(_ newString: String);
+}
+
 class addTableViewCell: ExpandableTableViewCell {
     var addRowDelegate: AddTableViewCellDelegate?
+    var addTodayRowDelegate: AddTodayTodoDelegate?
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
         textView.text = "";
         textView.textColor = UIColor.black;
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        if textView.text != "" {
-            var addString = textView.text!
-            addString = addString.replacingOccurrences(of: "\n", with: " ")
-            addRowDelegate?.addRow(self, addString)
-            print(addString)
-        }
-        textView.text = "Add new todo here"
-        textView.textColor = UIColor.gray;
-        expandCellDelegate?.updated()
     }
     
     override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

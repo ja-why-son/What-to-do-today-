@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TableCellTodoTodayBoxDelegate{
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TableCellTodoTodayBoxDelegate, AddTodayTodoDelegate{
     
     
     // UI Components
@@ -85,9 +85,9 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
                 todayList.append(list[i])
                 todayIndexList.append(i)
             }
+            print(list[i].content!)
         }
         tableView.reloadData()
-//        print("Total count \(todayList.count)")
     }
     
     @IBAction func clearDone(_ sender: Any) {
@@ -111,11 +111,17 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     //
     //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todayList.count
+        return todayList.count + 1
     }
     
     // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row == todayList.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as! TodayAddTableViewCell
+            cell.expandCellDelegate = self
+            cell.addTodayRowDelegate = self
+            return cell
+        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.expandCellDelegate = self
         cell.tableCellTodoTodayBoxDelegate = self
@@ -175,6 +181,20 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     // USE CORE DATA
     //
     // Check the checkbox
+    func addRow(_ newString: String) {
+        let newTodo = Todo(content: newString, category: "none", isToday: true)
+        self.todayList.append(newTodo);
+        self.list.append(newTodo);
+        user?.todoList! = []
+        PersistenceService.saveContext()
+        user?.todoList! = list
+        PersistenceService.saveContext()
+        let offset = todayList.count == 0 ? 0 : 1
+        let indexPath = IndexPath(item: todayList.count - offset, section: 0)
+        tableView.insertRows(at: [indexPath], with: .fade)
+        reloadToday()
+    }
+    
     @IBAction func checkCheckBox(_ sender: UIButton) {
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
@@ -190,7 +210,13 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     // edit the text in the today box
     func doneEdittingTodayCell(_ newText: String, _ sender : TodayTupleTableViewCell) {
         let index = tableView.indexPath(for: sender)?.row
-        list[todayIndexList[index!]].content = newText
+        if newText.isEmpty {
+            todayList.remove(at: index!)
+            tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .fade)
+            list.remove(at: todayIndexList[index!])
+        } else {
+            list[todayIndexList[index!]].content = newText
+        }
         user?.todoList! = []
         PersistenceService.saveContext()
         user?.todoList! = list

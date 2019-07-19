@@ -255,6 +255,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     
     // PROBLEM HERE TO BE FIXED!!
     func checkBox(ogIndex index : Int) {
+        mainList = (user?.todoList)!
         user?.todoList = []
         PersistenceService.saveContext() // Save newly created user
         user?.todoList = mainList
@@ -263,6 +264,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     }
     
     func moveTodayOrOut(ogIndex index : Int) {
+        mainList = (user?.todoList)!
         user?.todoList = []
         PersistenceService.saveContext() // Save newly created user
         user?.todoList = mainList

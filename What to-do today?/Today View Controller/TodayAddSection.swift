@@ -1,14 +1,14 @@
 //
-//  RedAddSection.swift
+//  TodayAddSection.swift
 //  What to-do today?
 //
-//  Created by Jayson Chen on 2019/3/7.
+//  Created by Jayson Chen on 2019/7/18.
 //  Copyright © 2019 Jayson Chen. All rights reserved.
 //
 
 import UIKit
 
-class RedAddTableViewCell: addTableViewCell {
+class TodayAddTableViewCell: addTableViewCell {
     
     @IBOutlet weak var textView: UITextView!
     
@@ -23,7 +23,7 @@ class RedAddTableViewCell: addTableViewCell {
         if textView.text != "" {
             var addString = textView.text!
             addString = addString.replacingOccurrences(of: "\n", with: " ")
-            addRowDelegate?.addRow(self, addString)
+            addTodayRowDelegate?.addRow(addString)
             print(addString)
         }
         textView.text = "Add new todo here"
