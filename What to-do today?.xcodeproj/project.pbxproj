@@ -52,10 +52,10 @@
 		9C13EFBF21FC15FF00642F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C13EFC221FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C13EFC421FC15FF00642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFC921FC15FF00642F56 /* What to-do today?Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C13EFC921FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "../Debug-iphonesimulator/What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_Tests.swift; sourceTree = "<group>"; };
 		9C13EFCF21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFD421FC160000642F56 /* What to-do today?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C13EFD421FC160000642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
 		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C13EFE621FC170600642F56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -112,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				9C13EFB221FC15FF00642F56 /* What to-do today?.app */,
-				9C13EFC921FC15FF00642F56 /* What to-do today?Tests.xctest */,
-				9C13EFD421FC160000642F56 /* What to-do today?UITests.xctest */,
+				9C13EFC921FC15FF00642F56 /* What to-do today?.app */,
+				9C13EFD421FC160000642F56 /* What to-do today?.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -212,7 +212,7 @@
 			);
 			name = "What to-do today?Tests";
 			productName = "What to-do today?Tests";
-			productReference = 9C13EFC921FC15FF00642F56 /* What to-do today?Tests.xctest */;
+			productReference = 9C13EFC921FC15FF00642F56 /* What to-do today?.app */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		9C13EFD321FC160000642F56 /* What to-do today?UITests */ = {
@@ -230,7 +230,7 @@
 			);
 			name = "What to-do today?UITests";
 			productName = "What to-do today?UITests";
-			productReference = 9C13EFD421FC160000642F56 /* What to-do today?UITests.xctest */;
+			productReference = 9C13EFD421FC160000642F56 /* What to-do today?.app */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */

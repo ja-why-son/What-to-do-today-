@@ -49,18 +49,6 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     var popUp : PopUpViewController? = nil
     var tempTodo = [Todo]()
     var categoriesList = [String]()
-    
-    func isAppAlreadyLaunchedOnce()->Bool{
-        let defaults = UserDefaults.standard
-        if let _ = defaults.string(forKey: "isAppAlreadyLaunchedOnce"){
-            print("App already launched")
-            return true
-        }else{
-            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
-            print("App launched first time")
-            return false
-        }
-    }
 
     
     override func viewDidLoad() {
@@ -79,8 +67,9 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
             if result.count == 0 { // []
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
-                newUser.todoList = []
-                newUser.categoryList = ["Red", "Orange", "Blue", "Green" ]
+                // load the instruction below 
+                newUser.todoList = createInstruction()
+                newUser.categoryList = ["1) Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -98,8 +87,24 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
-        
-        isAppAlreadyLaunchedOnce() 
+    }
+    
+    func createInstruction() -> [Todo] {
+        let upperLeft = [Todo(content: "Jot down your tasks here", category: "red", isToday: false),
+                          Todo(content: "Check them off when you're done", category: "red", isToday: false),
+                          Todo(content: "Swipe RIGHT to add to \"Today\" page", category: "red", isToday: false),
+                          Todo(content: "Swipe LEFT to elete todo", category: "red", isToday: false),
+                            Todo(content: "Tap the title to edit", category: "red", isToday: false)];
+        let upperRight = [Todo(content: "Exit this box and swipe LEFT to get to \"Today\" page", category: "orange", isToday: false),
+                          Todo(content: "Exit the box and swipe left to TODAY", category: "orange", isToday: false),
+                          Todo(content: "All the todos you should finish today are over there!", category: "orange", isToday: false)]
+        let bottomLeft = [Todo(content: "Plan out your tasks today", category: "blue", isToday: false),
+                          Todo(content: "Organize your to-do lists", category: "blue", isToday: false)]
+        let bottomRight = [Todo(content: "If you like this app, make sure to rate us on the app store", category: "green", isToday: false),Todo(content: "Happy productivity!", category: "green", isToday: false)]
+        let today = [Todo(content: "Finish these tasks today", category: "none", isToday: true),
+                     Todo(content: "Tap \"New Day\" to clear your checked taks", category: "none", isToday: true),
+                     Todo(content: "Swipe RIGHT to get back to home boxes", category: "none", isToday: true)]
+        return today + upperLeft + upperRight + bottomLeft + bottomRight
     }
     
     @objc func editLabel(_ notification : NSNotification) {
@@ -164,7 +169,9 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 greenList.append(mainList[i])
                 greenIndexList.append(i)
                 greenText = greenText + "- " + mainList[i].content! + "\n"
-            default: break
+            case "none":
+                print()
+            default: return
             }
         }
         redTextView.text = redText

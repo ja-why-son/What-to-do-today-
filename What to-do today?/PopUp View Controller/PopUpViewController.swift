@@ -238,11 +238,21 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     // also edit local(popup) list
     func doneEdittingPopUpCell(_ newText : String, _ sender : PopUpTableViewCell) {
         let index = tableView.indexPath(for: sender)![1]
-        //print(index)
+        let isToday : Bool = list[index].isToday
         list[index].content = newText
-        //print(indexList[index])
-        delegate?.editContent(newText, ogIndex: indexList[index])
-        if list[index].isToday {
+        // TODO if newText is empty, delete row 
+        // note that list[index].isToday is gonna break
+        // need to investigate to see if the index is the same as
+        // indexPath.row down in the remove method
+        print("index is \(index)");
+        if newText.isEmpty {
+            list.remove(at: index)
+            tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
+            indexList = (delegate?.deleteTodo(ogIndex: indexList[index], category!))!
+        } else {
+            delegate?.editContent(newText, ogIndex: indexList[index])
+        }
+        if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
     }
@@ -271,8 +281,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // DELETE ROW
     func deleteTodo(_ indexPath : IndexPath) {
-        print("Indexpath is \(indexPath)")
         let isToday : Bool = list[indexPath.row].isToday
+        print("index path is \(indexPath)");
         list.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
         indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
