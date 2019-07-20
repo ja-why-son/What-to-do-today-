@@ -259,9 +259,11 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // DONE OR NOT DONE
     @IBAction func checkCheckbox(_ sender : UIButton) {
+        tableView.reloadData()
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         let index = sender.tag
+        print("here\(index)")
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])
         tableView.reloadData()
@@ -284,11 +286,12 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let isToday : Bool = list[indexPath.row].isToday
         print("index path is \(indexPath)");
         list.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .fade)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
         indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
         if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
+        tableView.reloadData()
     }
     
 }
