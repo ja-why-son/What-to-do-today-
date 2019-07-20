@@ -29,7 +29,7 @@
                                 <rect key="frame" x="33.333333333333343" y="97" width="308.33333333333326" height="644"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWi-7I-OrB" customClass="PopUpTextField" customModule="What_to_do_today_" customModuleProvider="target">
-                                        <rect key="frame" x="11" y="13" width="282.33333333333331" height="32"/>
+                                        <rect key="frame" x="11" y="13" width="243" height="32"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -121,16 +121,29 @@
                                             <outlet property="delegate" destination="ACt-8f-EQn" id="d3l-tL-ODt"/>
                                         </connections>
                                     </tableView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDd-WR-fBQ">
+                                        <rect key="frame" x="270" y="13" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="6yt-uD-l0B"/>
+                                            <constraint firstAttribute="height" constant="24" id="MQg-01-rf8"/>
+                                        </constraints>
+                                        <state key="normal" image="cross_icon"/>
+                                        <connections>
+                                            <action selector="closeRedPopUp:" destination="ACt-8f-EQn" eventType="touchUpInside" id="kut-Tr-26C"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.64943163569999995" blue="0.68747366720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="vWi-7I-OrB" firstAttribute="top" secondItem="Fri-h6-rHS" secondAttribute="top" constant="13" id="1ZY-zc-Ioa"/>
+                                    <constraint firstItem="gDd-WR-fBQ" firstAttribute="leading" secondItem="vWi-7I-OrB" secondAttribute="trailing" constant="16" id="EIt-cr-8jK"/>
                                     <constraint firstAttribute="trailing" secondItem="f4U-03-VRs" secondAttribute="trailing" id="H0V-Ye-p4Z"/>
                                     <constraint firstItem="f4U-03-VRs" firstAttribute="top" secondItem="vWi-7I-OrB" secondAttribute="bottom" constant="4" id="TeN-2O-0zk"/>
                                     <constraint firstItem="vWi-7I-OrB" firstAttribute="leading" secondItem="Fri-h6-rHS" secondAttribute="leading" constant="11" id="WEI-gQ-6Oi"/>
                                     <constraint firstItem="f4U-03-VRs" firstAttribute="leading" secondItem="Fri-h6-rHS" secondAttribute="leading" id="XxW-MP-OWr"/>
                                     <constraint firstAttribute="bottom" secondItem="f4U-03-VRs" secondAttribute="bottom" constant="22" id="lvJ-XF-KqJ"/>
-                                    <constraint firstAttribute="trailing" secondItem="vWi-7I-OrB" secondAttribute="trailing" constant="15" id="tjS-Sb-RAl"/>
+                                    <constraint firstItem="gDd-WR-fBQ" firstAttribute="top" secondItem="Fri-h6-rHS" secondAttribute="top" constant="13" id="lwS-JW-VjT"/>
+                                    <constraint firstAttribute="trailing" secondItem="vWi-7I-OrB" secondAttribute="trailing" constant="54.329999999999998" id="tjS-Sb-RAl"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -509,6 +522,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cross_icon" width="512" height="512"/>
         <image name="plus_sign" width="100" height="100"/>
     </resources>
 </document>
