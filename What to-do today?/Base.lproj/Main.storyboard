@@ -93,21 +93,25 @@
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_sign" translatesAutoresizingMaskIntoConstraints="NO" id="Hqw-62-5Wp">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-pg-qh0">
                                                             <rect key="frame" x="7" y="6.6666666666666679" width="24" height="24"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="5st-W7-BpY"/>
-                                                                <constraint firstAttribute="height" constant="24" id="MHM-IG-OoS"/>
+                                                                <constraint firstAttribute="width" constant="24" id="64c-4W-wHj"/>
+                                                                <constraint firstAttribute="height" constant="24" id="8IK-ym-0bt"/>
                                                             </constraints>
-                                                        </imageView>
+                                                            <state key="normal" image="plus_sign"/>
+                                                            <connections>
+                                                                <action selector="enterEdit:" destination="9BE-jj-yci" eventType="touchUpInside" id="4sY-Td-C0K"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="hda-3a-MPG" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" id="0RD-hb-USz"/>
-                                                        <constraint firstItem="Hqw-62-5Wp" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" constant="7" id="BGd-6w-aPi"/>
+                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" constant="8" id="3Tc-Yc-IH3"/>
+                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" constant="7" id="RpR-Gf-Jjj"/>
                                                         <constraint firstAttribute="trailing" secondItem="hda-3a-MPG" secondAttribute="trailing" constant="26" id="X1w-Mu-7gA"/>
-                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Hqw-62-5Wp" secondAttribute="trailing" constant="8" id="fxY-fA-W8D"/>
                                                         <constraint firstAttribute="bottom" secondItem="hda-3a-MPG" secondAttribute="bottom" id="jry-Oh-aGu"/>
-                                                        <constraint firstItem="Hqw-62-5Wp" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" constant="6.8200000000000003" id="r2C-n0-i4p"/>
+                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" constant="6.8200000000000003" id="qRm-n2-Sn6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,9 +132,6 @@
                                             <constraint firstAttribute="height" constant="24" id="MQg-01-rf8"/>
                                         </constraints>
                                         <state key="normal" image="cross_icon"/>
-                                        <connections>
-                                            <action selector="closeRedPopUp:" destination="ACt-8f-EQn" eventType="touchUpInside" id="kut-Tr-26C"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.64943163569999995" blue="0.68747366720000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
