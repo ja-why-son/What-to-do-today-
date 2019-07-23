@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ToDoViewController: UIPageViewController/*, UIScrollViewDelegate*/{
+class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
 
     var currentPage : Int = 0
     
@@ -22,13 +22,6 @@ class ToDoViewController: UIPageViewController/*, UIScrollViewDelegate*/{
             instantiateViewController(withIdentifier: name)
     }
     
-    
-    /*
-    private func newColoredViewController(color: String) -> UIViewController {
-        return UIStoryboard(name: "Main", bundle: nil) .
-            instantiateViewControllerWithIdentifier("\(color)ViewController")
-    }
-    */
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,12 +34,12 @@ class ToDoViewController: UIPageViewController/*, UIScrollViewDelegate*/{
                                completion: nil)
         }
         
-//        for subview in self.view.subviews {
-//            if let scrollView = subview as? UIScrollView {
-//                scrollView.delegate = self
-//                break;
-//            }
-//        }
+        for subview in self.view.subviews {
+            if let scrollView = subview as? UIScrollView {
+                scrollView.delegate = self
+                break;
+            }
+        }
         
         NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.enableSwipe), name:NSNotification.Name(rawValue: "enableSwipe"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.disableSwipe), name:NSNotification.Name(rawValue: "disableSwipe"), object: nil)
@@ -70,19 +63,14 @@ extension ToDoViewController: UIPageViewControllerDataSource {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
-        
         currentPage = viewControllerIndex
-        
         let previousIndex = viewControllerIndex - 1
-        
         guard previousIndex >= 0 else {
             return nil
         }
-        
         guard orderedViewControllers.count > previousIndex else {
             return nil
         }
-        
         return orderedViewControllers[previousIndex]
     }
     
@@ -91,30 +79,32 @@ extension ToDoViewController: UIPageViewControllerDataSource {
         guard let viewControllerIndex = orderedViewControllers.index(of: viewController) else {
             return nil
         }
-        
         currentPage = viewControllerIndex
-        
         let nextIndex = viewControllerIndex + 1
         let orderedViewControllersCount = orderedViewControllers.count
         
         guard orderedViewControllersCount != nextIndex else {
             return nil
         }
-        
         guard orderedViewControllersCount > nextIndex else {
             return nil
         }
-        
         return orderedViewControllers[nextIndex]
     }
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if (currentPage == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) {
-//            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
-//        } else if (currentPage == 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
-//            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0);
-//        }
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (currentPage == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) || (currentPage == 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
+            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
+        }
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if (currentPage == 0 && scrollView.contentOffset.x <= scrollView.bounds.size.width) {
+            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
+        } else if (currentPage == 1 && scrollView.contentOffset.x >= scrollView.bounds.size.width) {
+            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
+        }
+    }
 
 }
 
