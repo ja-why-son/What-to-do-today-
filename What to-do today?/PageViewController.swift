@@ -47,7 +47,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
     
 }
 
-extension ToDoViewController: UIPageViewControllerDataSource {
+extension ToDoViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     
     @objc func disableSwipe(){
@@ -93,18 +93,45 @@ extension ToDoViewController: UIPageViewControllerDataSource {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (currentPage == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) || (currentPage == 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
-            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
-        }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        if (currentPage == 0 && scrollView.contentOffset.x <= scrollView.bounds.size.width) {
-            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
-        } else if (currentPage == 1 && scrollView.contentOffset.x >= scrollView.bounds.size.width) {
-            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
-        }
-    }
+//    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+//        guard let viewControllerIndex = orderedViewControllers.index(of: pageViewController.viewControllers!.first!) else {return}
+//        print(viewControllerIndex)
+//        print("HI")
+//    }
+//
+//    func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
+//        print("end animation")
+//    }
+//
+//
+//
+//    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+//        return currentPage
+//    }
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if (currentPage == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) || (currentPage == 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
+//            print("\(currentPage) is current page");
+//            print("content offset is \(scrollView.contentOffset.x)")
+//            print("bound size is \(scrollView.bounds.size.width)")
+//            scrollView.contentOffset = CGPoint(x: scrollView.bounds.size.width, y: 0)
+//        }
+//    }
+//
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//        if (currentPage == 0 && scrollView.contentOffset.x < scrollView.bounds.size.width) {
+//            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
+//            print(scrollView.bounds.size.width)
+//        } else if (currentPage == 1 && scrollView.contentOffset.x > scrollView.bounds.size.width) {
+//            targetContentOffset.pointee = CGPoint(x: scrollView.bounds.size.width, y: 0);
+//            print(scrollView.bounds.size.width)
+//
+//        }
+//    }
 
 }
 

@@ -69,7 +69,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 let newUser = User(context: PersistenceService.context)
                 // load the instruction below 
                 newUser.todoList = createInstruction()
-                newUser.categoryList = ["1) Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
+                newUser.categoryList = ["1) Get started!", "2) Where's \"Today\"?", "3) With To-Doy...", "4) Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }

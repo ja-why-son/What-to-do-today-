@@ -185,6 +185,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         let newTodo = Todo(content: newString, category: "none", isToday: true)
         self.todayList.append(newTodo);
         self.list.append(newTodo);
+//        reloadToday()
         user?.todoList! = []
         PersistenceService.saveContext()
         user?.todoList! = list
@@ -192,7 +193,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         let offset = todayList.count == 0 ? 0 : 1
         let indexPath = IndexPath(item: todayList.count - offset, section: 0)
         tableView.insertRows(at: [indexPath], with: .fade)
-        reloadToday()
     }
     
     @IBAction func checkCheckBox(_ sender: UIButton) {
@@ -209,6 +209,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     
     // edit the text in the today box
     func doneEdittingTodayCell(_ newText: String, _ sender : TodayTupleTableViewCell) {
+//        reloadToday()
         let index = tableView.indexPath(for: sender)?.row
         if newText.isEmpty {
             todayList.remove(at: index!)
