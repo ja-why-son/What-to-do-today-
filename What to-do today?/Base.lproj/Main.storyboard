@@ -214,7 +214,7 @@
                                                 </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.81960784313725488" green="0.94901960784313721" blue="0.6470588235294118" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.79607843137254897" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="TUm-HP-8Iz" firstAttribute="top" secondItem="pxw-G5-GxB" secondAttribute="bottom" constant="-4" id="4Rj-aM-kZV"/>
@@ -232,7 +232,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-xL-jcs">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="324.33333333333331"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
                                                 <rect key="frame" x="4" y="23.333333333333343" width="155.66666666666666" height="293"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
@@ -250,7 +250,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="1" green="0.76862745098039209" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="yHm-Qc-MlJ" firstAttribute="top" secondItem="RtN-Bh-7L6" secondAttribute="bottom" constant="-4" id="3K5-A5-zkX"/>
@@ -286,7 +286,7 @@
                                                 </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.93725490196078431" green="0.98039215686274506" blue="0.70588235294117641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.67843137254901964" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Bsr-bl-x4I" secondAttribute="trailing" constant="8" id="JYt-hW-A1e"/>
@@ -322,7 +322,7 @@
                                                 </connections>
                                             </textView>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.5725490196078431" green="0.84705882352941175" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.66666666666666663" green="0.84705882352941175" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="5xG-jx-CY7" firstAttribute="trailing" secondItem="yM5-qt-86g" secondAttribute="trailing" constant="8" id="G78-de-8ls"/>
@@ -471,14 +471,14 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="250" height="36.666666666666664"/>
+                                                            <rect key="frame" x="29" y="0.0" width="269" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="0.69999999999999996"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-NL-4E6">
-                                                            <rect key="frame" x="0.0" y="4" width="28" height="28"/>
+                                                            <rect key="frame" x="0.0" y="4.3333333333333321" width="28" height="27.999999999999996"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="28" id="DjB-c6-USi"/>
                                                                 <constraint firstAttribute="height" constant="28" id="YNb-3a-2Q1"/>
@@ -490,52 +490,17 @@
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
+                                                        <constraint firstItem="aKN-NL-4E6" firstAttribute="centerY" secondItem="IZ7-JC-UnF" secondAttribute="centerY" id="7Lz-le-XK4"/>
                                                         <constraint firstItem="6Nk-IY-MNw" firstAttribute="top" secondItem="IZ7-JC-UnF" secondAttribute="top" id="Dpr-A0-VGD"/>
-                                                        <constraint firstItem="aKN-NL-4E6" firstAttribute="top" secondItem="IZ7-JC-UnF" secondAttribute="top" constant="4" id="M2R-v6-hVa"/>
                                                         <constraint firstItem="6Nk-IY-MNw" firstAttribute="leading" secondItem="aKN-NL-4E6" secondAttribute="trailing" constant="1" id="Mho-lG-v0B"/>
                                                         <constraint firstAttribute="bottom" secondItem="6Nk-IY-MNw" secondAttribute="bottom" id="ZWO-3c-OOl"/>
-                                                        <constraint firstAttribute="trailing" secondItem="6Nk-IY-MNw" secondAttribute="trailing" constant="32" id="lyD-Zd-eDX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="6Nk-IY-MNw" secondAttribute="trailing" constant="13" id="lyD-Zd-eDX"/>
                                                         <constraint firstItem="aKN-NL-4E6" firstAttribute="leading" secondItem="IZ7-JC-UnF" secondAttribute="leading" id="nNv-Pb-O8l"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="checkBox" destination="aKN-NL-4E6" id="pM2-Nc-8AJ"/>
                                                     <outlet property="textView" destination="6Nk-IY-MNw" id="gNL-43-aVA"/>
-                                                </connections>
-                                            </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="addSection" id="3ZJ-VP-jvK" customClass="TodayAddTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="65" width="311" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3ZJ-VP-jvK" id="gLN-qD-Zol">
-                                                    <rect key="frame" x="0.0" y="0.0" width="311" height="43.666666666666664"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus_sign" translatesAutoresizingMaskIntoConstraints="NO" id="bHD-th-BBR">
-                                                            <rect key="frame" x="1" y="6" width="24" height="24"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="0OH-ct-T5M"/>
-                                                                <constraint firstAttribute="height" constant="24" id="pdC-pb-OOX"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2Iu-n0-mVr">
-                                                            <rect key="frame" x="26" y="0.0" width="253" height="43.666666666666664"/>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
-                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                        </textView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="2Iu-n0-mVr" secondAttribute="bottom" id="0Qo-16-jBG"/>
-                                                        <constraint firstItem="bHD-th-BBR" firstAttribute="top" secondItem="gLN-qD-Zol" secondAttribute="top" constant="6" id="73w-ba-U46"/>
-                                                        <constraint firstItem="2Iu-n0-mVr" firstAttribute="top" secondItem="gLN-qD-Zol" secondAttribute="top" id="bPw-TP-wyt"/>
-                                                        <constraint firstItem="bHD-th-BBR" firstAttribute="leading" secondItem="gLN-qD-Zol" secondAttribute="leading" constant="1" id="qtF-Zf-AZ4"/>
-                                                        <constraint firstItem="2Iu-n0-mVr" firstAttribute="leading" secondItem="bHD-th-BBR" secondAttribute="trailing" constant="1" id="tFs-U7-bYn"/>
-                                                        <constraint firstAttribute="trailing" secondItem="2Iu-n0-mVr" secondAttribute="trailing" constant="32" id="uET-me-dsd"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <connections>
-                                                    <outlet property="textView" destination="2Iu-n0-mVr" id="oS8-zi-1RE"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -591,6 +556,7 @@
                         <viewLayoutGuide key="safeArea" id="Mx9-Qf-I3w"/>
                     </view>
                     <connections>
+                        <outlet property="clearDoneButton" destination="9ca-Rw-ld9" id="PYa-YR-SgJ"/>
                         <outlet property="tableView" destination="12g-a3-ofk" id="1ht-mw-rvE"/>
                         <outlet property="todayBox" destination="hWW-si-CPG" id="Vus-2i-PLK"/>
                     </connections>

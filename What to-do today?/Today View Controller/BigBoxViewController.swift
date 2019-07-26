@@ -15,6 +15,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     // UI Components
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var todayBox: UIView!
+    @IBOutlet weak var clearDoneButton: UIButton!
     
     // Variables
     var user : User? = nil
@@ -25,6 +26,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     var expandingIndexRow: Int = 0
     var tempTodo = [Todo]()
 
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         }
         list = (user?.todoList)!
         reloadToday() // first time classifying
+        checkDoneExist()
         
         // Layout setting
         todayBox.layer.cornerRadius = 10
@@ -72,22 +75,66 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             selector: #selector(BigBoxViewController.reloadToday),
             name:NSNotification.Name(rawValue: "reloadToday"),
             object: nil)
-        
+        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(BigBoxViewController.sayHello))
+        doubleTapGesture.numberOfTapsRequired = 2
+        view.addGestureRecognizer(doubleTapGesture)
+    }
+    
+    @objc func sayHello() {
+        print("hello")
     }
     
     // call everytime when popup modification method is called
     @objc func reloadToday() {
         list = (user?.todoList)!
+        var upperLeft : [Todo] = []
+        var upperLeftIndex : [Int] = []
+        var upperRight :[Todo] = []
+        var upperRightIndex : [Int] = []
+        var bottomLeft : [Todo] = []
+        var bottomLeftIndex : [Int] = []
+        var bottomRight : [Todo] = []
+        var bottomRightIndex : [Int] = []
         todayList = []
         todayIndexList = []
         for i in stride(from: 0, to: list.count, by: 1) {
             if list[i].isToday {
-                todayList.append(list[i])
-                todayIndexList.append(i)
+                switch list[i].category! {
+                case "red":
+                    upperLeft.append(list[i])
+                    upperLeftIndex.append(i)
+                case "orange":
+                    upperRight.append(list[i])
+                    upperRightIndex.append(i)
+                case "blue":
+                    bottomLeft.append(list[i])
+                    bottomLeftIndex.append(i)
+                case "green":
+                    bottomRight.append(list[i])
+                    bottomRightIndex.append(i)
+                default: return
+                }
             }
-            print(list[i].content!)
         }
+        todayList = upperLeft + upperRight + bottomLeft + bottomRight
+        todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
+    }
+    
+    func checkDoneExist ()  {
+        var doneExist : Bool = false
+        todayList.forEach { todo in
+            if todo.done {
+                doneExist = true
+            }
+        }
+        if doneExist {
+            clearDoneButton.isHidden = false
+            clearDoneButton.isEnabled = true
+        } else {
+            clearDoneButton.isHidden = true
+            clearDoneButton.isEnabled = false
+        }
     }
     
     @IBAction func clearDone(_ sender: Any) {
@@ -111,17 +158,11 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     //
     //
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todayList.count + 1
+        return todayList.count
     }
     
     // this method is called multiple times whenever a certain indexPath is asking for a data, therefore, assign "" for index 'list.count'
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == todayList.count {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as! TodayAddTableViewCell
-            cell.expandCellDelegate = self
-            cell.addTodayRowDelegate = self
-            return cell
-        }
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.expandCellDelegate = self
         cell.tableCellTodoTodayBoxDelegate = self
@@ -205,11 +246,11 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         user?.todoList! = list
         PersistenceService.saveContext()
         tableView.reloadData()
+        checkDoneExist()
     }
     
     // edit the text in the today box
     func doneEdittingTodayCell(_ newText: String, _ sender : TodayTupleTableViewCell) {
-//        reloadToday()
         let index = tableView.indexPath(for: sender)?.row
         if newText.isEmpty {
             todayList.remove(at: index!)
@@ -222,7 +263,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
-        tableView.reloadData()
+        reloadToday()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     

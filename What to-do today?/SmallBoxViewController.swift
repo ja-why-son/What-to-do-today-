@@ -49,6 +49,12 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
     var popUp : PopUpViewController? = nil
     var tempTodo = [Todo]()
     var categoriesList = [String]()
+    
+    let UPPER_LEFT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.5791445374, blue: 0.5924175978, alpha: 1)
+    let UPPER_RIGHT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.7859908342, blue: 0.5220321417, alpha: 1)
+    let BOTTOM_LEFT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.9304491878, blue: 0.6437133551, alpha: 1)
+    let BOTTOM_RIGHT_COLOR : UIColor = #colorLiteral(red: 0.6162154078, green: 0.8536292911, blue: 0.6761775017, alpha: 1)
+    
 
     
     override func viewDidLoad() {
@@ -57,6 +63,10 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         orangeBox.layer.cornerRadius = 10
         blueBox.layer.cornerRadius = 10
         greenBox.layer.cornerRadius = 10
+        redBox.backgroundColor = UPPER_LEFT_COLOR
+        orangeBox.backgroundColor = UPPER_RIGHT_COLOR
+        blueBox.backgroundColor = BOTTOM_LEFT_COLOR
+        greenBox.backgroundColor = BOTTOM_RIGHT_COLOR
         
         // Data
         let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
@@ -175,9 +185,22 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
             }
         }
         redTextView.text = redText
+        redTextView.contentOffset = .zero
         orangeTextView.text = orangeText
+        orangeTextView.contentOffset = .zero
         blueTextView.text = blueText
+        blueTextView.contentOffset = .zero
         greenTextView.text = greenText
+        greenTextView.contentOffset = .zero
+//        print("the textview size");
+//        print(redTextView.contentSize);
+//        let ex = "- abcdefghijklmnopqrst"
+//        let hi = "- support both languages"
+//        let oneCh = "a"
+//        let size = ex.size(withAttributes: [.font: redTextView.font!])
+//        let size2 = oneCh.size(withAttributes: [.font: redTextView.font!])
+//        print("size of one character is \(size2)");
+//        print("size of text is \(size)");
     }
     
     
@@ -198,25 +221,25 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         
         switch senderTag {
             case 0: // do red
-                popUp?.color = #colorLiteral(red: 1, green: 0.5960784314, blue: 0.6941176471, alpha: 1)
+                popUp?.color = UPPER_LEFT_COLOR
                 popUp?.list = redList
                 popUp?.indexList = redIndexList
                 popUp?.category = "red"
                 popUp?.categoryName = categoriesList[0]
             case 1:  // do orange
-                popUp?.color = #colorLiteral(red: 1, green: 0.7859908342, blue: 0.5220321417, alpha: 1)
+                popUp?.color = UPPER_RIGHT_COLOR
                 popUp?.list = orangeList
                 popUp?.indexList = orangeIndexList
                 popUp?.category = "orange"
                 popUp?.categoryName = categoriesList[1]
             case 2:  // do blue
-                popUp?.color = #colorLiteral(red: 0.5487036109, green: 0.8750793338, blue: 1, alpha: 1)
+                popUp?.color = BOTTOM_LEFT_COLOR
                 popUp?.list = blueList
                 popUp?.indexList = blueIndexList
                 popUp?.category = "blue"
                 popUp?.categoryName = categoriesList[2]
             case 3:  // do green
-                popUp?.color = #colorLiteral(red: 0.5415468216, green: 1, blue: 0.6116992235, alpha: 1)
+                popUp?.color = BOTTOM_RIGHT_COLOR
                 popUp?.list = greenList
                 popUp?.indexList = greenIndexList
                 popUp?.category = "green"
