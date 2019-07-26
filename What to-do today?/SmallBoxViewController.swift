@@ -79,7 +79,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 let newUser = User(context: PersistenceService.context)
                 // load the instruction below 
                 newUser.todoList = createInstruction()
-                newUser.categoryList = ["1) Get started!", "2) Where's \"Today\"?", "3) With To-Doy...", "4) Enjoy!" ]
+                newUser.categoryList = ["Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -163,22 +163,22 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
                 // do red
                 redList.append(mainList[i])
                 redIndexList.append(i)
-                redText = redText + "- " + mainList[i].content! + "\n"
+                redText = redText +  mainList[i].content! + "\n"
             case "orange":
                 // do orange
                 orangeList.append(mainList[i])
                 orangeIndexList.append(i)
-                orangeText = orangeText + "- " + mainList[i].content! + "\n"
+                orangeText = orangeText + mainList[i].content! + "\n"
             case "blue":
                 // do blue
                 blueList.append(mainList[i])
                 blueIndexList.append(i)
-                blueText = blueText + "- " + mainList[i].content! + "\n"
+                blueText = blueText + mainList[i].content! + "\n"
             case "green":
                 // do green
                 greenList.append(mainList[i])
                 greenIndexList.append(i)
-                greenText = greenText + "- " + mainList[i].content! + "\n"
+                greenText = greenText + mainList[i].content! + "\n"
             case "none":
                 print()
             default: return
