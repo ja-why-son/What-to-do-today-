@@ -119,6 +119,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         todayList = upperLeft + upperRight + bottomLeft + bottomRight
         todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
+        checkDoneExist()
     }
     
     func checkDoneExist ()  {
