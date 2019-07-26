@@ -55,7 +55,7 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-gG-Prt">
-                                                            <rect key="frame" x="6" y="6.6666666666666679" width="28" height="28.000000000000004"/>
+                                                            <rect key="frame" x="6" y="4.3333333333333321" width="28" height="27.999999999999996"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="28" id="G3g-Dl-qMh"/>
                                                                 <constraint firstAttribute="width" constant="28" id="Gid-aM-gJS"/>
@@ -66,7 +66,7 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="top" secondItem="EBo-cR-Azo" secondAttribute="top" constant="6.6699999999999999" id="H5H-oq-bh3"/>
+                                                        <constraint firstItem="1cY-gG-Prt" firstAttribute="centerY" secondItem="EBo-cR-Azo" secondAttribute="centerY" id="J0R-43-ZLE"/>
                                                         <constraint firstItem="sfz-Ko-erf" firstAttribute="top" secondItem="EBo-cR-Azo" secondAttribute="top" id="SdF-um-j8V"/>
                                                         <constraint firstAttribute="bottom" secondItem="sfz-Ko-erf" secondAttribute="bottom" id="kKa-gC-awq"/>
                                                         <constraint firstItem="1cY-gG-Prt" firstAttribute="leading" secondItem="EBo-cR-Azo" secondAttribute="leading" constant="6" id="tKw-g3-QIx"/>
@@ -94,7 +94,7 @@
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-pg-qh0">
-                                                            <rect key="frame" x="7" y="6.6666666666666679" width="24" height="24"/>
+                                                            <rect key="frame" x="7" y="6.3333333333333321" width="24" height="24"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="24" id="64c-4W-wHj"/>
                                                                 <constraint firstAttribute="height" constant="24" id="8IK-ym-0bt"/>
@@ -108,10 +108,10 @@
                                                     <constraints>
                                                         <constraint firstItem="hda-3a-MPG" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" id="0RD-hb-USz"/>
                                                         <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" constant="8" id="3Tc-Yc-IH3"/>
+                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="centerY" secondItem="lot-sM-746" secondAttribute="centerY" id="93E-07-t41"/>
                                                         <constraint firstItem="Tli-pg-qh0" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" constant="7" id="RpR-Gf-Jjj"/>
                                                         <constraint firstAttribute="trailing" secondItem="hda-3a-MPG" secondAttribute="trailing" constant="26" id="X1w-Mu-7gA"/>
                                                         <constraint firstAttribute="bottom" secondItem="hda-3a-MPG" secondAttribute="bottom" id="jry-Oh-aGu"/>
-                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" constant="6.8200000000000003" id="qRm-n2-Sn6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
