@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate {
+class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate {
     
     // UI Components
     @IBOutlet weak var expandBox: UIView!
@@ -120,6 +120,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
+            // change text
         }
         return cell
     }
@@ -206,6 +207,10 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let tableRect = tableView.rect(forSection: 0)
         tableView.scrollRectToVisible(tableRect, animated: false)
 
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "endEdit"), object: nil)
     }
     
     /**********************************************************************************************************/

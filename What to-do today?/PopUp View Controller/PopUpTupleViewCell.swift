@@ -25,7 +25,15 @@ class PopUpTableViewCell: ExpandableTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
-        
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(PopUpTableViewCell.endEdit),
+            name: NSNotification.Name(rawValue: "endEdit"),
+            object: nil)
+    }
+    
+    @objc func endEdit () {
+        textView.resignFirstResponder()
     }
     
     

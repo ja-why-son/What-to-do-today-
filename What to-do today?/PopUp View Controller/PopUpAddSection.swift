@@ -17,6 +17,15 @@ class RedAddTableViewCell: addTableViewCell {
         textView.text = "Add new todo here";
         textView.textColor = UIColor.gray
         textView.delegate = self
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(RedAddTableViewCell.endEdit),
+            name: NSNotification.Name(rawValue: "endEdit"),
+            object: nil)
+    }
+    
+    @objc func endEdit () {
+        textView.resignFirstResponder()
     }
     
     @IBAction func enterEdit(_ sender: Any) {

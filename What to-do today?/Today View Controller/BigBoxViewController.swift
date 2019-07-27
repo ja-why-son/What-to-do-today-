@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ExpandingCellDelegate, TableCellTodoTodayBoxDelegate, AddTodayTodoDelegate{
+class BigBoxViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, TableCellTodoTodayBoxDelegate, AddTodayTodoDelegate{
     
     
     // UI Components
@@ -182,11 +182,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     //
     //
     //
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "endEdit"), object: nil)
+    }
+    
     @objc func keyboardWillShow(notification: NSNotification) {
         adjustForKeyboard(notification: notification);
-        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-        tap.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tap)
+//        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
+//        tap.cancelsTouchesInView = false
+//        self.view.addGestureRecognizer(tap)
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
@@ -266,6 +271,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         PersistenceService.saveContext()
         reloadToday()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+    }
+    
+    func moveOutToday(_ sender : TodayTupleTableViewCell) {
+        let index = tableView.indexPath(for: sender)?.row
+        list[todayIndexList[index!]].isToday = !list[todayIndexList[index!]].isToday
+        user?.todoList! = []
+        PersistenceService.saveContext()
+        user?.todoList! = list
+        PersistenceService.saveContext()
+        reloadToday()
     }
     
 }

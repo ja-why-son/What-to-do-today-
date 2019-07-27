@@ -194,17 +194,17 @@
                                 <rect key="frame" x="16" y="90.333333333333314" width="343" height="663.66666666666674"/>
                                 <subviews>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
-                                        <rect key="frame" x="180" y="0.0" width="164" height="324.33333333333331"/>
+                                        <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="324.33333333333331"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design &amp; Misc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxw-G5-GxB">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.33333333333334" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
-                                                <rect key="frame" x="12" y="42.000000000000028" width="140" height="274.33333333333337"/>
+                                                <rect key="frame" x="12" y="42.000000000000028" width="139.33333333333334" height="274.33333333333337"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -218,47 +218,8 @@ Show color under check box
 Thank Kelden for his Designs and awesome Swift help</string>
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="11" name="HelveticaNeue-Light"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -284,10 +245,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-xL-jcs">
-                                        <rect key="frame" x="0.0" y="0.0" width="164" height="324.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="324.33333333333331"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
-                                                <rect key="frame" x="12" y="42.000000000000028" width="140" height="274.33333333333337"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-Bh-7L6">
+                                                <rect key="frame" x="12" y="12" width="139.66666666666666" height="24"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
+                                                <rect key="frame" x="12" y="41" width="140" height="274.33333333333337"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -301,7 +269,7 @@ Show color under check box
 Thank Kelden for his Designs and awesome Swift help</string>
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="11" name="HelveticaNeue-Light"/>
+                                                            <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -311,13 +279,6 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                     <outletCollection property="gestureRecognizers" destination="get-xx-jWh" appends="YES" id="WT2-eK-foS"/>
                                                 </connections>
                                             </textView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-Bh-7L6">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
-                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="1" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
@@ -335,17 +296,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
-                                        <rect key="frame" x="0.0" y="339.33333333333337" width="164" height="324.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="339.33333333333337" width="163.66666666666666" height="324.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsr-bl-x4I">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.66666666666666" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
-                                                <rect key="frame" x="12" y="42" width="140" height="274.33333333333331"/>
+                                                <rect key="frame" x="12" y="42" width="139.66666666666666" height="274.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -359,47 +320,8 @@ Show color under check box
 Thank Kelden for his Designs and awesome Swift help</string>
                                                         <attributes>
                                                             <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                                                            <font key="NSFont" size="11" name="HelveticaNeue-Light"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
-                                                                <tabStops>
-                                                                    <textTab alignment="left" location="28">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="56">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="84">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="112">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="140">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="168">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="196">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="224">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="252">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="280">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="308">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                    <textTab alignment="left" location="336">
-                                                                        <options/>
-                                                                    </textTab>
-                                                                </tabStops>
-                                                            </paragraphStyle>
+                                                            <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                                         </attributes>
                                                     </fragment>
                                                 </attributedString>
@@ -425,17 +347,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
-                                        <rect key="frame" x="179" y="339.33333333333337" width="164" height="324.33333333333337"/>
+                                        <rect key="frame" x="178.66666666666663" y="339.33333333333337" width="163.33333333333337" height="324.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM5-qt-86g">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.33333333333334" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
-                                                <rect key="frame" x="12" y="42" width="140" height="274.33333333333331"/>
+                                                <rect key="frame" x="12" y="42" width="139.33333333333334" height="274.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -448,7 +370,7 @@ Send back mechanism
 Show color under check box
 Thank Kelden for his Designs and awesome Swift help</string>
                                                         <attributes>
-                                                            <font key="NSFont" size="11" name="HelveticaNeue-Light"/>
+                                                            <font key="NSFont" size="13" name="HelveticaNeue-Light"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacing="3" paragraphSpacingBefore="5" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
                                                     </fragment>
@@ -608,7 +530,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="269" height="36.666666666666664"/>
+                                                            <rect key="frame" x="29" y="0.0" width="253" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="0.69999999999999996"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -624,19 +546,34 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                                 <action selector="checkCheckBox:" destination="awd-Mk-cN6" eventType="touchUpInside" id="bnr-X9-Y01"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tK5-7D-UN3">
+                                                            <rect key="frame" x="269" y="8.3333333333333357" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="20" id="Ihl-4W-mPC"/>
+                                                                <constraint firstAttribute="height" constant="20" id="tN5-S8-yEc"/>
+                                                            </constraints>
+                                                            <state key="normal" image="later_icon"/>
+                                                            <connections>
+                                                                <action selector="sayWOW:" destination="jI1-Vd-1QK" eventType="touchUpInside" id="uYZ-PI-hnh"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="tK5-7D-UN3" secondAttribute="trailing" constant="6" id="2zY-No-bih"/>
                                                         <constraint firstItem="aKN-NL-4E6" firstAttribute="centerY" secondItem="IZ7-JC-UnF" secondAttribute="centerY" id="7Lz-le-XK4"/>
                                                         <constraint firstItem="6Nk-IY-MNw" firstAttribute="top" secondItem="IZ7-JC-UnF" secondAttribute="top" id="Dpr-A0-VGD"/>
                                                         <constraint firstItem="6Nk-IY-MNw" firstAttribute="leading" secondItem="aKN-NL-4E6" secondAttribute="trailing" constant="1" id="Mho-lG-v0B"/>
                                                         <constraint firstAttribute="bottom" secondItem="6Nk-IY-MNw" secondAttribute="bottom" id="ZWO-3c-OOl"/>
+                                                        <constraint firstItem="tK5-7D-UN3" firstAttribute="centerY" secondItem="IZ7-JC-UnF" secondAttribute="centerY" id="bNp-e5-ZQg"/>
                                                         <constraint firstAttribute="trailing" secondItem="6Nk-IY-MNw" secondAttribute="trailing" constant="13" id="lyD-Zd-eDX"/>
                                                         <constraint firstItem="aKN-NL-4E6" firstAttribute="leading" secondItem="IZ7-JC-UnF" secondAttribute="leading" id="nNv-Pb-O8l"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="checkBox" destination="aKN-NL-4E6" id="pM2-Nc-8AJ"/>
+                                                    <outlet property="notToday" destination="tK5-7D-UN3" id="ZWp-Jb-K2h"/>
+                                                    <outlet property="textRightConstraint" destination="lyD-Zd-eDX" id="hkD-Pd-pYg"/>
                                                     <outlet property="textView" destination="6Nk-IY-MNw" id="gNL-43-aVA"/>
                                                 </connections>
                                             </tableViewCell>
@@ -706,6 +643,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
     <resources>
         <image name="clear_done_icon" width="512" height="512"/>
         <image name="cross_icon" width="512" height="512"/>
+        <image name="later_icon" width="512" height="512"/>
         <image name="plus_sign" width="100" height="100"/>
     </resources>
 </document>
