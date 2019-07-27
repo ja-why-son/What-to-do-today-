@@ -28,9 +28,6 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         textView.delegate = self
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(TodayTupleTableViewCell.sayHello))
-        doubleTapGesture.numberOfTapsRequired = 2
-        self.addGestureRecognizer(doubleTapGesture)
         notToday.isEnabled = false
         notToday.isHidden = true
         NotificationCenter.default.addObserver(
@@ -44,13 +41,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
         textView.resignFirstResponder()
     }
     
-    @objc func sayHello() {
-        print("hello")
-        tableCellTodoTodayBoxDelegate?.doneEdittingTodayCell("", self)
-    }
-    
     @IBAction func sayWOW(_ sender: Any) {
-        print("wow")
         tableCellTodoTodayBoxDelegate?.moveOutToday(self)
     }
     

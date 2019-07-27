@@ -49,16 +49,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sfz-Ko-erf">
-                                                            <rect key="frame" x="33" y="0.0" width="231" height="36.666666666666664"/>
+                                                            <rect key="frame" x="35" y="0.0" width="229" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cY-gG-Prt">
-                                                            <rect key="frame" x="0.0" y="4.3333333333333321" width="28" height="27.999999999999996"/>
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="30" height="29.999999999999996"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="28" id="G3g-Dl-qMh"/>
-                                                                <constraint firstAttribute="width" constant="28" id="Gid-aM-gJS"/>
+                                                                <constraint firstAttribute="height" constant="30" id="G3g-Dl-qMh"/>
+                                                                <constraint firstAttribute="width" constant="30" id="Gid-aM-gJS"/>
                                                             </constraints>
                                                             <connections>
                                                                 <action selector="checkCheckbox:" destination="ACt-8f-EQn" eventType="touchUpInside" id="0Gf-I4-pwg"/>
@@ -88,16 +88,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hda-3a-MPG">
-                                                            <rect key="frame" x="31.000000000000014" y="0.0" width="219.33333333333337" height="36.666666666666664"/>
+                                                            <rect key="frame" x="35.000000000000014" y="0.0" width="215.33333333333337" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tli-pg-qh0">
-                                                            <rect key="frame" x="7" y="6.3333333333333321" width="24" height="24"/>
+                                                            <rect key="frame" x="0.0" y="5" width="27" height="27"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="24" id="64c-4W-wHj"/>
-                                                                <constraint firstAttribute="height" constant="24" id="8IK-ym-0bt"/>
+                                                                <constraint firstAttribute="width" constant="27" id="64c-4W-wHj"/>
+                                                                <constraint firstAttribute="height" constant="27" id="8IK-ym-0bt"/>
                                                             </constraints>
                                                             <state key="normal" image="plus_sign"/>
                                                             <connections>
@@ -107,9 +107,9 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="hda-3a-MPG" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" id="0RD-hb-USz"/>
-                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" id="3Tc-Yc-IH3"/>
+                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" constant="8" id="3Tc-Yc-IH3"/>
                                                         <constraint firstItem="Tli-pg-qh0" firstAttribute="centerY" secondItem="lot-sM-746" secondAttribute="centerY" id="93E-07-t41"/>
-                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" constant="7" id="RpR-Gf-Jjj"/>
+                                                        <constraint firstItem="Tli-pg-qh0" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" id="RpR-Gf-Jjj"/>
                                                         <constraint firstAttribute="trailing" secondItem="hda-3a-MPG" secondAttribute="trailing" constant="26" id="X1w-Mu-7gA"/>
                                                         <constraint firstAttribute="bottom" secondItem="hda-3a-MPG" secondAttribute="bottom" id="jry-Oh-aGu"/>
                                                     </constraints>
@@ -520,7 +520,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="12g-a3-ofk">
                                         <rect key="frame" x="16" y="70.666666666666686" width="295" height="579.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <inset key="separatorInset" minX="30" minY="0.0" maxX="13" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="38" minY="0.0" maxX="13" maxY="0.0"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Tuple" rowHeight="37" id="jI1-Vd-1QK" customClass="TodayTupleTableViewCell" customModule="What_to_do_today_" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="295" height="37"/>
@@ -530,17 +530,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="29" y="0.0" width="253" height="36.666666666666664"/>
+                                                            <rect key="frame" x="35" y="0.0" width="247" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="0.69999999999999996"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                                                         </textView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKN-NL-4E6">
-                                                            <rect key="frame" x="0.0" y="4.3333333333333321" width="28" height="27.999999999999996"/>
+                                                            <rect key="frame" x="0.0" y="3.3333333333333321" width="30" height="29.999999999999996"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="28" id="DjB-c6-USi"/>
-                                                                <constraint firstAttribute="height" constant="28" id="YNb-3a-2Q1"/>
+                                                                <constraint firstAttribute="width" constant="30" id="DjB-c6-USi"/>
+                                                                <constraint firstAttribute="height" constant="30" id="YNb-3a-2Q1"/>
                                                             </constraints>
                                                             <connections>
                                                                 <action selector="checkCheckBox:" destination="awd-Mk-cN6" eventType="touchUpInside" id="bnr-X9-Y01"/>
@@ -563,7 +563,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                         <constraint firstAttribute="trailing" secondItem="tK5-7D-UN3" secondAttribute="trailing" constant="6" id="2zY-No-bih"/>
                                                         <constraint firstItem="aKN-NL-4E6" firstAttribute="centerY" secondItem="IZ7-JC-UnF" secondAttribute="centerY" id="7Lz-le-XK4"/>
                                                         <constraint firstItem="6Nk-IY-MNw" firstAttribute="top" secondItem="IZ7-JC-UnF" secondAttribute="top" id="Dpr-A0-VGD"/>
-                                                        <constraint firstItem="6Nk-IY-MNw" firstAttribute="leading" secondItem="aKN-NL-4E6" secondAttribute="trailing" constant="1" id="Mho-lG-v0B"/>
+                                                        <constraint firstItem="6Nk-IY-MNw" firstAttribute="leading" secondItem="aKN-NL-4E6" secondAttribute="trailing" constant="5" id="Mho-lG-v0B"/>
                                                         <constraint firstAttribute="bottom" secondItem="6Nk-IY-MNw" secondAttribute="bottom" id="ZWO-3c-OOl"/>
                                                         <constraint firstItem="tK5-7D-UN3" firstAttribute="centerY" secondItem="IZ7-JC-UnF" secondAttribute="centerY" id="bNp-e5-ZQg"/>
                                                         <constraint firstAttribute="trailing" secondItem="6Nk-IY-MNw" secondAttribute="trailing" constant="13" id="lyD-Zd-eDX"/>
