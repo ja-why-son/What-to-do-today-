@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 
-class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate {
+class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate, UITableViewDragDelegate {
     
     // UI Components
     @IBOutlet weak var expandBox: UIView!
@@ -54,6 +54,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             selector:#selector(PopUpViewController.keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
     }
     
     /**********************************************************************************************************/
@@ -172,7 +174,20 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         return nil
     }
+
+    func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+        let todoItem = list[indexList[indexPath.row]]
+        let itemProvider = NSItemProvider(object: todoItem)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        return[dragItem]
+    }
     
+    func tableView(_ tableView: UITableView, dragPreviewParametersForRowAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        let estilo = UIDragPreviewParameters()
+        estilo.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+        return estilo
+    }
+
     /**********************************************************************************************************/
     // keyboard configuration
     //
