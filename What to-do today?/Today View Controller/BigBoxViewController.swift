@@ -40,7 +40,8 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             if result.count == 0 { // []
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
-                newUser.todoList = []
+                // load the instruction below
+                newUser.categoryList = ["Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -75,14 +76,8 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             selector: #selector(BigBoxViewController.reloadToday),
             name:NSNotification.Name(rawValue: "reloadToday"),
             object: nil)
-        let doubleTapGesture = UITapGestureRecognizer(target: self, action: #selector(BigBoxViewController.sayHello))
-        doubleTapGesture.numberOfTapsRequired = 2
-        view.addGestureRecognizer(doubleTapGesture)
     }
-    
-    @objc func sayHello() {
-        print("hello")
-    }
+
     
     // call everytime when popup modification method is called
     @objc func reloadToday() {

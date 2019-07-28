@@ -111,10 +111,7 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         let bottomLeft = [Todo(content: "Plan out your tasks today", category: "blue", isToday: false),
                           Todo(content: "Organize your to-do lists", category: "blue", isToday: false)]
         let bottomRight = [Todo(content: "If you like this app, make sure to rate us on the app store", category: "green", isToday: false),Todo(content: "Happy productivity!", category: "green", isToday: false)]
-        let today = [Todo(content: "Finish these tasks today", category: "none", isToday: true),
-                     Todo(content: "Tap \"New Day\" to clear your checked taks", category: "none", isToday: true),
-                     Todo(content: "Swipe RIGHT to get back to home boxes", category: "none", isToday: true)]
-        return today + upperLeft + upperRight + bottomLeft + bottomRight
+        return upperLeft + upperRight + bottomLeft + bottomRight
     }
     
     @objc func editLabel(_ notification : NSNotification) {
