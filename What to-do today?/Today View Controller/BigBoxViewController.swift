@@ -271,11 +271,14 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     func moveOutToday(_ sender : TodayTupleTableViewCell) {
         let index = tableView.indexPath(for: sender)?.row
         list[todayIndexList[index!]].isToday = !list[todayIndexList[index!]].isToday
+        todayList.remove(at: index!)
+        todayIndexList.remove(at: index!)
         user?.todoList! = []
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
-        reloadToday()
+        tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .automatic)
+//        reloadToday()
     }
     
 }

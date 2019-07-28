@@ -8,9 +8,11 @@
 
 import UIKit
 import CoreData
+import MobileCoreServices
 
 
-class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate, UITableViewDragDelegate {
+class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate, ExpandingCellDelegate, AddTableViewCellDelegate, TableCellTodoSmallBoxDelegate, UITableViewDragDelegate, UITableViewDropDelegate {
+ 
     
     // UI Components
     @IBOutlet weak var expandBox: UIView!
@@ -56,6 +58,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             object: nil)
         tableView.dragInteractionEnabled = true
         tableView.dragDelegate = self
+        tableView.dropDelegate = self
     }
     
     /**********************************************************************************************************/
@@ -123,6 +126,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
             // change text
+            // 刪除線
         }
         return cell
     }
@@ -174,19 +178,109 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
         return nil
     }
-
+    
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        let todoItem = list[indexList[indexPath.row]]
+        if indexPath.row == list.count {
+            return []
+        }
+//        let data = String(indexPath.row).data(using: .utf8)
+        let todoItem = list[indexPath.row]
         let itemProvider = NSItemProvider(object: todoItem)
+//        let itemProvider = NSItemProvider()
+//        itemProvider.registerDataRepresentation(forTypeIdentifier: kUTTypePlainText as String, visibility: .all) { completion in
+//            completion(data, nil)
+//            return nil
+//        }
         let dragItem = UIDragItem(itemProvider: itemProvider)
         return[dragItem]
     }
     
     func tableView(_ tableView: UITableView, dragPreviewParametersForRowAt indexPath: IndexPath) -> UIDragPreviewParameters? {
         let estilo = UIDragPreviewParameters()
-        estilo.backgroundColor = UIColor(displayP3Red: 0, green: 0, blue: 0, alpha: 0)
+        estilo.backgroundColor = color
         return estilo
     }
+    
+    func tableView(_ tableView: UITableView, canHandle session: UIDropSession) -> Bool {
+        return session.canLoadObjects(ofClass: Todo.self)
+    }
+    
+    /**
+     A drop proposal from a table view includes two items: a drop operation,
+     typically .move or .copy; and an intent, which declares the action the
+     table view will take upon receiving the items. (A drop proposal from a
+     custom view does includes only a drop operation, not an intent.)
+     */
+    func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
+        // The .move operation is available only for dragging within a single app.
+        if let _ = destinationIndexPath {
+            if destinationIndexPath!.row >= list.count {
+                return UITableViewDropProposal(operation: .forbidden)
+            }
+        } else {
+            return UITableViewDropProposal(operation: .forbidden)
+        }
+        if tableView.hasActiveDrag {
+            if session.items.count > 1 {
+                return UITableViewDropProposal(operation: .cancel)
+            } else {
+                return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
+            }
+        } else {
+            return UITableViewDropProposal(operation: .copy, intent: .insertAtDestinationIndexPath)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
+        let destinationIndexPath: IndexPath
+        
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            // Get last index path of table view.
+            let row = tableView.numberOfRows(inSection: 0)
+            destinationIndexPath = IndexPath(row: row, section: 0)
+        }
+        
+        coordinator.session.loadObjects(ofClass: Todo.self) { (todos) in
+            let todoItems = todos as! [Todo]
+            var indexPaths = [IndexPath]()
+            for (_, item) in todoItems.enumerated() {
+                let indexPath = IndexPath(row: destinationIndexPath.row, section: 0)
+                self.list.insert(item, at: indexPath.row)
+                indexPaths.append(indexPath)
+            }
+            tableView.insertRows(at: indexPaths, with: .automatic)
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, dropPreviewParametersForRowAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        let estilo = UIDragPreviewParameters()
+        estilo.backgroundColor = color
+        return estilo
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        if destinationIndexPath.row != list.count {
+            let todo = list[sourceIndexPath.row]
+            let start = indexList[sourceIndexPath.row]
+            let end = indexList[destinationIndexPath.row]
+            delegate?.swapTodo(startFrom: start, endAt: end)
+            list.remove(at: sourceIndexPath.row)
+            list.insert(todo, at: destinationIndexPath.row)
+            indexList.remove(at: sourceIndexPath.row)
+            indexList.insert(start, at: destinationIndexPath.row)
+            
+        }
+    }
+    
+   
+    
 
     /**********************************************************************************************************/
     // keyboard configuration
@@ -253,7 +347,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let offset = list.count == 0 ? 0 : 1
         let indexPath = IndexPath(item: list.count - offset, section: 0)
         tableView.insertRows(at: [indexPath], with: .fade)
-        UIView.performWithoutAnimation{tableView.reloadData()}
+//        UIView.performWithoutAnimation{tableView.reloadData()}
         
     }
     
@@ -302,6 +396,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cellIndex = indexPath.row
         list[cellIndex].isToday = !list[cellIndex].isToday
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
+//        tableView.reloadRows(at: [indexPath], with: .none)
         tableView.reloadData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
@@ -316,7 +411,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
-        UIView.performWithoutAnimation{tableView.reloadData()}
+//        UIView.performWithoutAnimation{tableView.reloadData()}
     }
     
  

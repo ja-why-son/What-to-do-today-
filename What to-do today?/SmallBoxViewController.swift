@@ -15,6 +15,7 @@ protocol SmallBoxPopUpDelegate {
     func checkBox(ogIndex index : Int)
     func moveTodayOrOut(ogIndex index : Int)
     func deleteTodo(ogIndex index : Int, _ category : String) -> [Int]
+    func swapTodo(startFrom origin : Int, endAt destination : Int)
 }
 
 
@@ -304,5 +305,17 @@ class SmallBoxViewController: UIViewController, SmallBoxPopUpDelegate {
         case "green" : return greenIndexList
         default : return [0]
         }
+    }
+    
+    func swapTodo(startFrom origin: Int, endAt destination: Int) {
+        mainList = (user?.todoList)!
+        let temp = mainList[origin]
+        mainList.remove(at: origin)
+        mainList.insert(temp, at: destination)
+        user?.todoList = []
+        PersistenceService.saveContext() // Save newly created user
+        user?.todoList = mainList
+        PersistenceService.saveContext() // Save newly created user
+        reload()
     }
 }
