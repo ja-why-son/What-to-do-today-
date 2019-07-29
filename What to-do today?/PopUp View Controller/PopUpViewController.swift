@@ -125,8 +125,10 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
-            // change text
-            // 刪除線
+            let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font], range: NSMakeRange(0, attributeString.length))
+            cell.textView.attributedText = attributeString
         }
         return cell
     }
@@ -140,7 +142,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Delete item")
             self.deleteTodo(indexPath)
-            success(true)
+            success(true) 
         })
         deleteAction.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         
@@ -382,7 +384,6 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         let index = sender.tag
-        print("here\(index)")
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])
         tableView.reloadData()

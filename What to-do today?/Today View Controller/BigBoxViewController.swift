@@ -169,6 +169,10 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
+            let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font], range: NSMakeRange(0, attributeString.length))
+            cell.textView.attributedText = attributeString
         }
         return cell
     }
