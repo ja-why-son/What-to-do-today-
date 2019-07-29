@@ -127,7 +127,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
             let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font], range: NSMakeRange(0, attributeString.length))
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font!], range: NSMakeRange(0, attributeString.length))
             cell.textView.attributedText = attributeString
         }
         return cell
@@ -215,6 +215,15 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
      */
     func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
         // The .move operation is available only for dragging within a single app.
+        var isEmpty : Bool = false
+        session.loadObjects(ofClass: Todo.self, completion: { (todos) in
+            if todos.isEmpty {
+                isEmpty = true
+            }
+        })
+        if isEmpty {
+            return UITableViewDropProposal(operation: .forbidden)
+        }
         if let _ = destinationIndexPath {
             if destinationIndexPath!.row >= list.count {
                 return UITableViewDropProposal(operation: .forbidden)
@@ -264,7 +273,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
+        return indexPath.row != list.count
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -277,7 +286,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             list.insert(todo, at: destinationIndexPath.row)
             indexList.remove(at: sourceIndexPath.row)
             indexList.insert(start, at: destinationIndexPath.row)
-            
+            tableView.reloadData()
         }
     }
     
@@ -384,6 +393,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         let generator = UIImpactFeedbackGenerator(style: .medium)
         generator.impactOccurred()
         let index = sender.tag
+        print("check box is \(index)")
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])
         tableView.reloadData()
@@ -406,12 +416,24 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     func deleteTodo(_ indexPath : IndexPath) {
         let isToday : Bool = list[indexPath.row].isToday
         print("index path is \(indexPath)");
-        list.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: .automatic)
+//        for i in indexPath.row + 1 ... list.count - 1 {
+//            tableView.cellForRow(at: IndexPath(row: i, section: 0)).check
+//        }
         indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
+        list.remove(at: indexPath.row)
+//        indexList.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
         if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
+        var indexPaths : [IndexPath] = []
+        if indexPath.row <= list.count - 1 {
+            print("doing reload")
+            for i in indexPath.row ... list.count - 1 {
+                indexPaths.append(IndexPath(row: i, section: 0))
+            }
+        }
+        tableView.reloadRows(at: indexPaths, with: .automatic)
 //        UIView.performWithoutAnimation{tableView.reloadData()}
     }
     
