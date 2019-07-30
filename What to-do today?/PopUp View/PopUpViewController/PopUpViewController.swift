@@ -30,6 +30,8 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     var delegate : SmallBoxPopUpDelegate?
     var categoryName : String? = nil
     var labelTag : Int?
+    var scrollTarget : IndexPath?
+    var labelEdit : Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,9 +58,12 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             selector:#selector(PopUpViewController.keyboardWillHide),
             name: UIResponder.keyboardWillHideNotification,
             object: nil)
+         NotificationCenter.default.addObserver(self, selector: #selector(PopUpViewController.editLabel), name:NSNotification.Name(rawValue: "label is editting"), object: nil)
         tableView.dragInteractionEnabled = true
         tableView.dragDelegate = self
         tableView.dropDelegate = self
+        scrollTarget = IndexPath(row: 0, section: 0)
+        labelEdit = false
     }
     
     /**********************************************************************************************************/
@@ -108,11 +113,14 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: "addSection", for: indexPath) as! RedAddTableViewCell
             cell.expandCellDelegate = self
             cell.addRowDelegate = self
+            print(indexPath)
+            cell.index = indexPath
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "tuple", for: indexPath) as! PopUpTableViewCell
         cell.expandCellDelegate = self
         cell.tableCellTodoSmallBoxDelegate = self
+        cell.indexPath = indexPath
         let currTodo = list[indexPath.row]
         cell.textView.text = currTodo.content
         if currTodo.isToday == true {
@@ -123,6 +131,9 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         cell.checkBox.tag = indexPath.row
         if currTodo.done! == false {
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
+            let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font!], range: NSMakeRange(0, attributeString.length))
+            cell.textView.attributedText = attributeString
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
             let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
@@ -215,21 +226,12 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
      */
     func tableView(_ tableView: UITableView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UITableViewDropProposal {
         // The .move operation is available only for dragging within a single app.
-        var isEmpty : Bool = false
-        session.loadObjects(ofClass: Todo.self, completion: { (todos) in
-            if todos.isEmpty {
-                isEmpty = true
-            }
-        })
-        if isEmpty {
-            return UITableViewDropProposal(operation: .forbidden)
-        }
         if let _ = destinationIndexPath {
             if destinationIndexPath!.row >= list.count {
-                return UITableViewDropProposal(operation: .forbidden)
+                return UITableViewDropProposal(operation: .cancel)
             }
         } else {
-            return UITableViewDropProposal(operation: .forbidden)
+            return UITableViewDropProposal(operation: .cancel)
         }
         if tableView.hasActiveDrag {
             if session.items.count > 1 {
@@ -243,26 +245,28 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, performDropWith coordinator: UITableViewDropCoordinator) {
-        let destinationIndexPath: IndexPath
+//        let destinationIndexPath: IndexPath
         
-        if let indexPath = coordinator.destinationIndexPath {
-            destinationIndexPath = indexPath
-        } else {
-            // Get last index path of table view.
-            let row = tableView.numberOfRows(inSection: 0)
-            destinationIndexPath = IndexPath(row: row, section: 0)
-        }
+//        if let in dexPath = coordinator.destinationIndexPath {
+//            destinationIndexPath = indexPath
+//        } else {
+//            // Get last index path of table view.
+//            let row = tableView.numberOfRows(inSection: 0)
+//            destinationIndexPath = IndexPath(row: row, section: 0)
+//        }
         
-        coordinator.session.loadObjects(ofClass: Todo.self) { (todos) in
-            let todoItems = todos as! [Todo]
-            var indexPaths = [IndexPath]()
-            for (_, item) in todoItems.enumerated() {
-                let indexPath = IndexPath(row: destinationIndexPath.row, section: 0)
-                self.list.insert(item, at: indexPath.row)
-                indexPaths.append(indexPath)
-            }
-            tableView.insertRows(at: indexPaths, with: .automatic)
-        }
+//        coordinator.session.loadObjects(ofClass: Todo.self) { (todos) in
+//            let todoItems = todos as! [Todo]
+//            var indexPaths = [IndexPath]()
+//            print("HERE")
+//            print(todoItems.count)
+//            for (_, item) in todoItems.enumerated() {
+//                let indexPath = IndexPath(row: destinationIndexPath.row, section: 0)
+//                self.list.insert(item, at: indexPath.row)
+//                indexPaths.append(indexPath)
+//            }
+//            tableView.insertRows(at: indexPaths, with: .automatic)
+//        }
         
     }
     
@@ -288,6 +292,7 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
             indexList.insert(start, at: destinationIndexPath.row)
             tableView.reloadData()
         }
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
     
    
@@ -318,14 +323,26 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
         if notification.name == UIResponder.keyboardWillHideNotification {
 //            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableView.estimatedRowHeight, right: 0) // if there's a problem think about using the frame and content size
 //            tableView.scrollIndicatorInsets = .zero
-            tableView.contentInset = .zero
+            self.tableView.contentInset = .zero
         } else {
-            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+            print("delay")
+            self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
 //            tableView.scrollIndicatorInsets = tableView.contentInset
         }
-        tableView.scrollIndicatorInsets = tableView.contentInset
-        let tableRect = tableView.rect(forSection: 0)
-        tableView.scrollRectToVisible(tableRect, animated: false)
+        self.tableView.scrollIndicatorInsets = self.tableView.contentInset
+        print("scroll target is \(scrollTarget)")
+        if !labelEdit! {
+            if let indexPath = scrollTarget {
+                print("number of section is \(tableView.numberOfSections)")
+                print("number of row is \(tableView.numberOfRows(inSection: 0))")
+                print("scroll to \(indexPath.row)")
+                self.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
+            }
+        }
+        
+        
+//        let tableRect = tableView.rect(forSection: 0)
+//        tableView.scrollRectToVisible(tableRect, animated: false)
 
     }
     
@@ -433,9 +450,19 @@ class PopUpViewController: UIViewController, UITableViewDataSource, UITableViewD
                 indexPaths.append(IndexPath(row: i, section: 0))
             }
         }
-        tableView.reloadRows(at: indexPaths, with: .automatic)
+        tableView.reloadData()
+//        tableView.estimatedRowHeight = 100
+//        tableView.reloadRows(at: indexPaths, with: .automatic)
 //        UIView.performWithoutAnimation{tableView.reloadData()}
     }
     
+    func updateScrollTarget (_ indexPath : IndexPath) {
+        print("data passed in is \(indexPath)")
+        scrollTarget = IndexPath(row: indexPath.row, section: indexPath.section)
+    }
+    
+    @objc func editLabel () {
+        labelEdit = true
+    }
  
 }

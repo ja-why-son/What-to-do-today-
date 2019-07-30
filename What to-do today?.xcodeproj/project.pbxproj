@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C0EB16622E17C810098C9D5 /* TodayAddSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */; };
 		9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB521FC15FF00642F56 /* AppDelegate.swift */; };
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
@@ -47,17 +46,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAddSection.swift; sourceTree = "<group>"; };
 		9C13EFB221FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFB521FC15FF00642F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C13EFBA21FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C13EFBF21FC15FF00642F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C13EFC221FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C13EFC421FC15FF00642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFC921FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "../Debug-iphonesimulator/What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C13EFC921FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "What to-do today?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_Tests.swift; sourceTree = "<group>"; };
 		9C13EFCF21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFD421FC160000642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C13EFD421FC160000642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "What to-do today?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
 		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C13EFE621FC170600642F56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +98,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0B8C3C22F0376300F5446E /* PopUpViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D364220BBCC100688F21 /* PopUpViewController.swift */,
+			);
+			path = PopUpViewController;
+			sourceTree = "<group>";
+		};
+		9C0B8C3D22F0378B00F5446E /* PopUp Component */ = {
+			isa = PBXGroup;
+			children = (
+				9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */,
+				9C34345522319CCA00A8B923 /* PopUpAddSection.swift */,
+				9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */,
+			);
+			path = "PopUp Component";
+			sourceTree = "<group>";
+		};
+		9C0B8C3E22F037CC00F5446E /* BigBoxViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+			);
+			path = BigBoxViewController;
+			sourceTree = "<group>";
+		};
+		9C0B8C4022F0380400F5446E /* Today View Component */ = {
+			isa = PBXGroup;
+			children = (
+				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
+			);
+			path = "Today View Component";
+			sourceTree = "<group>";
+		};
+		9C0B8C4122F0387C00F5446E /* SmallBoxViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+			);
+			path = SmallBoxViewController;
+			sourceTree = "<group>";
+		};
+		9C0B8C4222F0388D00F5446E /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9C13EFE621FC170600642F56 /* PageViewController.swift */,
+			);
+			path = PageViewController;
+			sourceTree = "<group>";
+		};
+		9C0B8C4322F0390400F5446E /* Component Base */ = {
+			isa = PBXGroup;
+			children = (
+				9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */,
+				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
+			);
+			path = "Component Base";
+			sourceTree = "<group>";
+		};
+		9C0B8C4422F0391600F5446E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */,
+				9C6D124622475ABC003A7FD9 /* Todo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9C13EFA921FC15FF00642F56 = {
 			isa = PBXGroup;
 			children = (
@@ -123,19 +189,17 @@
 		9C13EFB421FC15FF00642F56 /* What to-do today? */ = {
 			isa = PBXGroup;
 			children = (
-				9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */,
-				9C3434512230B72B00A8B923 /* AddTableViewCellBase.swift */,
-				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
-				9C6D124622475ABC003A7FD9 /* Todo.swift */,
-				9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */,
-				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
-				9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */,
-				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
-				9C13EFE621FC170600642F56 /* PageViewController.swift */,
-				9CA392BC224AF479008E4622 /* PopUp View Controller */,
+				9C0B8C4422F0391600F5446E /* Model */,
+				9C0B8C4322F0390400F5446E /* Component Base */,
+				9C0B8C4222F0388D00F5446E /* PageViewController */,
+				9C0B8C4122F0387C00F5446E /* SmallBoxViewController */,
+				9CA392BC224AF479008E4622 /* PopUp View */,
 				9CF9D36E220CEDE800688F21 /* Today View Controller */,
-				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
+				9C13EFB921FC15FF00642F56 /* Main.storyboard */,
 				9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */,
+				9C13EFB521FC15FF00642F56 /* AppDelegate.swift */,
+				9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */,
+				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC421FC15FF00642F56 /* Info.plist */,
 			);
 			path = "What to-do today?";
@@ -159,23 +223,20 @@
 			path = "What to-do today?UITests";
 			sourceTree = "<group>";
 		};
-		9CA392BC224AF479008E4622 /* PopUp View Controller */ = {
+		9CA392BC224AF479008E4622 /* PopUp View */ = {
 			isa = PBXGroup;
 			children = (
-				9CF9D364220BBCC100688F21 /* PopUpViewController.swift */,
-				9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */,
-				9C34345522319CCA00A8B923 /* PopUpAddSection.swift */,
-				9C3434532230E5AA00A8B923 /* PopUpTupleViewCell.swift */,
+				9C0B8C3C22F0376300F5446E /* PopUpViewController */,
+				9C0B8C3D22F0378B00F5446E /* PopUp Component */,
 			);
-			path = "PopUp View Controller";
+			path = "PopUp View";
 			sourceTree = "<group>";
 		};
 		9CF9D36E220CEDE800688F21 /* Today View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */,
-				9C0EB16522E17C810098C9D5 /* TodayAddSection.swift */,
-				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+				9C0B8C4022F0380400F5446E /* Today View Component */,
+				9C0B8C3E22F037CC00F5446E /* BigBoxViewController */,
 			);
 			path = "Today View Controller";
 			sourceTree = "<group>";
@@ -319,7 +380,6 @@
 				9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */,
 				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */,
-				9C0EB16622E17C810098C9D5 /* TodayAddSection.swift in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
 				9C32FCEB2257FDEE00B9AEEF /* PersistenceService.swift in Sources */,
 				9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 protocol LabelSmallBoxDelegate {
-    func editLabel(_ newLabel : String, _ index : Int)
+    func editLabel()
 }
 
 class PopUpTextField: UITextField, UITextFieldDelegate {
@@ -22,6 +22,11 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         delegate = self
+    }
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "label is editting"), object: nil, userInfo: nil)
+        return true
     }
 
     func textFieldDidBeginEditing(_ textField : UITextField) {

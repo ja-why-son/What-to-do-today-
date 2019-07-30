@@ -24,7 +24,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     var todayIndexList = [Int]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
-    var tempTodo = [Todo]()
+    var todayIsEditting : Bool = false
 
     
     
@@ -51,7 +51,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         }
         list = (user?.todoList)!
         reloadToday() // first time classifying
-        checkDoneExist()
+//        checkDoneExist()
         
         // Layout setting
         todayBox.layer.cornerRadius = 10
@@ -114,39 +114,56 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         todayList = upperLeft + upperRight + bottomLeft + bottomRight
         todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
-        checkDoneExist()
+//        checkDoneExist()
     }
     
-    func checkDoneExist ()  {
-        var doneExist : Bool = false
-        todayList.forEach { todo in
-            if todo.done {
-                doneExist = true
-            }
-        }
-        if doneExist {
-            clearDoneButton.isHidden = false
-            clearDoneButton.isEnabled = true
-        } else {
-            clearDoneButton.isHidden = true
-            clearDoneButton.isEnabled = false
-        }
-    }
+//    func checkDoneExist ()  {
+//        var doneExist : Bool = false
+//        list.forEach { todo in
+//            if todo.done {
+//                doneExist = true
+//            }
+//        }
+//        if doneExist {
+//            clearDoneButton.isHidden = false
+//            clearDoneButton.isEnabled = true
+//        } else {
+//            clearDoneButton.isHidden = true
+//            clearDoneButton.isEnabled = false
+//        }
+//    }
     
     @IBAction func clearDone(_ sender: Any) {
-        
-        tempTodo = []
-        for i in stride(from: 0, to: list.count, by: 1) {
-            if !list[i].done {
-                tempTodo.append(list[i])
+        var count : Int = 0
+        var tempTodo: [Todo] = []
+        for todo in list {
+            if todo.done {
+                count = count + 1
+            } else {
+                tempTodo.append(todo)
             }
         }
-        user?.todoList = []
-        PersistenceService.saveContext()
-        user?.todoList = tempTodo
-        PersistenceService.saveContext()
-        reloadToday()
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+        if count == 0 {
+            let alert = UIAlertController(title: "Hmm", message: "You haven't done any todo yet", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            let alert = UIAlertController(title: "Clear done", message: "Clear all the done todos?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+                self.user?.todoList = []
+                PersistenceService.saveContext()
+                self.user?.todoList = tempTodo
+                PersistenceService.saveContext()
+                self.reloadToday()
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+                let placeholder : String = count == 1 ? "todo" : "todos"
+                let congrat = UIAlertController(title: "YAY", message: "You finished \(count) \(placeholder) today!\nKeep it going!", preferredStyle: .alert)
+                congrat.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(congrat, animated: true, completion: nil)
+            } ))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     /**********************************************************************************************************/
@@ -167,11 +184,14 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         cell.checkBox.tag = indexPath.row
         if currTodo.done! == false {
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
+            let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font!], range: NSMakeRange(0, attributeString.length))
+            cell.textView.attributedText = attributeString
         } else {
             cell.checkBox.setImage(UIImage(named: "checked_checkbox"), for: .normal)
             let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
-            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font], range: NSMakeRange(0, attributeString.length))
+            attributeString.addAttributes([NSAttributedString.Key.font: cell.textView.font!], range: NSMakeRange(0, attributeString.length))
             cell.textView.attributedText = attributeString
         }
         return cell
@@ -187,14 +207,16 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
-        adjustForKeyboard(notification: notification);
-//        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
-//        tap.cancelsTouchesInView = false
-//        self.view.addGestureRecognizer(tap)
+        if todayIsEditting {
+            adjustForKeyboard(notification: notification);
+        }
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
-        adjustForKeyboard(notification: notification);
+        if todayIsEditting {
+            adjustForKeyboard(notification: notification);
+        }
+        todayIsEditting = false
     }
     
     func adjustForKeyboard(notification: NSNotification) {
@@ -207,9 +229,11 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         } else {
             tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
             tableView.scrollIndicatorInsets = tableView.contentInset
+            
         }
-        let tableRect = tableView.rect(forSection: 0)
-        tableView.scrollRectToVisible(tableRect, animated: true)
+//        let tableRect = tableView.rect(forSection: 0)
+        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .middle, animated: true)
+//        tableView.scrollRectToVisible(tableRect, animated: true)
     }
     
     /**********************************************************************************************************/
@@ -251,7 +275,7 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         user?.todoList! = list
         PersistenceService.saveContext()
         tableView.reloadData()
-        checkDoneExist()
+//        checkDoneEx ist()
     }
     
     // edit the text in the today box
@@ -281,8 +305,14 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
-        tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .automatic)
-//        reloadToday()
+        print(index)
+//        tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .automatic)
+        print("not this bug")
+        reloadToday()
+    }
+    
+    func todayEnterEdit() {
+        todayIsEditting = true
     }
     
 }

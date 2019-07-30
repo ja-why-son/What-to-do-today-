@@ -11,6 +11,8 @@ import UIKit
 class RedAddTableViewCell: addTableViewCell {
     
     @IBOutlet weak var textView: UITextView!
+    var index : IndexPath?
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +24,12 @@ class RedAddTableViewCell: addTableViewCell {
             selector: #selector(RedAddTableViewCell.endEdit),
             name: NSNotification.Name(rawValue: "endEdit"),
             object: nil)
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        print("add section index is \(index)")
+        addRowDelegate?.updateScrollTarget(index!)
+        return true
     }
     
     @objc func endEdit () {

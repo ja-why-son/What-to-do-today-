@@ -10,6 +10,7 @@ import UIKit
 
 protocol AddTableViewCellDelegate {
     func addRow(_ sender:UITableViewCell, _ newString:String)
+    func updateScrollTarget (_ indexPath : IndexPath)
 }
 
 protocol AddTodayTodoDelegate {

@@ -92,10 +92,10 @@ extension ToDoViewController: UIPageViewControllerDataSource, UIPageViewControll
         return orderedViewControllers[nextIndex]
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
-        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
+//    }
     
 //    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
 //        guard let viewControllerIndex = orderedViewControllers.index(of: pageViewController.viewControllers!.first!) else {return}

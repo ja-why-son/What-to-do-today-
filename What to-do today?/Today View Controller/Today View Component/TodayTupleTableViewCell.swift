@@ -11,6 +11,7 @@ import UIKit
 protocol TableCellTodoTodayBoxDelegate {
     func doneEdittingTodayCell(_ newText : String, _ sender : TodayTupleTableViewCell)
     func moveOutToday(_ sender : TodayTupleTableViewCell)
+    func todayEnterEdit()
 }
 
 
@@ -43,6 +44,11 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     
     @IBAction func sayWOW(_ sender: Any) {
         tableCellTodoTodayBoxDelegate?.moveOutToday(self)
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        tableCellTodoTodayBoxDelegate?.todayEnterEdit()
+        return true
     }
     
     
