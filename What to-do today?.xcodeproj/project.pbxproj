@@ -23,6 +23,12 @@
 		9C0B8C6022F16D8600F5446E /* PopUpViewController + ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C5F22F16D8600F5446E /* PopUpViewController + ScrollViewDelegate.swift */; };
 		9C0B8C6222F16E3000F5446E /* PopUpViewController + AddTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6122F16E3000F5446E /* PopUpViewController + AddTableViewCellDelegate.swift */; };
 		9C0B8C6422F1716900F5446E /* PopUpViewController + TableCellTodoSmallBoxDelegate .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6322F1716900F5446E /* PopUpViewController + TableCellTodoSmallBoxDelegate .swift */; };
+		9C0B8C6622F1796E00F5446E /* BigBoxViewController + Reload .swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6522F1796E00F5446E /* BigBoxViewController + Reload .swift */; };
+		9C0B8C6822F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6722F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift */; };
+		9C0B8C6A22F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6922F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift */; };
+		9C0B8C6C22F17A8F00F5446E /* BigBoxViewController + Keyboard Op.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6B22F17A8F00F5446E /* BigBoxViewController + Keyboard Op.swift */; };
+		9C0B8C6E22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C6D22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift */; };
+		9C0B8C7122F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0B8C7022F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift */; };
 		9C13EFB621FC15FF00642F56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFB521FC15FF00642F56 /* AppDelegate.swift */; };
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
@@ -78,6 +84,12 @@
 		9C0B8C5F22F16D8600F5446E /* PopUpViewController + ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopUpViewController + ScrollViewDelegate.swift"; sourceTree = "<group>"; };
 		9C0B8C6122F16E3000F5446E /* PopUpViewController + AddTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopUpViewController + AddTableViewCellDelegate.swift"; sourceTree = "<group>"; };
 		9C0B8C6322F1716900F5446E /* PopUpViewController + TableCellTodoSmallBoxDelegate .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PopUpViewController + TableCellTodoSmallBoxDelegate .swift"; sourceTree = "<group>"; };
+		9C0B8C6522F1796E00F5446E /* BigBoxViewController + Reload .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + Reload .swift"; sourceTree = "<group>"; };
+		9C0B8C6722F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + TableView DataSource Delegate.swift"; sourceTree = "<group>"; };
+		9C0B8C6922F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + ScrollViewDelegate.swift"; sourceTree = "<group>"; };
+		9C0B8C6B22F17A8F00F5446E /* BigBoxViewController + Keyboard Op.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + Keyboard Op.swift"; sourceTree = "<group>"; };
+		9C0B8C6D22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + Expanding Cell Delegate.swift"; sourceTree = "<group>"; };
+		9C0B8C7022F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + TableCellTodoTodayBoxDelegate.swift"; sourceTree = "<group>"; };
 		9C13EFB221FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "What to-do today?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13EFB521FC15FF00642F56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C13EFBA21FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +174,12 @@
 			isa = PBXGroup;
 			children = (
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+				9C0B8C6522F1796E00F5446E /* BigBoxViewController + Reload .swift */,
+				9C0B8C6722F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift */,
+				9C0B8C6922F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift */,
+				9C0B8C6B22F17A8F00F5446E /* BigBoxViewController + Keyboard Op.swift */,
+				9C0B8C6D22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift */,
+				9C0B8C7022F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift */,
 			);
 			path = BigBoxViewController;
 			sourceTree = "<group>";
@@ -423,9 +441,12 @@
 				9C0B8C4A22F113CA00F5446E /* SmallBoxViewController + Reload.swift in Sources */,
 				9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */,
 				9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */,
+				9C0B8C6822F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
+				9C0B8C6E22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift in Sources */,
 				9C0B8C6022F16D8600F5446E /* PopUpViewController + ScrollViewDelegate.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
+				9C0B8C6622F1796E00F5446E /* BigBoxViewController + Reload .swift in Sources */,
 				9C0B8C5822F16A5100F5446E /* PopUpViewController + Expanding Cell Delegate.swift in Sources */,
 				9C34345622319CCA00A8B923 /* PopUpAddSection.swift in Sources */,
 				9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */,
@@ -442,9 +463,12 @@
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
 				9C0B8C5422F162BA00F5446E /* PopUpViewController + TableView Datasource Delegate.swift in Sources */,
 				9C0B8C4E22F15F3100F5446E /* SmallBoxViewController + SmallBoxPopUpDelegate.swift in Sources */,
+				9C0B8C7122F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift in Sources */,
 				9C0B8C5022F15FFA00F5446E /* SmallBoxViewController + Show Box.swift in Sources */,
+				9C0B8C6A22F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift in Sources */,
 				9C32FCEB2257FDEE00B9AEEF /* PersistenceService.swift in Sources */,
 				9C0B8C6422F1716900F5446E /* PopUpViewController + TableCellTodoSmallBoxDelegate .swift in Sources */,
+				9C0B8C6C22F17A8F00F5446E /* BigBoxViewController + Keyboard Op.swift in Sources */,
 				9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */,
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */,

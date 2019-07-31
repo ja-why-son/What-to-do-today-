@@ -13,14 +13,9 @@ protocol AddTableViewCellDelegate {
     func updateScrollTarget (_ indexPath : IndexPath)
 }
 
-protocol AddTodayTodoDelegate {
-    func addRow(_ newString: String);
-}
-
 class addTableViewCell: ExpandableTableViewCell {
     
     var addRowDelegate: AddTableViewCellDelegate?
-    var addTodayRowDelegate: AddTodayTodoDelegate?
     
     
     func textViewDidBeginEditing(_ textView: UITextView) {
