@@ -22,6 +22,15 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
         delegate = self
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(PopUpTextField.endEdit),
+            name: NSNotification.Name(rawValue: "endEdit"),
+            object: nil)
+    }
+    
+    @objc func endEdit() {
+        self.resignFirstResponder()
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {

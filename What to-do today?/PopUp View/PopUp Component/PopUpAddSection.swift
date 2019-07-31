@@ -27,7 +27,6 @@ class RedAddTableViewCell: addTableViewCell {
     }
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        print("add section index is \(index)")
         addRowDelegate?.updateScrollTarget(index!)
         return true
     }
@@ -44,7 +43,6 @@ class RedAddTableViewCell: addTableViewCell {
             var addString = textView.text!
             addString = addString.replacingOccurrences(of: "\n", with: " ")
             addRowDelegate?.addRow(self, addString)
-            print(addString)
         }
         textView.text = "Add new todo here"
         textView.textColor = UIColor.gray;

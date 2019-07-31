@@ -18,6 +18,7 @@ protocol AddTodayTodoDelegate {
 }
 
 class addTableViewCell: ExpandableTableViewCell {
+    
     var addRowDelegate: AddTableViewCellDelegate?
     var addTodayRowDelegate: AddTodayTodoDelegate?
     

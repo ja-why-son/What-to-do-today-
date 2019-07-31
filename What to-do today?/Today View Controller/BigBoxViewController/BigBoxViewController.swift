@@ -305,9 +305,6 @@ class BigBoxViewController: UIViewController, UITableViewDataSource, UITableView
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
-        print(index)
-//        tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .automatic)
-        print("not this bug")
         reloadToday()
     }
     
