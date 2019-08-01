@@ -24,7 +24,6 @@ extension BigBoxViewController {
     }
     
     func adjustForKeyboard(notification: NSNotification) {
-        print("wrong place")
         guard let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
         let keyboardScreenEndFrame = keyboardValue.cgRectValue
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
