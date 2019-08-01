@@ -14,14 +14,10 @@ extension PopUpViewController : UITableViewDragDelegate {
         if indexPath.row == list.count {
             return []
         }
-        //        let data = String(indexPath.row).data(using: .utf8)
+        let generator = UIImpactFeedbackGenerator(style: .medium)
+        generator.impactOccurred()
         let todoItem = list[indexPath.row]
         let itemProvider = NSItemProvider(object: todoItem)
-        //        let itemProvider = NSItemProvider()
-        //        itemProvider.registerDataRepresentation(forTypeIdentifier: kUTTypePlainText as String, visibility: .all) { completion in
-        //            completion(data, nil)
-        //            return nil
-        //        }
         let dragItem = UIDragItem(itemProvider: itemProvider)
         return[dragItem]
     }

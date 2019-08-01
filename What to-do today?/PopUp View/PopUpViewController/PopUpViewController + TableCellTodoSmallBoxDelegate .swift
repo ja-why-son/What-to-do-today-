@@ -26,9 +26,7 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     // also edit local(popup) list
     func doneEdittingPopUpCell(_ newText : String, _ sender : PopUpTableViewCell) {
         let index = tableView.indexPath(for: sender)![1]
-        print("index is \(index)")
         let isToday : Bool = list[index].isToday
-        print("content is \(list[index].content)")
         list[index].content = newText
         // TODO if newText is empty, delete row
         // note that list[index].isToday is gonna break
@@ -50,7 +48,7 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     // DONE OR NOT DONE
     @IBAction func checkCheckbox(_ sender : UIButton) {
         tableView.reloadData()
-        let generator = UIImpactFeedbackGenerator(style: .medium)
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
         let index = sender.tag
         list[index].done! = !list[index].done!

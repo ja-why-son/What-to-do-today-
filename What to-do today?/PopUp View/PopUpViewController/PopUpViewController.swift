@@ -32,6 +32,7 @@ class PopUpViewController: UIViewController{
     var scrollTarget : IndexPath?
     var labelEdit : Bool?
     var isMakingEdit : Bool = false
+    var dropTarget : Int = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -11,7 +11,7 @@ import UIKit
 extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
     
     @IBAction func checkCheckBox(_ sender: UIButton) {
-        let generator = UIImpactFeedbackGenerator(style: .medium)
+        let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
         let index = sender.tag
         list[todayIndexList[index]].done! = !list[todayIndexList[index]].done!
