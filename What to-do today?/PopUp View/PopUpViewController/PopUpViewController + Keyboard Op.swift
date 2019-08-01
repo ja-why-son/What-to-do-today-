@@ -11,6 +11,7 @@ import UIKit
 extension PopUpViewController {
     
     @objc func keyboardWillShow(notification: NSNotification) {
+        isMakingEdit = true
         adjustForKeyboard(notification: notification);
         backButton.isEnabled = false
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))
@@ -19,6 +20,7 @@ extension PopUpViewController {
     }
     
     @objc func keyboardWillHide(notification: NSNotification) {
+        isMakingEdit = false
         adjustForKeyboard(notification: notification);
         backButton.isEnabled = true
     }

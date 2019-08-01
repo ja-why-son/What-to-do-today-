@@ -27,7 +27,7 @@ extension PopUpViewController : UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return !(list.isEmpty || indexPath.row == list.count)
+        return !(list.isEmpty || indexPath.row == list.count || isMakingEdit)
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
