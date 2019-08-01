@@ -21,7 +21,7 @@ extension PopUpViewController : AddTableViewCellDelegate {
         let indexPath = IndexPath(item: list.count - offset, section: 0)
         tableView.insertRows(at: [indexPath], with: .fade)
         print("\(newContent) was added");
-        //        UIView.performWithoutAnimation{tableView.reloadData()}
+       scrollTarget = IndexPath(row: list.count - 1, section: 0)
         
     }
     

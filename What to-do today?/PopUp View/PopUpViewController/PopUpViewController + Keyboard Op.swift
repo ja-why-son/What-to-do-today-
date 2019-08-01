@@ -36,15 +36,13 @@ extension PopUpViewController {
             //            tableView.scrollIndicatorInsets = tableView.contentInset
         }
         self.tableView.scrollIndicatorInsets = self.tableView.contentInset
+        print("scroll target is \(scrollTarget)" )
         if !labelEdit! {
             if let indexPath = scrollTarget {
-                self.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
+                if tableView.numberOfRows(inSection: 0) > indexPath.row {
+                    self.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
+                }
             }
         }
-        
-        
-        //        let tableRect = tableView.rect(forSection: 0)
-        //        tableView.scrollRectToVisible(tableRect, animated: false)
-        
     }
 }

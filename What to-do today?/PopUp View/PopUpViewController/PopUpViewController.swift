@@ -10,15 +10,6 @@ import UIKit
 import CoreData
 import MobileCoreServices
 
-protocol SmallBoxPopUpDelegate {
-    func appendTodo(_ newTodo : Todo) -> Int
-    func editContent (_ newText : String, ogIndex index : Int)
-    func checkBox(ogIndex index : Int)
-    func moveTodayOrOut(ogIndex index : Int)
-    func deleteTodo(ogIndex index : Int, _ category : String) -> [Int]
-    func swapTodo(startFrom origin : Int, endAt destination : Int)
-}
-
 class PopUpViewController: UIViewController{
  
     

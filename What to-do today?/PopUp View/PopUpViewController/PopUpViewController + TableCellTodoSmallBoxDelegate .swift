@@ -8,6 +8,17 @@
 
 import UIKit
 
+protocol SmallBoxPopUpDelegate {
+    func appendTodo(_ newTodo : Todo) -> Int
+    func editContent (_ newText : String, ogIndex index : Int)
+    func checkBox(ogIndex index : Int)
+    func moveTodayOrOut(ogIndex index : Int)
+    func deleteTodo(ogIndex index : Int)
+    func swapTodo(startFrom origin : Int, endAt destination : Int)
+    func getList(forCategory category : String) -> [Todo]
+    func getIndexList (forCategory category : String) -> [Int]
+}
+
 extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     
     // EDIT CONTENT
@@ -15,7 +26,9 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     // also edit local(popup) list
     func doneEdittingPopUpCell(_ newText : String, _ sender : PopUpTableViewCell) {
         let index = tableView.indexPath(for: sender)![1]
+        print("index is \(index)")
         let isToday : Bool = list[index].isToday
+        print("content is \(list[index].content)")
         list[index].content = newText
         // TODO if newText is empty, delete row
         // note that list[index].isToday is gonna break
@@ -24,7 +37,8 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
         if newText.isEmpty {
             list.remove(at: index)
             tableView.deleteRows(at: [IndexPath(row: index, section: 0)], with: .fade)
-            indexList = (delegate?.deleteTodo(ogIndex: indexList[index], category!))!
+            delegate?.deleteTodo(ogIndex: indexList[index])
+            indexList = (delegate?.getIndexList(forCategory: category!))!
         } else {
             delegate?.editContent(newText, ogIndex: indexList[index])
         }
@@ -52,7 +66,6 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
         let cellIndex = indexPath.row
         list[cellIndex].isToday = !list[cellIndex].isToday
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
-        //        tableView.reloadRows(at: [indexPath], with: .none)
         tableView.reloadData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
@@ -60,23 +73,14 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     // DELETE ROW
     func deleteTodo(_ indexPath : IndexPath) {
         let isToday : Bool = list[indexPath.row].isToday
-        indexList = (delegate?.deleteTodo(ogIndex: indexList[indexPath.row], category!))!
+        delegate?.deleteTodo(ogIndex: indexList[indexPath.row])
+        indexList = (delegate?.getIndexList(forCategory: category!))!
         list.remove(at: indexPath.row)
-        //        indexList.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .automatic)
         if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
-        var indexPaths : [IndexPath] = []
-        if indexPath.row <= list.count - 1 {
-            print("doing reload for rows after the delete")
-            for i in indexPath.row ... list.count - 1 {
-                indexPaths.append(IndexPath(row: i, section: 0))
-            }
-        }
+        scrollTarget = IndexPath(row: list.count - 1, section: 0)
         tableView.reloadData()
-        //        tableView.estimatedRowHeight = 100
-        //        tableView.reloadRows(at: indexPaths, with: .automatic)
-        //        UIView.performWithoutAnimation{tableView.reloadData()}
     }
 }

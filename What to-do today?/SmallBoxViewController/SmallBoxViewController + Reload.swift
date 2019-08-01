@@ -34,7 +34,13 @@ extension SmallBoxViewController {
         var orangeText : String = ""
         var blueText : String = ""
         var greenText : String = ""
-        for i in stride(from: 0, to: mainList.count, by: 1) {
+        for i in stride(from: 1, to: mainList.count, by: 1) {
+//            let addOnText = mainList[i]
+//            if mainList[i].done {
+//                let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: mainList[i].content!)
+//                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, attributeString.length))
+//            }
+            
             switch mainList[i].category {
             case "red":
                 // do red
@@ -57,7 +63,7 @@ extension SmallBoxViewController {
                 greenIndexList.append(i)
                 greenText = greenText + mainList[i].content! + "\n"
             case "none":
-                print() // check if still needed
+                print()
             default: return
             }
         }

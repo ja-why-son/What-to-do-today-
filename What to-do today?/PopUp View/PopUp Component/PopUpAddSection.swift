@@ -38,6 +38,7 @@ class RedAddTableViewCell: addTableViewCell {
     @IBAction func enterEdit(_ sender: Any) {
         textView.becomeFirstResponder()
     }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != "" {
             var addString = textView.text!

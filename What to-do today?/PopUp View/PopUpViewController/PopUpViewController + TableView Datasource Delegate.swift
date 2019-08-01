@@ -57,14 +57,16 @@ extension PopUpViewController : UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         if destinationIndexPath.row != list.count {
-            let todo = list[sourceIndexPath.row]
+//            let todo = list[sourceIndexPath.row]
             let start = indexList[sourceIndexPath.row]
             let end = indexList[destinationIndexPath.row]
             delegate?.swapTodo(startFrom: start, endAt: end)
-            list.remove(at: sourceIndexPath.row)
-            list.insert(todo, at: destinationIndexPath.row)
-            indexList.remove(at: sourceIndexPath.row)
-            indexList.insert(start, at: destinationIndexPath.row)
+            list = (delegate?.getList(forCategory: category!))!
+            indexList = (delegate?.getIndexList(forCategory: category!))!
+//            list.remove(at: sourceIndexPath.row)
+//            list.insert(todo, at: destinationIndexPath.row)
+//            indexList.remove(at: sourceIndexPath.row)
+//            indexList.insert(start, at: destinationIndexPath.row)
             tableView.reloadData()
         }
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)

@@ -9,7 +9,9 @@
 import UIKit
 import CoreData
 
-extension SmallBoxViewController : SmallBoxPopUpDelegate {
+extension SmallBoxViewController :  SmallBoxPopUpDelegate {
+    
+    
     func appendTodo (_ newTodo : Todo) -> Int{
         mainList.append(newTodo)
         user?.todoList = mainList
@@ -19,6 +21,8 @@ extension SmallBoxViewController : SmallBoxPopUpDelegate {
     }
     
     func editContent (_ newText : String, ogIndex index : Int) {
+        print("main list index is")
+        print(mainList[index])
         mainList[index].content = newText
         user?.todoList = []
         PersistenceService.saveContext()
@@ -45,18 +49,11 @@ extension SmallBoxViewController : SmallBoxPopUpDelegate {
         reload()
     }
     
-    func deleteTodo(ogIndex index : Int, _ category : String) -> [Int] {
+    func deleteTodo(ogIndex index : Int){
         mainList.remove(at: index)
         user?.todoList = mainList
         PersistenceService.saveContext()
         reload()
-        switch category {
-        case "red" : return redIndexList
-        case "orange" : return orangeIndexList
-        case "blue" : return blueIndexList
-        case "green" : return greenIndexList
-        default : return [0]
-        }
     }
     
     func swapTodo(startFrom origin: Int, endAt destination: Int) {
@@ -70,4 +67,25 @@ extension SmallBoxViewController : SmallBoxPopUpDelegate {
         PersistenceService.saveContext() // Save newly created user
         reload()
     }
+    
+    func getList(forCategory category: String) -> [Todo] {
+        switch category {
+        case "red" : return redList
+        case "orange" : return orangeList
+        case "blue" : return blueList
+        case "green" : return greenList
+        default : return []
+        }
+    }
+    
+    func getIndexList(forCategory category: String) -> [Int] {
+        switch category {
+        case "red" : return redIndexList
+        case "orange" : return orangeIndexList
+        case "blue" : return blueIndexList
+        case "green" : return greenIndexList
+        default : return []
+        }
+    }
+    
 }
