@@ -20,7 +20,7 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         user?.todoList! = list
         PersistenceService.saveContext()
         tableView.reloadData()
-        //        checkDoneEx ist()
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     
     // edit the text in the today box
