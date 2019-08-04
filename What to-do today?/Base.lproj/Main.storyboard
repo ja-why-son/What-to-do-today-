@@ -88,7 +88,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hda-3a-MPG">
-                                                            <rect key="frame" x="51.000000000000014" y="0.0" width="228.33333333333337" height="36.666666666666664"/>
+                                                            <rect key="frame" x="53.000000000000014" y="0.0" width="226.33333333333337" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
@@ -107,7 +107,7 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="hda-3a-MPG" firstAttribute="top" secondItem="lot-sM-746" secondAttribute="top" id="0RD-hb-USz"/>
-                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" constant="6" id="3Tc-Yc-IH3"/>
+                                                        <constraint firstItem="hda-3a-MPG" firstAttribute="leading" secondItem="Tli-pg-qh0" secondAttribute="trailing" constant="8" id="3Tc-Yc-IH3"/>
                                                         <constraint firstItem="Tli-pg-qh0" firstAttribute="centerY" secondItem="lot-sM-746" secondAttribute="centerY" id="93E-07-t41"/>
                                                         <constraint firstItem="Tli-pg-qh0" firstAttribute="leading" secondItem="lot-sM-746" secondAttribute="leading" constant="18" id="RpR-Gf-Jjj"/>
                                                         <constraint firstAttribute="trailing" secondItem="hda-3a-MPG" secondAttribute="trailing" constant="29" id="X1w-Mu-7gA"/>

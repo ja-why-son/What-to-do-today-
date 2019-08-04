@@ -18,6 +18,8 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.enableSwipe), name:NSNotification.Name(rawValue: "enableSwipe"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.disableSwipe), name:NSNotification.Name(rawValue: "disableSwipe"), object: nil)
         dataSource = self
         if let firstViewController = orderedViewControllers.first {
             setViewControllers([firstViewController],
@@ -31,8 +33,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
                 break;
             }
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.enableSwipe), name:NSNotification.Name(rawValue: "enableSwipe"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.disableSwipe), name:NSNotification.Name(rawValue: "disableSwipe"), object: nil)
+        
     }
     
     private func newViewController(name: String) -> UIViewController {

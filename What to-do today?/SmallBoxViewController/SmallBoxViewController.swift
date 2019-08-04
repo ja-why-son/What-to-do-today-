@@ -13,6 +13,13 @@ import CoreData
 
 class SmallBoxViewController: UIViewController {
     
+    let walkthroughs = [
+        WalkthroughModel(title: "Quick Overview", subtitle: "Quickly visualize important business metrics. The overview in the home tab shows the most important metrics to monitor how your business is doing in real time.", icon: "analytics-icon"),
+        WalkthroughModel(title: "Analytics", subtitle: "Dive deep into charts to extract valuable insights and come up with data driven product initiatives, to boost the success of your business.", icon: "bars-icon"),
+        WalkthroughModel(title: "Dashboard Feeds", subtitle: "View your sales feed, orders, customers, products and employees.", icon: "activity-feed-icon"),
+        WalkthroughModel(title: "Get Notified", subtitle: "Receive notifications when critical situations occur to stay on top of everything important.", icon: "bell-icon"),
+    ]
+    
     // UI Components
     @IBOutlet weak var redBox: UIView!
     @IBOutlet weak var orangeBox: UIView!
@@ -69,7 +76,11 @@ class SmallBoxViewController: UIViewController {
             if result.count == 0 { // []
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
-                // load the instruction below 
+                // load the instruction below
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
+                let walkthroughVC = self.walkthroughVC()
+                walkthroughVC.delegate = self
+                self.addChildViewControllerWithView(walkthroughVC)
                 newUser.todoList = createInstruction()
                 newUser.categoryList = ["Get started!", "\"Today\"?", "With To-Doy...", "Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
