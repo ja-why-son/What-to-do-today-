@@ -43,6 +43,7 @@
 		9C186DB522F696B4007315B8 /* ATCWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DB422F696B4007315B8 /* ATCWalkthroughViewController.swift */; };
 		9C186DB822F697BE007315B8 /* ATCWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DB622F697BE007315B8 /* ATCWalkthroughViewController.xib */; };
 		9C186DB922F697BE007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DB722F697BE007315B8 /* ATCClassicWalkthroughViewController.xib */; };
+		9C186DBB22F7BDF3007315B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DBA22F7BDF3007315B8 /* Constants.swift */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
 		9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */; };
@@ -117,6 +118,7 @@
 		9C186DB422F696B4007315B8 /* ATCWalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ATCWalkthroughViewController.swift; sourceTree = "<group>"; };
 		9C186DB622F697BE007315B8 /* ATCWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATCWalkthroughViewController.xib; path = "../../../../../Downloads/WalkthroughOnboarding/WalkthroughOnboarding/View Controllers/ATCWalkthroughViewController.xib"; sourceTree = "<group>"; };
 		9C186DB722F697BE007315B8 /* ATCClassicWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATCClassicWalkthroughViewController.xib; path = "../../../../../Downloads/WalkthroughOnboarding/WalkthroughOnboarding/View Controllers/ATCClassicWalkthroughViewController.xib"; sourceTree = "<group>"; };
+		9C186DBA22F7BDF3007315B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTextField.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			children = (
 				9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */,
 				9C6D124622475ABC003A7FD9 /* Todo.swift */,
+				9C186DBA22F7BDF3007315B8 /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 				9C0B8C6622F1796E00F5446E /* BigBoxViewController + Reload .swift in Sources */,
 				9C186DB322F696A2007315B8 /* ATCClassicWalkthroughViewController.swift in Sources */,
 				9C0B8C5822F16A5100F5446E /* PopUpViewController + Expanding Cell Delegate.swift in Sources */,
+				9C186DBB22F7BDF3007315B8 /* Constants.swift in Sources */,
 				9C34345622319CCA00A8B923 /* PopUpAddSection.swift in Sources */,
 				9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */,
 				9C0B8C5622F1638F00F5446E /* PopUpViewController + TableView Delegate.swift in Sources */,

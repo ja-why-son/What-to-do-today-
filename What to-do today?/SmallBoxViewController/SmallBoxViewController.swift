@@ -14,10 +14,12 @@ import CoreData
 class SmallBoxViewController: UIViewController {
     
     let walkthroughs = [
-        WalkthroughModel(title: "Quick Overview", subtitle: "Quickly visualize important business metrics. The overview in the home tab shows the most important metrics to monitor how your business is doing in real time.", icon: "analytics-icon"),
-        WalkthroughModel(title: "Analytics", subtitle: "Dive deep into charts to extract valuable insights and come up with data driven product initiatives, to boost the success of your business.", icon: "bars-icon"),
-        WalkthroughModel(title: "Dashboard Feeds", subtitle: "View your sales feed, orders, customers, products and employees.", icon: "activity-feed-icon"),
-        WalkthroughModel(title: "Get Notified", subtitle: "Receive notifications when critical situations occur to stay on top of everything important.", icon: "bell-icon"),
+        WalkthroughModel(title: "Welcome!", subtitle: "With To-Doy, you can easily customize your to-do lists.", icon: "analytics-icon"),
+        WalkthroughModel(title: "Basic", subtitle: "Add tasks to your daily to-do list", icon: "bars-icon"),
+        WalkthroughModel(title: "Add to-dos to today!", subtitle: "View your sales feed, orders, customers, products and employees.", icon: "activity-feed-icon"),
+        WalkthroughModel(title: "Clear done to-dos.", subtitle: "After you've checked off your finished tasks, tap the button in the upper right to clear them.", icon: "bell-icon"),
+        WalkthroughModel(title: "Postpone", subtitle: "If you decide to postpone a task, you can also move it off the Today list.", icon: "bell-icon"),
+        WalkthroughModel(title: "Achieve your goal!", subtitle: "Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!", icon: "bell-icon")
     ]
     
     // UI Components
@@ -81,8 +83,8 @@ class SmallBoxViewController: UIViewController {
                 let walkthroughVC = self.walkthroughVC()
                 walkthroughVC.delegate = self
                 self.addChildViewControllerWithView(walkthroughVC)
-                newUser.todoList = createInstruction()
-                newUser.categoryList = ["Get started!", "\"Today\"?", "With To-Doy...", "Enjoy!" ]
+                newUser.todoList = createTips()
+                newUser.categoryList = ["Tips", "Untitled", "Untitled", "Untitled" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -97,5 +99,6 @@ class SmallBoxViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
+        print(Constants.message)
     }
 }
