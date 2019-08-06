@@ -14,12 +14,11 @@ import CoreData
 class SmallBoxViewController: UIViewController {
     
     let walkthroughs = [
-        WalkthroughModel(title: "Welcome!", subtitle: "With To-Doy, you can easily customize your to-do lists.", icon: "analytics-icon"),
-        WalkthroughModel(title: "Basic", subtitle: "Add tasks to your daily to-do list", icon: "bars-icon"),
-        WalkthroughModel(title: "Add to-dos to today!", subtitle: "View your sales feed, orders, customers, products and employees.", icon: "activity-feed-icon"),
-        WalkthroughModel(title: "Clear done to-dos.", subtitle: "After you've checked off your finished tasks, tap the button in the upper right to clear them.", icon: "bell-icon"),
-        WalkthroughModel(title: "Postpone", subtitle: "If you decide to postpone a task, you can also move it off the Today list.", icon: "bell-icon"),
-        WalkthroughModel(title: "Achieve your goal!", subtitle: "Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!", icon: "bell-icon")
+        WalkthroughModel(title: NSLocalizedString("Welcome!", comment: ""), subtitle: NSLocalizedString("With To-Doy, you can easily customize your to-do lists.", comment: ""), icon: "analytics-icon"),
+        WalkthroughModel(title: NSLocalizedString("Add to-dos to today!", comment: ""), subtitle: NSLocalizedString("Add tasks to your daily to-do list", comment: ""), icon: "bars-icon"),
+        WalkthroughModel(title: NSLocalizedString("Clear done to-dos.", comment: ""), subtitle: NSLocalizedString("After you've checked off your finished tasks, tap the button in the upper right to clear them.", comment: ""), icon: "bell-icon"),
+        WalkthroughModel(title: NSLocalizedString("Postpone", comment: ""), subtitle: NSLocalizedString("If you decide to postpone a task, you can also move it off the Today list.", comment: ""), icon: "bell-icon"),
+        WalkthroughModel(title: NSLocalizedString("Achieve your goal!", comment: ""), subtitle: NSLocalizedString("Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!", comment: ""), icon: "bell-icon")
     ]
     
     // UI Components
@@ -84,7 +83,7 @@ class SmallBoxViewController: UIViewController {
                 walkthroughVC.delegate = self
                 self.addChildViewControllerWithView(walkthroughVC)
                 newUser.todoList = createTips()
-                newUser.categoryList = ["Tips", "Untitled", "Untitled", "Untitled" ]
+                newUser.categoryList = [NSLocalizedString("Tips", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: "") ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -99,6 +98,5 @@ class SmallBoxViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
-        print(Constants.message)
     }
 }

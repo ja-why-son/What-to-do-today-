@@ -1,0 +1,34 @@
+/* 
+  Localizable(Ch).strings
+  What to-do today?
+
+  Created by Jayson Chen on 2019/8/5.
+  Copyright © 2019 Jayson Chen. All rights reserved.
+*/
+
+"Welcome!" = "歡迎！";
+"With To-Doy, you can easily customize your to-do lists." = "藉由To-Doy，你可以輕鬆編輯出屬於自己的待辦清單";
+"Add to-dos to today!" = "加入「今天」清單！";
+"Add tasks to your daily to-do list" = "把你今天要做的事情加入「今天」清單";
+"Clear done to-dos." = "消除完成事項";
+"After you've checked off your finished tasks, tap the button in the upper right to clear them." = "當你完成待辦後，點擊右上方的按鈕可以消除完成的事項";
+"Postpone" = "延遲";
+"If you decide to postpone a task, you can also move it off the Today list." = "如果你決定改天再完成此事項，可以將它移出「今日」清單";
+"Achieve your goal!" = "達成你的目標！";
+"Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!" = "每天一早決定好當天要做的是，不用擔心其他事情，讓你專注於手邊的工作！";
+"Long press and drag a todo to re-arrange it." = "長壓可以移動事項並整理你的清單";
+"Break down big todos into smaller ones" = "將龐雜的事務切割開來可以大大提升效率！";
+"Tips" = "小撇步";
+"Untitled" = "清單";
+"Hmm" = "呃";
+"You haven't done any todo yet..." = "你還沒完成任何事情誒...";
+"OK" = "好";
+"Clear done" = "消除";
+"Clear all the done todos?" = "消除全部完成的事項？";
+"Cancel" = "取消";
+"YAY" = "耶耶";
+"todo" = "";
+"todos" = "";
+"You finished " = "你今天完成了";
+" today!" = "項事情";
+"Keep it going!" = "繼續加油！！";

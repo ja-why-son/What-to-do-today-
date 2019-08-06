@@ -7,9 +7,16 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     
     static let message = "HI"
+    
+    static let lightHaptic = UIImpactFeedbackGenerator(style: .light)
+    
+    static let mediumHaptic = UIImpactFeedbackGenerator(style: .medium)
+    
+    static let heavyHaptic = UIImpactFeedbackGenerator(style: .heavy)
     
 }

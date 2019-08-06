@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "New Day"; ObjectID = "9ca-Rw-ld9"; */
+"9ca-Rw-ld9.normalTitle" = "New Day";
+
+/* Class = "UILabel"; text = "Internship"; ObjectID = "Bsr-bl-x4I"; */
+"Bsr-bl-x4I.text" = "Internship";
+
+/* Class = "UILabel"; text = "Today"; ObjectID = "C1e-tH-Bel"; */
+"C1e-tH-Bel.text" = "今天";
+
+/* Class = "UILabel"; text = "Technical"; ObjectID = "RtN-Bh-7L6"; */
+"RtN-Bh-7L6.text" = "Technical";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Sq2-B1-8h8"; */
+"Sq2-B1-8h8.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "App Designed & Developed By Jayson Chen"; ObjectID = "Z8e-YW-bjK"; */
+"Z8e-YW-bjK.text" = "App Designed & Developed By Jayson Chen";
+
+/* Class = "UILabel"; text = "To-Doy"; ObjectID = "osD-IM-OeF"; */
+"osD-IM-OeF.text" = "To-Doy";
+
+/* Class = "UILabel"; text = "Design & Misc"; ObjectID = "pxw-G5-GxB"; */
+"pxw-G5-GxB.text" = "Design & Misc";
+
+/* Class = "UITextField"; text = "Title"; ObjectID = "vWi-7I-OrB"; */
+"vWi-7I-OrB.text" = "Title";
+
+/* Class = "UILabel"; text = "Misc"; ObjectID = "yM5-qt-86g"; */
+"yM5-qt-86g.text" = "Misc";

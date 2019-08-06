@@ -48,8 +48,7 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
     // DONE OR NOT DONE
     @IBAction func checkCheckbox(_ sender : UIButton) {
         tableView.reloadData()
-        let generator = UIImpactFeedbackGenerator(style: .heavy)
-        generator.impactOccurred()
+        Constants.heavyHaptic.impactOccurred()
         let index = sender.tag
         list[index].done! = !list[index].done!
         delegate?.checkBox(ogIndex: indexList[index])

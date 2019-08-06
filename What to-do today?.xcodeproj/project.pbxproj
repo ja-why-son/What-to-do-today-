@@ -44,6 +44,7 @@
 		9C186DB822F697BE007315B8 /* ATCWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DB622F697BE007315B8 /* ATCWalkthroughViewController.xib */; };
 		9C186DB922F697BE007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DB722F697BE007315B8 /* ATCClassicWalkthroughViewController.xib */; };
 		9C186DBB22F7BDF3007315B8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DBA22F7BDF3007315B8 /* Constants.swift */; };
+		9C186DC022F92044007315B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DC222F92044007315B8 /* Localizable.strings */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
 		9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */; };
@@ -119,6 +120,10 @@
 		9C186DB622F697BE007315B8 /* ATCWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATCWalkthroughViewController.xib; path = "../../../../../Downloads/WalkthroughOnboarding/WalkthroughOnboarding/View Controllers/ATCWalkthroughViewController.xib"; sourceTree = "<group>"; };
 		9C186DB722F697BE007315B8 /* ATCClassicWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ATCClassicWalkthroughViewController.xib; path = "../../../../../Downloads/WalkthroughOnboarding/WalkthroughOnboarding/View Controllers/ATCClassicWalkthroughViewController.xib"; sourceTree = "<group>"; };
 		9C186DBA22F7BDF3007315B8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C186DBC22F91EE1007315B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		9C186DBD22F91EE2007315B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		9C186DC322F92844007315B8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9C186DC422F928F4007315B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTextField.swift; sourceTree = "<group>"; };
@@ -285,6 +290,7 @@
 				9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */,
 				9C13EFBF21FC15FF00642F56 /* Assets.xcassets */,
 				9C13EFC421FC15FF00642F56 /* Info.plist */,
+				9C186DC222F92044007315B8 /* Localizable.strings */,
 			);
 			path = "What to-do today?";
 			sourceTree = "<group>";
@@ -449,6 +455,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hant",
 			);
 			mainGroup = 9C13EFA921FC15FF00642F56;
 			productRefGroup = 9C13EFB321FC15FF00642F56 /* Products */;
@@ -470,6 +477,7 @@
 				9C186DB822F697BE007315B8 /* ATCWalkthroughViewController.xib in Resources */,
 				9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */,
 				9C186DB922F697BE007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */,
+				9C186DC022F92044007315B8 /* Localizable.strings in Resources */,
 				9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */,
 				9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */,
 			);
@@ -577,6 +585,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C13EFBA21FC15FF00642F56 /* Base */,
+				9C186DBC22F91EE1007315B8 /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -585,8 +594,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C13EFC221FC15FF00642F56 /* Base */,
+				9C186DBD22F91EE2007315B8 /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9C186DC222F92044007315B8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C186DC322F92844007315B8 /* en */,
+				9C186DC422F928F4007315B8 /* zh-Hant */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -596,6 +615,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -657,6 +677,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

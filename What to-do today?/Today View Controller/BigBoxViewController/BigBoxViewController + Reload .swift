@@ -61,22 +61,27 @@ extension BigBoxViewController {
             }
         }
         if count == 0 {
-            let alert = UIAlertController(title: "Hmm", message: "You haven't done any todo yet", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            let alert = UIAlertController(title: NSLocalizedString("Hmm", comment: ""), message: NSLocalizedString("You haven't done any todo yet...", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         } else {
-            let alert = UIAlertController(title: "Clear done", message: "Clear all the done todos?", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { action in
+            let alert = UIAlertController(title: NSLocalizedString("Clear done", comment: ""), message: NSLocalizedString("Clear all the done todos?", comment: ""), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.default, handler: nil))
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default, handler: { action in
                 self.user?.todoList = []
                 PersistenceService.saveContext()
                 self.user?.todoList = tempTodo
                 PersistenceService.saveContext()
                 self.reloadToday()
+                
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
-                let placeholder : String = count == 1 ? "todo" : "todos"
-                let congrat = UIAlertController(title: "YAY", message: "You finished \(count) \(placeholder) today!\nKeep it going!", preferredStyle: .alert)
-                congrat.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                let head = NSLocalizedString("You finished ", comment: "")
+                let body = NSLocalizedString(" today!", comment: "")
+                let tail = NSLocalizedString("Keep it going!", comment: "")
+                let placeholder : String = count == 1 ? NSLocalizedString("todo", comment: "") : NSLocalizedString("todos", comment: "")
+                let comment = head + String(count) + placeholder + body + "\n" + tail
+                let congrat = UIAlertController(title: NSLocalizedString("YAY", comment: ""), message: comment, preferredStyle: .alert)
+                congrat.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: UIAlertAction.Style.default, handler: nil))
                 self.present(congrat, animated: true, completion: nil)
             } ))
             self.present(alert, animated: true, completion: nil)

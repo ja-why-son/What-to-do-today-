@@ -14,8 +14,7 @@ extension PopUpViewController : UITableViewDragDelegate {
         if indexPath.row == list.count {
             return []
         }
-        let generator = UIImpactFeedbackGenerator(style: .medium)
-        generator.impactOccurred()
+        Constants.mediumHaptic.impactOccurred()
         let todoItem = list[indexPath.row]
         let itemProvider = NSItemProvider(object: todoItem)
         let dragItem = UIDragItem(itemProvider: itemProvider)

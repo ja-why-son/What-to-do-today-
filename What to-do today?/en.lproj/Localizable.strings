@@ -1,0 +1,34 @@
+/* 
+  Localizable(Ch).strings
+  What to-do today?
+
+  Created by Jayson Chen on 2019/8/5.
+  Copyright © 2019 Jayson Chen. All rights reserved.
+*/
+
+"Welcome!" = "Welcome!";
+"With To-Doy, you can easily customize your to-do lists." = "With To-Doy, you can easily customize your to-do lists.";
+"Add to-dos to today!" = "Add to-dos to today!";
+"Add tasks to your daily to-do list" = "Add tasks to your daily to-do list";
+"Clear done to-dos." = "Clear done to-dos.";
+"After you've checked off your finished tasks, tap the button in the upper right to clear them." = "After you've checked off your finished tasks, tap the button in the upper right to clear them.";
+"Postpone" = "Postpone";
+"If you decide to postpone a task, you can also move it off the Today list." = "If you decide to postpone a task, you can also move it off the Today list.";
+"Achieve your goal!" = "Achieve your goal!";
+"Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!" = "Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!";
+"Long press and drag a todo to re-arrange it." = "Long press and drag a todo to re-arrange it.";
+"Break down big todos into smaller ones" = "Break down big todos into smaller ones";
+"Tips" = "Tips";
+"Untitled" = "Untitled";
+"Hmm" = "Hmm";
+"You haven't done any todo yet..." = "You haven't done any todo yet...";
+"OK" = "OK";
+"Clear done" = "Clear done";
+"Clear all the done todos?" = "Clear all the done todos?";
+"Cancel" = "Cancel";
+"YAY" = "YAY";
+"todo" = "todo";
+"todos" = "todos";
+"You finished " = "You finished ";
+" today!" = " today!";
+"Keep it going!" = "Keep it going!";

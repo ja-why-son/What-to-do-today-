@@ -31,8 +31,7 @@ extension PopUpViewController : UITableViewDropDelegate {
                 return UITableViewDropProposal(operation: .cancel)
             } else {
                 if destinationIndexPath?.row != dropTarget {
-                    let generator = UIImpactFeedbackGenerator(style: .medium)
-                    generator.impactOccurred()
+                    Constants.mediumHaptic.impactOccurred()
                     dropTarget = destinationIndexPath!.row
                 }
                 return UITableViewDropProposal(operation: .move, intent: .insertAtDestinationIndexPath)
