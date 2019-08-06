@@ -11,6 +11,7 @@ import UIKit
 extension PopUpViewController {
     
     func showAnimate() {
+//        Constants.heavyHaptic.impactOccurred()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
         ToDoViewController().dataSource = nil
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -22,6 +23,7 @@ extension PopUpViewController {
     }
     
     func removeAnimate() {
+//        Constants.lightHaptic.impactOccurred()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enableSwipe"), object: nil)
         UIView.animate(withDuration: 0.25, animations: {
             self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)

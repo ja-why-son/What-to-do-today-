@@ -41,6 +41,7 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
     }
     
     func moveOutToday(_ sender : TodayTupleTableViewCell) {
+        Constants.mediumHaptic.impactOccurred()
         let index = tableView.indexPath(for: sender)?.row
         sender.textView.resignFirstResponder()
         list[todayIndexList[index!]].isToday = !list[todayIndexList[index!]].isToday

@@ -65,10 +65,12 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
         delegate?.moveTodayOrOut(ogIndex: indexList[cellIndex])
         tableView.reloadData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
+        Constants.mediumHaptic.impactOccurred()
     }
     
     // DELETE ROW
     func deleteTodo(_ indexPath : IndexPath) {
+        Constants.mediumHaptic.impactOccurred()
         let isToday : Bool = list[indexPath.row].isToday
         delegate?.deleteTodo(ogIndex: indexList[indexPath.row])
         indexList = (delegate?.getIndexList(forCategory: category!))!

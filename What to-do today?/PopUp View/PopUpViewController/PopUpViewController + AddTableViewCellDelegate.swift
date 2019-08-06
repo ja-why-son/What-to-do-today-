@@ -13,6 +13,7 @@ extension PopUpViewController : AddTableViewCellDelegate {
     // APPEND NEW ROW
     // make append delegate method return the list.count
     func addRow(_ sender:UITableViewCell, _ newContent:String) {
+        Constants.mediumHaptic.impactOccurred()
         let newTodo = Todo(content: newContent, category: self.category!, isToday: false)
         self.list.append(newTodo)
         let newIndex = delegate?.appendTodo(newTodo)

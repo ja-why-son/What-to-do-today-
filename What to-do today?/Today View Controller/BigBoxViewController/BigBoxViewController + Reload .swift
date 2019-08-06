@@ -50,6 +50,7 @@ extension BigBoxViewController {
     
     
     @IBAction func clearDone(_ sender: Any) {
+        Constants.heavyHaptic.impactOccurred()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "endEdit"), object: nil)
         var count : Int = 0
         var tempTodo: [Todo] = []

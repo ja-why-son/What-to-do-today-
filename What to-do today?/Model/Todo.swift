@@ -77,7 +77,7 @@ public final class Todo: NSObject, NSCoding, Codable, NSItemProviderReading, NSI
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             let data = try encoder.encode(self)
-            let json = String(data: data, encoding: String.Encoding.utf8)
+//            let json = String(data: data, encoding: String.Encoding.utf8)
             progress.completedUnitCount = 100
             completionHandler(data, nil)
         } catch {
