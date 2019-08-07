@@ -17,13 +17,12 @@ public final class Todo: NSObject, NSCoding, Codable, NSItemProviderReading, NSI
     var category : String!
     var isToday : Bool!
     var done : Bool! = false
-    var uuid : String?
+    var uuid : String! = UUID().uuidString
     
     init(content: String, category: String, isToday: Bool) {
         self.content = content
         self.category = category
         self.isToday = isToday
-        self.uuid = UUID().uuidString
     }
     
     private enum Key: String {
@@ -35,7 +34,7 @@ public final class Todo: NSObject, NSCoding, Codable, NSItemProviderReading, NSI
     }
     
     public func encode(with aCoder: NSCoder) {
-        if let content = self.content, let category = self.category, let isToday = self.isToday, let done = self.done
+        if let content = self.content, let category = self.category, let isToday = self.isToday, let done = self.done, let uuid = self.uuid
         {
             aCoder.encode(content, forKey: Key.content.rawValue)
             aCoder.encode(category, forKey: Key.category.rawValue)
@@ -50,7 +49,7 @@ public final class Todo: NSObject, NSCoding, Codable, NSItemProviderReading, NSI
         category = aDecoder.decodeObject(forKey: Key.category.rawValue) as? String
         isToday = aDecoder.decodeBool(forKey: Key.isToday.rawValue)
         done = aDecoder.decodeBool(forKey: Key.done.rawValue)
-        uuid = aDecoder.decodeObject(forKey: Key.content.rawValue) as? String
+        uuid = aDecoder.decodeObject(forKey: Key.uuid.rawValue) as? String
     }
     
     public static var readableTypeIdentifiersForItemProvider: [String] {
