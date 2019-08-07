@@ -41,7 +41,6 @@ extension PopUpViewController : UITableViewDelegate {
             success(true)
         })
         todayAction.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-        
         let notTodayAction = UIContextualAction(style: .normal, title: "Later", handler: {
             (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Move out from today")

@@ -19,6 +19,8 @@ extension BigBoxViewController : UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Tuple", for: indexPath) as! TodayTupleTableViewCell
         cell.expandCellDelegate = self
         cell.tableCellTodoTodayBoxDelegate = self
+        // change here to render cell content from order list
+        // retrieve the info by uuid thru dict
         let currTodo = todayList[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row

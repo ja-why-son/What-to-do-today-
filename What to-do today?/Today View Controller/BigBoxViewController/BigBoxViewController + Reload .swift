@@ -21,6 +21,7 @@ extension BigBoxViewController {
         var bottomLeftIndex : [Int] = []
         var bottomRight : [Todo] = []
         var bottomRightIndex : [Int] = []
+        
         todayList = []
         todayIndexList = []
         for i in stride(from: 0, to: list.count, by: 1) {
@@ -46,6 +47,17 @@ extension BigBoxViewController {
         todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
         //        checkDoneExist()
+    }
+    
+    // call it when first load and whenever there's change in number of todo
+    func loadTodayTodoToDict () {
+        for todo in list {
+            if todo.isToday {
+                print(todo.uuid)
+                todayDict[todo.uuid] = todo
+            }
+        }
+        //todayList = createTodayList()
     }
     
     
@@ -88,4 +100,14 @@ extension BigBoxViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
+    
+     func createTodayList() -> [Todo]{
+        let ordersList : [String] = []
+        let todayList : [Todo] = []
+        for uuid in ordersList {
+     
+        }
+        return []
+     }
+    
 }

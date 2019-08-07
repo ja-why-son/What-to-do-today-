@@ -20,11 +20,13 @@ class BigBoxViewController: UIViewController{
     // Variables
     var user : User? = nil
     var list = [Todo]()
+    var ordersList = [String]() 
     var todayList = [Todo]()
     var todayIndexList = [Int]()
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
     var todayIsEditting : Bool = false
+    var todayDict : [String? : Todo] = [:]
 
     
     
@@ -75,5 +77,7 @@ class BigBoxViewController: UIViewController{
             selector: #selector(BigBoxViewController.reloadToday),
             name:NSNotification.Name(rawValue: "reloadToday"),
             object: nil)
+        loadTodayTodoToDict()
+        print(todayDict)
     }
 }
