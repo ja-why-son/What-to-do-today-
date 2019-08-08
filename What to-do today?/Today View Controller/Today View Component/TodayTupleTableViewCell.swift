@@ -58,6 +58,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
         notToday.isHidden = false
         textRightConstraint.constant = 30
         notToday.layer.zPosition = 10000
+        expandCellDelegate?.updated()
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
