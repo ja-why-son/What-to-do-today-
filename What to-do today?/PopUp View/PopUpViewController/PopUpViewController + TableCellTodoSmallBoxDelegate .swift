@@ -79,7 +79,8 @@ extension PopUpViewController : TableCellTodoSmallBoxDelegate  {
         if isToday {
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
         }
-        scrollTarget = IndexPath(row: list.count - 1, section: 0)
+        let offset = list.count == 0 ? 0 : 1
+        scrollTarget = IndexPath(row: list.count - offset, section: 0)
         tableView.reloadData()
     }
 }

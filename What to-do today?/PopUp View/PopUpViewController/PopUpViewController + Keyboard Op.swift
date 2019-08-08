@@ -41,7 +41,8 @@ extension PopUpViewController {
         print("scroll target is \(scrollTarget)" )
         if !labelEdit! {
             if let indexPath = scrollTarget {
-                if tableView.numberOfRows(inSection: 0) > indexPath.row {
+                if (tableView.numberOfRows(inSection: 0) > indexPath.row) &&
+                    indexPath.row >= 0{
                     self.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
                 }
             }
