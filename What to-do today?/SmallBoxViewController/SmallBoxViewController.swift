@@ -49,6 +49,7 @@ class SmallBoxViewController: UIViewController {
     var popUp : PopUpViewController? = nil
     var tempTodo = [Todo]()
     var categoriesList = [String]()
+    var todayOrdersList = [String]()
     
     let UPPER_LEFT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.5791445374, blue: 0.5924175978, alpha: 1)
     let UPPER_RIGHT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.7859908342, blue: 0.5220321417, alpha: 1)
@@ -77,13 +78,14 @@ class SmallBoxViewController: UIViewController {
             if result.count == 0 { // []
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
-                // load the instruction below
                 NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
                 let walkthroughVC = self.walkthroughVC()
                 walkthroughVC.delegate = self
                 self.addChildViewControllerWithView(walkthroughVC)
                 newUser.todoList = createTips()
+                print(newUser.todoList)
                 newUser.categoryList = [NSLocalizedString("Tips", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: "") ]
+                newUser.todayOrdersList = []
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -93,6 +95,7 @@ class SmallBoxViewController: UIViewController {
         }
         mainList = (user?.todoList)!
         categoriesList = (user?.categoryList)!
+        todayOrdersList = (user?.todayOrdersList)!
         reload()
         reloadLabel()
         

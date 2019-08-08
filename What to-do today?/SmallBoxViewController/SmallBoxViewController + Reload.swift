@@ -41,7 +41,7 @@ extension SmallBoxViewController {
             .font: redTextView.font!,
             .paragraphStyle: paragraphstyle,
         ]
-        for i in stride(from: 1, to: mainList.count, by: 1) {
+        for i in stride(from: 0, to: mainList.count, by: 1) {
             var addOnText : NSMutableAttributedString
             addOnText = NSMutableAttributedString(string: mainList[i].content!)
             if mainList[i].done {

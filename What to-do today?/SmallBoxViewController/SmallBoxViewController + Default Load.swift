@@ -11,10 +11,12 @@ import UIKit
 extension SmallBoxViewController {
     
     func createTips() -> [Todo] {
-        return [
+        let instruction = [
             Todo(content: "Long press and drag a todo to re-arrange it.", category: "red", isToday: false),
-            Todo(content: "Break down big todos into smaller ones", category: "red", isToday: false),
+            Todo(content: "Break down big todos into smaller ones", category: "red", isToday: false)
         ]
+        print(instruction)
+        return instruction
     }
     
 //    func createInstruction() -> [Todo] {

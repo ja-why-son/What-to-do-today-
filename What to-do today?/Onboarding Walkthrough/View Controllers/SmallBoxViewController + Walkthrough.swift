@@ -13,10 +13,11 @@ extension SmallBoxViewController : ATCWalkthroughViewControllerDelegate {
     func walkthroughViewControllerDidFinishFlow(_ vc: ATCWalkthroughViewController) {
         UIView.transition(with: self.view, duration: 1, options: .transitionFlipFromLeft, animations: {
             vc.view.removeFromSuperview()
-            let viewControllerToBePresented = UIViewController()
-            self.view.addSubview(viewControllerToBePresented.view)
+//            let viewControllerToBePresented = UIViewController()
+//            self.view.addSubview(viewControllerToBePresented.view)
         }, completion: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enableSwipe"), object: nil)
+        self.removeChildViewController(vc)
     }
     
     

@@ -26,6 +26,7 @@ class BigBoxViewController: UIViewController{
     var expandingCellHeight: CGFloat = 200
     var expandingIndexRow: Int = 0
     var todayIsEditting : Bool = false
+    var todayOrdersList = [String]()
     var todayDict : [String? : Todo] = [:]
 
     
@@ -40,9 +41,8 @@ class BigBoxViewController: UIViewController{
             // No user profile is found
             if result.count == 0 { // []
                 print("Creating initial user")
-                let newUser = User(context: PersistenceService.context)
-                // load the instruction below
-                newUser.categoryList = ["Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
+//                let newUser = User(context: PersistenceService.context)
+//                newUser.categoryList = ["Get started!", "Where's \"Today\"?", "With To-Doy...", "Enjoy!" ]
                 PersistenceService.saveContext() // Save newly created user
                 result = try PersistenceService.context.fetch(fetchRequest) // Fetch the CoreData again with the new user
             }
@@ -51,6 +51,7 @@ class BigBoxViewController: UIViewController{
             print("FATAL: Couldn't fetch Coredata")
         }
         list = (user?.todoList)!
+        todayOrdersList = (user?.todayOrdersList)!
         reloadToday() // first time classifying
 //        checkDoneExist()
         
