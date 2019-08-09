@@ -47,8 +47,9 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         saveData()
     }
     
-    func todayEnterEdit() {
+    func todayEnterEdit(_ indexPath : IndexPath) {
         todayIsEditting = true
+        scrollTarget = indexPath.row
     }
     
     func saveData() {

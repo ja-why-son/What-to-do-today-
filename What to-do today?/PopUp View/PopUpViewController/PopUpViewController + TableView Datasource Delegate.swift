@@ -21,7 +21,7 @@ extension PopUpViewController : UITableViewDataSource {
             cell.expandCellDelegate = self
             cell.addRowDelegate = self
             cell.index = indexPath
-            print("Create add section")
+            print("Create section is in \(indexPath)")
             return cell
         }
         let cell = tableView.dequeueReusableCell(withIdentifier: "tuple", for: indexPath) as! PopUpTableViewCell

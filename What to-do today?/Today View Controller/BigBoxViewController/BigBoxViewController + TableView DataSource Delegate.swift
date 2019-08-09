@@ -24,6 +24,7 @@ extension BigBoxViewController : UITableViewDataSource {
         let currTodo = todayList[indexPath.row]
         cell.textView.text = currTodo.content
         cell.checkBox.tag = indexPath.row
+        cell.indexPath = indexPath
         if currTodo.done! == false {
             cell.checkBox.setImage(UIImage(named: "empty_checkbox"), for: .normal)
             let attributeString : NSMutableAttributedString = NSMutableAttributedString(string: cell.textView.text)

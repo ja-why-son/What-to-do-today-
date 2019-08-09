@@ -17,7 +17,6 @@ extension BigBoxViewController {
         print(todayOrdersList)
         todayList = []
         todayIndexList = []
-        loadTodayTodoToDict()
         var todayIndexDict : [String? : Int] = [:]
         for i in stride(from: 0, to: list.count, by: 1) {
             if list[i].isToday {
@@ -29,51 +28,7 @@ extension BigBoxViewController {
             todayList.append(list[todayIndexDict[todayOrdersList[i]]!])
             todayIndexList.append(todayIndexDict[todayOrdersList[i]]!)
         }
-        
-//        var upperLeft : [Todo] = []
-//        var upperLeftIndex : [Int] = []
-//        var upperRight :[Todo] = []
-//        var upperRightIndex : [Int] = []
-//        var bottomLeft : [Todo] = []
-//        var bottomLeftIndex : [Int] = []
-//        var bottomRight : [Todo] = []
-//        var bottomRightIndex : [Int] = []
-//        for i in stride(from: 0, to: list.count, by: 1) {
-//            if list[i].isToday {
-//                switch list[i].category! {
-//                case "red":
-//                    upperLeft.append(list[i])
-//                    upperLeftIndex.append(i)
-//                case "orange":
-//                    upperRight.append(list[i])
-//                    upperRightIndex.append(i)
-//                case "blue":
-//                    bottomLeft.append(list[i])
-//                    bottomLeftIndex.append(i)
-//                case "green":
-//                    bottomRight.append(list[i])
-//                    bottomRightIndex.append(i)
-//                default: return
-//                }
-//            }
-//        }
-//        todayList = upperLeft + upperRight + bottomLeft + bottomRight
-//        todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
-    }
-    
-    // call it when first load and whenever there's change in number of todo
-    func loadTodayTodoToDict () {
-        todayDict = [:]
-        for todo in list {
-            if todo.isToday {
-                print(todo.uuid)
-                todayDict[todo.uuid] = todo
-            }
-        }
-        print("Here")
-        print(todayDict)
-        //todayList = createTodayList()
     }
     
     

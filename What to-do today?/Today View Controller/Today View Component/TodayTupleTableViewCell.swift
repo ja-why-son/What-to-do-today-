@@ -11,7 +11,7 @@ import UIKit
 protocol TableCellTodoTodayBoxDelegate {
     func doneEdittingTodayCell(_ newText : String, _ sender : TodayTupleTableViewCell)
     func moveOutToday(_ sender : TodayTupleTableViewCell)
-    func todayEnterEdit()
+    func todayEnterEdit(_ indexPath : IndexPath)
 }
 
 
@@ -25,6 +25,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     
     var originalText : String?
     var tableCellTodoTodayBoxDelegate : TableCellTodoTodayBoxDelegate?
+    var indexPath : IndexPath = IndexPath()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -47,7 +48,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     }
     
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        tableCellTodoTodayBoxDelegate?.todayEnterEdit()
+        tableCellTodoTodayBoxDelegate?.todayEnterEdit(indexPath)
         return true
     }
     

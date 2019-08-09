@@ -35,8 +35,6 @@ extension BigBoxViewController {
             tableView.scrollIndicatorInsets = tableView.contentInset
             
         }
-        //        let tableRect = tableView.rect(forSection: 0)
-        tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .middle, animated: true)
-        //        tableView.scrollRectToVisible(tableRect, animated: true)
+        tableView.scrollToRow(at: IndexPath(row: scrollTarget, section: 0), at: .middle, animated: true)
     }
 }

@@ -30,19 +30,16 @@ extension PopUpViewController {
         let keyboardScreenEndFrame = keyboardValue.cgRectValue
         let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
         if notification.name == UIResponder.keyboardWillHideNotification {
-            //            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: tableView.estimatedRowHeight, right: 0) // if there's a problem think about using the frame and content size
-            //            tableView.scrollIndicatorInsets = .zero
             self.tableView.contentInset = .zero
         } else {
             self.tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
-            //            tableView.scrollIndicatorInsets = tableView.contentInset
         }
         self.tableView.scrollIndicatorInsets = self.tableView.contentInset
-        print("scroll target is \(scrollTarget)" )
         if !labelEdit! {
             if let indexPath = scrollTarget {
                 if (tableView.numberOfRows(inSection: 0) > indexPath.row) &&
                     indexPath.row >= 0{
+                    print("scroll target is \(scrollTarget)" )
                     self.tableView.scrollToRow(at: IndexPath(row: indexPath.row, section: 0), at: .middle, animated: true)
                 }
             }

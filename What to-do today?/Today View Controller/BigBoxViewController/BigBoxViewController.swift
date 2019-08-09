@@ -27,8 +27,8 @@ class BigBoxViewController: UIViewController{
     var expandingIndexRow: Int = 0
     var todayIsEditting : Bool = false
     var todayOrdersList = [String]()
-    var todayDict : [String? : Todo] = [:]
     var dropTarget : Int = Int()
+    var scrollTarget : Int = Int()
 
     
     
@@ -82,7 +82,5 @@ class BigBoxViewController: UIViewController{
         tableView.dragInteractionEnabled = true
         tableView.dragDelegate = self
         tableView.dropDelegate = self
-        loadTodayTodoToDict()
-//        print(todayDict)
     }
 }
