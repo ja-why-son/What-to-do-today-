@@ -24,36 +24,25 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
         print("main list index is")
         print(mainList[index])
         mainList[index].content = newText
-        user?.todoList = []
-        PersistenceService.saveContext()
-        user?.todoList = mainList
-        PersistenceService.saveContext()
-        reload()
+        saveTodoList()
     }
     
     func checkBox(ogIndex index : Int) {
-        mainList = (user?.todoList)!
-        user?.todoList = []
-        PersistenceService.saveContext() // Save newly created user
-        user?.todoList = mainList
-        PersistenceService.saveContext() // Save newly created user
-        reload()
+//        mainList = (user?.todoList)! // not sure why we need it here
+        saveTodoList()
     }
     
     func moveTodayOrOut(ogIndex index : Int) {
-        mainList = (user?.todoList)!
-        user?.todoList = []
-        PersistenceService.saveContext() // Save newly created user
-        user?.todoList = mainList
-        PersistenceService.saveContext() // Save newly created user
-        reload()
+//        mainList = (user?.todoList)! // same ^^
+        print(mainList[index].content!)
+        print(mainList[index].uuid!)
+        editTodayOrder(mainList[index].uuid!)
+        saveTodoList()
     }
     
     func deleteTodo(ogIndex index : Int){
         mainList.remove(at: index)
-        user?.todoList = mainList
-        PersistenceService.saveContext()
-        reload()
+        saveTodoList()
     }
     
     func swapTodo(startFrom origin: Int, endAt destination: Int) {
@@ -61,11 +50,7 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
         let temp = mainList[origin]
         mainList.remove(at: origin)
         mainList.insert(temp, at: destination)
-        user?.todoList = []
-        PersistenceService.saveContext() // Save newly created user
-        user?.todoList = mainList
-        PersistenceService.saveContext() // Save newly created user
-        reload()
+        saveTodoList()
     }
     
     func getList(forCategory category: String) -> [Todo] {
@@ -88,4 +73,24 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
         }
     }
     
+    func saveTodoList() {
+        user?.todoList = []
+        PersistenceService.saveContext() // Save newly created user
+        user?.todoList = mainList
+        PersistenceService.saveContext() // Save newly created user
+        reload()
+    }
+    
+    func editTodayOrder(_ uuid : String) {
+        if todayOrdersList.contains(uuid) {
+            todayOrdersList.remove(at: todayOrdersList.index(of: uuid)!)
+        } else {
+            todayOrdersList.append(uuid)
+        }
+        user?.todayOrdersList = []
+        PersistenceService.saveContext()
+        user?.todayOrdersList = todayOrdersList
+        PersistenceService.saveContext()
+        print(todayOrdersList)
+    }
 }

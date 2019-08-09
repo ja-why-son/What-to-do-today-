@@ -83,7 +83,6 @@ class SmallBoxViewController: UIViewController {
                 walkthroughVC.delegate = self
                 self.addChildViewControllerWithView(walkthroughVC)
                 newUser.todoList = createTips()
-                print(newUser.todoList)
                 newUser.categoryList = [NSLocalizedString("Tips", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: "") ]
                 newUser.todayOrdersList = []
                 PersistenceService.saveContext() // Save newly created user
