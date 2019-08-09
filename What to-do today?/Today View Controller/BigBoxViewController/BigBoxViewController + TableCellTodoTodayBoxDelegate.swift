@@ -24,7 +24,10 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         if newText.isEmpty {
             todayList.remove(at: index!)
             tableView.deleteRows(at: [IndexPath(row: index!, section: 0)], with: .fade)
+            let uuid = list[todayIndexList[index!]].uuid!
             list.remove(at: todayIndexList[index!])
+            todayOrdersList.remove(at: todayOrdersList.index(of: uuid)!)
+            // here
         } else {
             list[todayIndexList[index!]].content = newText
         }
@@ -37,6 +40,8 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         let index = tableView.indexPath(for: sender)?.row
         sender.textView.resignFirstResponder()
         list[todayIndexList[index!]].isToday = !list[todayIndexList[index!]].isToday
+        let uuid = list[todayIndexList[index!]].uuid!
+        todayOrdersList.remove(at: todayOrdersList.index(of: uuid)!)
         todayList.remove(at: index!)
         todayIndexList.remove(at: index!)
         saveData()
@@ -48,8 +53,10 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
     
     func saveData() {
         user?.todoList! = []
+        user?.todayOrdersList = []
         PersistenceService.saveContext()
         user?.todoList! = list
+        user?.todayOrdersList = todayOrdersList
         PersistenceService.saveContext()
         reloadToday()
     }

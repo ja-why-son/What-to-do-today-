@@ -28,6 +28,7 @@ class BigBoxViewController: UIViewController{
     var todayIsEditting : Bool = false
     var todayOrdersList = [String]()
     var todayDict : [String? : Todo] = [:]
+    var dropTarget : Int = Int()
 
     
     
@@ -78,7 +79,10 @@ class BigBoxViewController: UIViewController{
             selector: #selector(BigBoxViewController.reloadToday),
             name:NSNotification.Name(rawValue: "reloadToday"),
             object: nil)
+        tableView.dragInteractionEnabled = true
+        tableView.dragDelegate = self
+        tableView.dropDelegate = self
         loadTodayTodoToDict()
-        print(todayDict)
+//        print(todayDict)
     }
 }

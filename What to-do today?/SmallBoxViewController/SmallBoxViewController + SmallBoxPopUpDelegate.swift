@@ -39,7 +39,9 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
     }
     
     func deleteTodo(ogIndex index : Int){
-        editTodayOrder(mainList[index].uuid!)
+        if mainList[index].isToday {
+            editTodayOrder(mainList[index].uuid!)
+        }
         mainList.remove(at: index)
         saveTodoList()
     }
@@ -81,6 +83,7 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
     }
     
     func editTodayOrder(_ uuid : String) {
+        todayOrdersList = (user?.todayOrdersList)!
         if todayOrdersList.contains(uuid) {
             todayOrdersList.remove(at: todayOrdersList.index(of: uuid)!)
         } else {

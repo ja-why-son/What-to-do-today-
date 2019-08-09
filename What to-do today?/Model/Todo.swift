@@ -17,12 +17,13 @@ public final class Todo: NSObject, NSCoding, Codable, NSItemProviderReading, NSI
     var category : String!
     var isToday : Bool!
     var done : Bool! = false
-    var uuid : String! = UUID().uuidString
+    var uuid : String!
     
     init(content: String, category: String, isToday: Bool) {
         self.content = content
         self.category = category
         self.isToday = isToday
+        self.uuid = UUID().uuidString
     }
     
     private enum Key: String {

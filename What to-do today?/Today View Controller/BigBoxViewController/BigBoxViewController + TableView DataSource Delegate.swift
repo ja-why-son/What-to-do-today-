@@ -38,4 +38,16 @@ extension BigBoxViewController : UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enableSwipe"), object: nil)
+        if destinationIndexPath.row != list.count {
+            let temp = todayOrdersList[sourceIndexPath.row]
+            todayOrdersList.remove(at: sourceIndexPath.row)
+            todayOrdersList.insert(temp, at: destinationIndexPath.row)
+        }
+        saveData()
+        reloadToday()
+        tableView.reloadData()
+    }
 }

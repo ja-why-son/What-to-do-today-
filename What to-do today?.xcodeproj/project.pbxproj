@@ -45,6 +45,8 @@
 		9C186DC022F92044007315B8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DC222F92044007315B8 /* Localizable.strings */; };
 		9C186DC722FA83B8007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DC522FA83B7007315B8 /* ATCClassicWalkthroughViewController.xib */; };
 		9C186DC822FA83B8007315B8 /* ATCWalkthroughViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C186DC622FA83B7007315B8 /* ATCWalkthroughViewController.xib */; };
+		9C186DCA22FD3E20007315B8 /* BigBoxViewController + Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DC922FD3E1F007315B8 /* BigBoxViewController + Drag.swift */; };
+		9C186DCC22FD4AA6007315B8 /* BigBoxViewController + Drop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DCB22FD4AA6007315B8 /* BigBoxViewController + Drop.swift */; };
 		9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */; };
 		9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */; };
 		9C32FCE72254A73F00B9AEEF /* PopUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */; };
@@ -124,6 +126,8 @@
 		9C186DC422F928F4007315B8 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		9C186DC522FA83B7007315B8 /* ATCClassicWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCClassicWalkthroughViewController.xib; sourceTree = "<group>"; };
 		9C186DC622FA83B7007315B8 /* ATCWalkthroughViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ATCWalkthroughViewController.xib; sourceTree = "<group>"; };
+		9C186DC922FD3E1F007315B8 /* BigBoxViewController + Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + Drag.swift"; sourceTree = "<group>"; };
+		9C186DCB22FD4AA6007315B8 /* BigBoxViewController + Drop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + Drop.swift"; sourceTree = "<group>"; };
 		9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallBoxViewController.swift; sourceTree = "<group>"; };
 		9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigBoxViewController.swift; sourceTree = "<group>"; };
 		9C32FCE62254A73F00B9AEEF /* PopUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpTextField.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+				9C186DC922FD3E1F007315B8 /* BigBoxViewController + Drag.swift */,
+				9C186DCB22FD4AA6007315B8 /* BigBoxViewController + Drop.swift */,
 				9C0B8C6522F1796E00F5446E /* BigBoxViewController + Reload .swift */,
 				9C0B8C6722F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift */,
 				9C0B8C6922F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift */,
@@ -510,9 +516,11 @@
 				9C0B8C6822F179E400F5446E /* BigBoxViewController + TableView DataSource Delegate.swift in Sources */,
 				9C1DB7302206935900C49EE9 /* SmallBoxViewController.swift in Sources */,
 				9C0B8C6E22F17AD600F5446E /* BigBoxViewController + Expanding Cell Delegate.swift in Sources */,
+				9C186DCA22FD3E20007315B8 /* BigBoxViewController + Drag.swift in Sources */,
 				9C0B8C6022F16D8600F5446E /* PopUpViewController + ScrollViewDelegate.swift in Sources */,
 				9C3434522230B72B00A8B923 /* AddTableViewCellBase.swift in Sources */,
 				9C0B8C6622F1796E00F5446E /* BigBoxViewController + Reload .swift in Sources */,
+				9C186DCC22FD4AA6007315B8 /* BigBoxViewController + Drop.swift in Sources */,
 				9C186DB322F696A2007315B8 /* ATCClassicWalkthroughViewController.swift in Sources */,
 				9C0B8C5822F16A5100F5446E /* PopUpViewController + Expanding Cell Delegate.swift in Sources */,
 				9C186DBB22F7BDF3007315B8 /* Constants.swift in Sources */,

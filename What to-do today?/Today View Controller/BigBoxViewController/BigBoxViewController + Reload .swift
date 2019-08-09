@@ -13,41 +13,53 @@ extension BigBoxViewController {
     // call everytime when popup modification method is called
     @objc func reloadToday() {
         list = (user?.todoList)!
-        var upperLeft : [Todo] = []
-        var upperLeftIndex : [Int] = []
-        var upperRight :[Todo] = []
-        var upperRightIndex : [Int] = []
-        var bottomLeft : [Todo] = []
-        var bottomLeftIndex : [Int] = []
-        var bottomRight : [Todo] = []
-        var bottomRightIndex : [Int] = []
-        
+        todayOrdersList = (user?.todayOrdersList)!
+        print(todayOrdersList)
         todayList = []
         todayIndexList = []
+        loadTodayTodoToDict()
+        var todayIndexDict : [String? : Int] = [:]
         for i in stride(from: 0, to: list.count, by: 1) {
             if list[i].isToday {
-                switch list[i].category! {
-                case "red":
-                    upperLeft.append(list[i])
-                    upperLeftIndex.append(i)
-                case "orange":
-                    upperRight.append(list[i])
-                    upperRightIndex.append(i)
-                case "blue":
-                    bottomLeft.append(list[i])
-                    bottomLeftIndex.append(i)
-                case "green":
-                    bottomRight.append(list[i])
-                    bottomRightIndex.append(i)
-                default: return
-                }
+                todayIndexDict[list[i].uuid] = i
             }
         }
-        todayList = upperLeft + upperRight + bottomLeft + bottomRight
-        todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
+        for i in stride(from: 0, to: todayOrdersList.count, by: 1) {
+            print(list[todayIndexDict[todayOrdersList[i]]!].content!)
+            todayList.append(list[todayIndexDict[todayOrdersList[i]]!])
+            todayIndexList.append(todayIndexDict[todayOrdersList[i]]!)
+        }
+        
+//        var upperLeft : [Todo] = []
+//        var upperLeftIndex : [Int] = []
+//        var upperRight :[Todo] = []
+//        var upperRightIndex : [Int] = []
+//        var bottomLeft : [Todo] = []
+//        var bottomLeftIndex : [Int] = []
+//        var bottomRight : [Todo] = []
+//        var bottomRightIndex : [Int] = []
+//        for i in stride(from: 0, to: list.count, by: 1) {
+//            if list[i].isToday {
+//                switch list[i].category! {
+//                case "red":
+//                    upperLeft.append(list[i])
+//                    upperLeftIndex.append(i)
+//                case "orange":
+//                    upperRight.append(list[i])
+//                    upperRightIndex.append(i)
+//                case "blue":
+//                    bottomLeft.append(list[i])
+//                    bottomLeftIndex.append(i)
+//                case "green":
+//                    bottomRight.append(list[i])
+//                    bottomRightIndex.append(i)
+//                default: return
+//                }
+//            }
+//        }
+//        todayList = upperLeft + upperRight + bottomLeft + bottomRight
+//        todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
-        //        checkDoneExist()
-        loadTodayTodoToDict()
     }
     
     // call it when first load and whenever there's change in number of todo
