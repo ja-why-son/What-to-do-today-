@@ -33,6 +33,8 @@ extension BigBoxViewController {
     
     
     @IBAction func clearDone(_ sender: Any) {
+        // make a separated deleted list and a temp list. check thru the deleted list to see
+        // if it is in the todayorderslist, then remove it. (can also count done items via deleted list
         Constants.heavyHaptic.impactOccurred()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "endEdit"), object: nil)
         var count : Int = 0
@@ -71,13 +73,5 @@ extension BigBoxViewController {
             self.present(alert, animated: true, completion: nil)
         }
     }
-    
-     func createTodayList() -> [Todo]{
-        let todayList : [Todo] = []
-        for uuid in todayOrdersList {
-     
-        }
-        return []
-     }
     
 }
