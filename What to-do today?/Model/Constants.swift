@@ -19,4 +19,6 @@ struct Constants {
     
     static let heavyHaptic = UIImpactFeedbackGenerator(style: .heavy)
     
+    static let useDictFeatureFlag = false
+    
 }

@@ -14,11 +14,7 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         Constants.heavyHaptic.impactOccurred()
         let index = sender.tag
         list[todayIndexList[index]].done! = !list[todayIndexList[index]].done!
-        user?.todoList! = []
-        PersistenceService.saveContext()
-        user?.todoList! = list
-        PersistenceService.saveContext()
-        tableView.reloadData()
+        saveData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     
@@ -32,11 +28,7 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         } else {
             list[todayIndexList[index!]].content = newText
         }
-        user?.todoList! = []
-        PersistenceService.saveContext()
-        user?.todoList! = list
-        PersistenceService.saveContext()
-        reloadToday()
+        saveData()
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
     }
     
@@ -47,15 +39,19 @@ extension BigBoxViewController : TableCellTodoTodayBoxDelegate {
         list[todayIndexList[index!]].isToday = !list[todayIndexList[index!]].isToday
         todayList.remove(at: index!)
         todayIndexList.remove(at: index!)
+        saveData()
+    }
+    
+    func todayEnterEdit() {
+        todayIsEditting = true
+    }
+    
+    func saveData() {
         user?.todoList! = []
         PersistenceService.saveContext()
         user?.todoList! = list
         PersistenceService.saveContext()
         reloadToday()
-    }
-    
-    func todayEnterEdit() {
-        todayIsEditting = true
     }
     
 }

@@ -47,16 +47,20 @@ extension BigBoxViewController {
         todayIndexList = upperLeftIndex + upperRightIndex + bottomLeftIndex + bottomRightIndex
         tableView.reloadData()
         //        checkDoneExist()
+        loadTodayTodoToDict()
     }
     
     // call it when first load and whenever there's change in number of todo
     func loadTodayTodoToDict () {
+        todayDict = [:]
         for todo in list {
             if todo.isToday {
                 print(todo.uuid)
                 todayDict[todo.uuid] = todo
             }
         }
+        print("Here")
+        print(todayDict)
         //todayList = createTodayList()
     }
     
@@ -102,9 +106,8 @@ extension BigBoxViewController {
     }
     
      func createTodayList() -> [Todo]{
-        let ordersList : [String] = []
         let todayList : [Todo] = []
-        for uuid in ordersList {
+        for uuid in todayOrdersList {
      
         }
         return []

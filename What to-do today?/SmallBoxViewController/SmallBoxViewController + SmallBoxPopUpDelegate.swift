@@ -34,13 +34,12 @@ extension SmallBoxViewController :  SmallBoxPopUpDelegate {
     
     func moveTodayOrOut(ogIndex index : Int) {
 //        mainList = (user?.todoList)! // same ^^
-        print(mainList[index].content!)
-        print(mainList[index].uuid!)
         editTodayOrder(mainList[index].uuid!)
         saveTodoList()
     }
     
     func deleteTodo(ogIndex index : Int){
+        editTodayOrder(mainList[index].uuid!)
         mainList.remove(at: index)
         saveTodoList()
     }
