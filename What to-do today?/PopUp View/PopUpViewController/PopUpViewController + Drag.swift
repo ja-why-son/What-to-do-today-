@@ -11,7 +11,7 @@ import UIKit
 extension PopUpViewController : UITableViewDragDelegate {
     
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-        if indexPath.row == list.count {
+        if indexPath.row == list.count || isMakingEdit {
             return []
         }
         Constants.mediumHaptic.impactOccurred()

@@ -40,6 +40,7 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
 
     func textFieldDidBeginEditing(_ textField : UITextField) {
         originalLabel = self.text
+        textField.selectAll(nil)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

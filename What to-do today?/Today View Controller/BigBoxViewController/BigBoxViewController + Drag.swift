@@ -12,7 +12,6 @@ extension BigBoxViewController : UITableViewDragDelegate {
     
     func tableView(_ tableView: UITableView, dragSessionWillBegin session: UIDragSession) {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
-        print("HI")
     }
     
     func tableView(_ tableView: UITableView, dropSessionDidEnd session: UIDropSession) {
@@ -20,7 +19,9 @@ extension BigBoxViewController : UITableViewDragDelegate {
     }
     
     func tableView(_ tableView: UITableView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-
+        if todayIsEditting {
+            return []
+        }
         Constants.mediumHaptic.impactOccurred()
         let todoItem = list[indexPath.row]
         let itemProvider = NSItemProvider(object: todoItem)
