@@ -33,8 +33,6 @@
 		9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFB921FC15FF00642F56 /* Main.storyboard */; };
 		9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFBF21FC15FF00642F56 /* Assets.xcassets */; };
 		9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C13EFC121FC15FF00642F56 /* LaunchScreen.storyboard */; };
-		9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */; };
-		9C13EFD921FC160000642F56 /* What_to_do_today_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */; };
 		9C13EFE721FC170600642F56 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C13EFE621FC170600642F56 /* PageViewController.swift */; };
 		9C186DAB22F6953F007315B8 /* WalkthroughModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DAA22F6953F007315B8 /* WalkthroughModel.swift */; };
 		9C186DAE22F69581007315B8 /* ViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C186DAD22F69581007315B8 /* ViewControllerHelper.swift */; };
@@ -60,23 +58,6 @@
 		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		9C13EFCA21FC15FF00642F56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C13EFAA21FC15FF00642F56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C13EFB121FC15FF00642F56;
-			remoteInfo = "What to-do today?";
-		};
-		9C13EFD521FC160000642F56 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C13EFAA21FC15FF00642F56 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C13EFB121FC15FF00642F56;
-			remoteInfo = "What to-do today?";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9C0B8C4522F10FC800F5446E /* PageViewController + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PageViewController + Delegate.swift"; sourceTree = "<group>"; };
@@ -107,12 +88,6 @@
 		9C13EFBF21FC15FF00642F56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C13EFC221FC15FF00642F56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C13EFC421FC15FF00642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFC921FC15FF00642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "What to-do today?Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_Tests.swift; sourceTree = "<group>"; };
-		9C13EFCF21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C13EFD421FC160000642F56 /* What to-do today?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "What to-do today?.app"; path = "What to-do today?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = What_to_do_today_UITests.swift; sourceTree = "<group>"; };
-		9C13EFDA21FC160000642F56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C13EFE621FC170600642F56 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		9C186DAA22F6953F007315B8 /* WalkthroughModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughModel.swift; sourceTree = "<group>"; };
 		9C186DAD22F69581007315B8 /* ViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHelper.swift; sourceTree = "<group>"; };
@@ -144,20 +119,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		9C13EFAF21FC15FF00642F56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C13EFC621FC15FF00642F56 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C13EFD121FC160000642F56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -264,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				9C13EFB421FC15FF00642F56 /* What to-do today? */,
-				9C13EFCC21FC15FF00642F56 /* What to-do today?Tests */,
-				9C13EFD721FC160000642F56 /* What to-do today?UITests */,
 				9C13EFB321FC15FF00642F56 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -274,8 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				9C13EFB221FC15FF00642F56 /* What to-do today?.app */,
-				9C13EFC921FC15FF00642F56 /* What to-do today?.app */,
-				9C13EFD421FC160000642F56 /* What to-do today?.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -299,24 +256,6 @@
 				9C186DC222F92044007315B8 /* Localizable.strings */,
 			);
 			path = "What to-do today?";
-			sourceTree = "<group>";
-		};
-		9C13EFCC21FC15FF00642F56 /* What to-do today?Tests */ = {
-			isa = PBXGroup;
-			children = (
-				9C13EFCD21FC160000642F56 /* What_to_do_today_Tests.swift */,
-				9C13EFCF21FC160000642F56 /* Info.plist */,
-			);
-			path = "What to-do today?Tests";
-			sourceTree = "<group>";
-		};
-		9C13EFD721FC160000642F56 /* What to-do today?UITests */ = {
-			isa = PBXGroup;
-			children = (
-				9C13EFD821FC160000642F56 /* What_to_do_today_UITests.swift */,
-				9C13EFDA21FC160000642F56 /* Info.plist */,
-			);
-			path = "What to-do today?UITests";
 			sourceTree = "<group>";
 		};
 		9C186DA822F694DA007315B8 /* Onboarding Walkthrough */ = {
@@ -395,42 +334,6 @@
 			productReference = 9C13EFB221FC15FF00642F56 /* What to-do today?.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C13EFC821FC15FF00642F56 /* What to-do today?Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C13EFE021FC160000642F56 /* Build configuration list for PBXNativeTarget "What to-do today?Tests" */;
-			buildPhases = (
-				9C13EFC521FC15FF00642F56 /* Sources */,
-				9C13EFC621FC15FF00642F56 /* Frameworks */,
-				9C13EFC721FC15FF00642F56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C13EFCB21FC15FF00642F56 /* PBXTargetDependency */,
-			);
-			name = "What to-do today?Tests";
-			productName = "What to-do today?Tests";
-			productReference = 9C13EFC921FC15FF00642F56 /* What to-do today?.app */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		9C13EFD321FC160000642F56 /* What to-do today?UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C13EFE321FC160000642F56 /* Build configuration list for PBXNativeTarget "What to-do today?UITests" */;
-			buildPhases = (
-				9C13EFD021FC160000642F56 /* Sources */,
-				9C13EFD121FC160000642F56 /* Frameworks */,
-				9C13EFD221FC160000642F56 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C13EFD621FC160000642F56 /* PBXTargetDependency */,
-			);
-			name = "What to-do today?UITests";
-			productName = "What to-do today?UITests";
-			productReference = 9C13EFD421FC160000642F56 /* What to-do today?.app */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -443,14 +346,6 @@
 				TargetAttributes = {
 					9C13EFB121FC15FF00642F56 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					9C13EFC821FC15FF00642F56 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 9C13EFB121FC15FF00642F56;
-					};
-					9C13EFD321FC160000642F56 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 9C13EFB121FC15FF00642F56;
 					};
 				};
 			};
@@ -469,8 +364,6 @@
 			projectRoot = "";
 			targets = (
 				9C13EFB121FC15FF00642F56 /* What to-do today? */,
-				9C13EFC821FC15FF00642F56 /* What to-do today?Tests */,
-				9C13EFD321FC160000642F56 /* What to-do today?UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -486,20 +379,6 @@
 				9C186DC022F92044007315B8 /* Localizable.strings in Resources */,
 				9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */,
 				9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C13EFC721FC15FF00642F56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C13EFD221FC160000642F56 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,36 +436,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C13EFC521FC15FF00642F56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C13EFCE21FC160000642F56 /* What_to_do_today_Tests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C13EFD021FC160000642F56 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C13EFD921FC160000642F56 /* What_to_do_today_UITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		9C13EFCB21FC15FF00642F56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C13EFB121FC15FF00642F56 /* What to-do today? */;
-			targetProxy = 9C13EFCA21FC15FF00642F56 /* PBXContainerItemProxy */;
-		};
-		9C13EFD621FC160000642F56 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C13EFB121FC15FF00642F56 /* What to-do today? */;
-			targetProxy = 9C13EFD521FC160000642F56 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9C13EFB921FC15FF00642F56 /* Main.storyboard */ = {
@@ -775,84 +625,6 @@
 			};
 			name = Release;
 		};
-		9C13EFE121FC160000642F56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What to-do today?Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/What to-do today?.app/What to-do today?";
-			};
-			name = Debug;
-		};
-		9C13EFE221FC160000642F56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What to-do today?Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-Tests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/What to-do today?.app/What to-do today?";
-			};
-			name = Release;
-		};
-		9C13EFE421FC160000642F56 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What to-do today?UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "What to-do today?";
-			};
-			name = Debug;
-		};
-		9C13EFE521FC160000642F56 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "What to-do today?UITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "What to-do today?";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -870,24 +642,6 @@
 			buildConfigurations = (
 				9C13EFDE21FC160000642F56 /* Debug */,
 				9C13EFDF21FC160000642F56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C13EFE021FC160000642F56 /* Build configuration list for PBXNativeTarget "What to-do today?Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C13EFE121FC160000642F56 /* Debug */,
-				9C13EFE221FC160000642F56 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C13EFE321FC160000642F56 /* Build configuration list for PBXNativeTarget "What to-do today?UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C13EFE421FC160000642F56 /* Debug */,
-				9C13EFE521FC160000642F56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
