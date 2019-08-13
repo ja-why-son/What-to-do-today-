@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Gifu
 
 class ATCClassicWalkthroughViewController: UIViewController {
     @IBOutlet var containerView: UIView!
     @IBOutlet var imageContainerView: UIView!
-    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var imageView: GIFImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
     
@@ -35,6 +36,7 @@ class ATCClassicWalkthroughViewController: UIViewController {
 //        imageView.clipsToBounds = true
 //        imageView.tintColor = .white
 //        imageContainerView.backgroundColor = .clear
+        imageView.animate(withGIFNamed: "giphy")
         
         titleLabel.text = model.title
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)

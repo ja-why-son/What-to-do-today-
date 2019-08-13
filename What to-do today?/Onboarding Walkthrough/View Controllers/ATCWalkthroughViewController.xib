@@ -22,14 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="15L-4h-hYT">
-                    <rect key="frame" x="168" y="594" width="39" height="37"/>
+                    <rect key="frame" x="168" y="606" width="39" height="37"/>
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="currentPageIndicatorTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                 </pageControl>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="15L-4h-hYT" secondAttribute="bottom" constant="36" id="ICv-uv-zBE"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="15L-4h-hYT" secondAttribute="bottom" constant="24" id="ICv-uv-zBE"/>
                 <constraint firstItem="15L-4h-hYT" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="yOu-mT-LsU"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -29,13 +29,13 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBB-wU-Tzs" userLabel="Image Container View">
-                            <rect key="frame" x="137.5" y="200" width="100" height="100"/>
+                            <rect key="frame" x="28" y="135" width="320" height="320"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-v9-Ctm">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-v9-Ctm" customClass="GIFImageView" customModule="Gifu">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="100" id="DVg-Ik-xM8"/>
-                                        <constraint firstAttribute="width" constant="100" id="u60-iy-Hjr"/>
+                                        <constraint firstAttribute="height" constant="320" id="DVg-Ik-xM8"/>
+                                        <constraint firstAttribute="width" constant="320" id="u60-iy-Hjr"/>
                                     </constraints>
                                 </imageView>
                             </subviews>
@@ -43,18 +43,18 @@
                             <constraints>
                                 <constraint firstItem="NRA-v9-Ctm" firstAttribute="centerX" secondItem="iBB-wU-Tzs" secondAttribute="centerX" id="6Le-Oz-a5U"/>
                                 <constraint firstItem="NRA-v9-Ctm" firstAttribute="centerY" secondItem="iBB-wU-Tzs" secondAttribute="centerY" id="K6B-1U-GQF"/>
-                                <constraint firstAttribute="width" constant="100" id="YzF-gN-n8w"/>
-                                <constraint firstAttribute="height" constant="100" id="thC-4g-cZj"/>
+                                <constraint firstAttribute="width" constant="320" id="YzF-gN-n8w"/>
+                                <constraint firstAttribute="height" constant="320" id="thC-4g-cZj"/>
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRL-uJ-wL1" userLabel="Title Label">
-                            <rect key="frame" x="166.5" y="370" width="42" height="20.5"/>
+                            <rect key="frame" x="166.5" y="490" width="42" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDu-W2-TQj" userLabel="Subtitle Label">
-                            <rect key="frame" x="166.5" y="420.5" width="42" height="51"/>
+                            <rect key="frame" x="166.5" y="541.5" width="42" height="51"/>
                             <attributedString key="attributedText">
                                 <fragment content="Label">
                                     <attributes>
@@ -70,11 +70,11 @@
                     <constraints>
                         <constraint firstItem="yRL-uJ-wL1" firstAttribute="centerX" secondItem="t6a-rE-WeO" secondAttribute="centerX" id="DN8-8I-DWK"/>
                         <constraint firstItem="yRL-uJ-wL1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t6a-rE-WeO" secondAttribute="leading" constant="35" id="EZV-u7-UB0"/>
-                        <constraint firstItem="yRL-uJ-wL1" firstAttribute="top" secondItem="iBB-wU-Tzs" secondAttribute="bottom" constant="70" id="EhQ-SF-YAR"/>
-                        <constraint firstItem="XDu-W2-TQj" firstAttribute="top" secondItem="yRL-uJ-wL1" secondAttribute="bottom" constant="30" id="GaY-zA-HO2"/>
+                        <constraint firstItem="yRL-uJ-wL1" firstAttribute="top" secondItem="iBB-wU-Tzs" secondAttribute="bottom" constant="35" id="EhQ-SF-YAR"/>
+                        <constraint firstItem="XDu-W2-TQj" firstAttribute="top" secondItem="yRL-uJ-wL1" secondAttribute="bottom" constant="31" id="GaY-zA-HO2"/>
                         <constraint firstItem="iBB-wU-Tzs" firstAttribute="centerX" secondItem="t6a-rE-WeO" secondAttribute="centerX" id="Hae-Ii-Wfx"/>
                         <constraint firstItem="XDu-W2-TQj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t6a-rE-WeO" secondAttribute="leading" constant="35" id="NHJ-Jp-md1"/>
-                        <constraint firstItem="iBB-wU-Tzs" firstAttribute="top" secondItem="t6a-rE-WeO" secondAttribute="top" constant="200" id="Nd1-Ym-R0u"/>
+                        <constraint firstItem="iBB-wU-Tzs" firstAttribute="top" secondItem="t6a-rE-WeO" secondAttribute="top" constant="135" id="Nd1-Ym-R0u"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XDu-W2-TQj" secondAttribute="trailing" constant="35" id="RS5-Bh-qRK"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="yRL-uJ-wL1" secondAttribute="trailing" constant="35" id="c0Z-BG-aZW"/>
                         <constraint firstItem="XDu-W2-TQj" firstAttribute="centerX" secondItem="t6a-rE-WeO" secondAttribute="centerX" id="sHs-ra-osA"/>

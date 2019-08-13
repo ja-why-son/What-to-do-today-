@@ -63,7 +63,7 @@ class BigBoxViewController: UIViewController{
         let offset = todayList.count == 0 ? 0 : 1
         expandingIndexRow = todayList.count - offset
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 100
+        tableView.estimatedRowHeight = 50
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(BigBoxViewController.keyboardWillShow),

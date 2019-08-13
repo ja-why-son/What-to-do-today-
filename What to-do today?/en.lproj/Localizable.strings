@@ -7,10 +7,10 @@
 */
 
 "Welcome!" = "Welcome!";
-"With To-Doy, you can easily customize your to-do lists." = "With To-Doy, you can easily create your to-do lists.";
-"Add to-dos to today!" = "Add to-dos to today!";
-"Add tasks to your daily to-do list" = "Add tasks to your daily to-do list";
-"Clear done to-dos." = "Clear done to-dos.";
+"With To-Doy, you can easily customize your to-do lists." = "With To-Doy, you can easily create your todo lists.";
+"Add to-dos to today!" = "Add todos to today!";
+"Add tasks to your daily to-do list" = "Add tasks to your daily todo list";
+"Clear done to-dos." = "Clear done todos.";
 "After you've checked off your finished tasks, tap the button in the upper right to clear them." = "After you've checked off your finished tasks, tap the button in the upper right to clear them.";
 "Postpone" = "Postpone";
 "If you decide to postpone a task, you can also move it off the Today list." = "If you decide to postpone a task, you can also move it off the Today list.";

@@ -1,0 +1,28 @@
+PODS:
+  - Gifu (3.2.0)
+  - GSTouchesShowingWindow-Swift (1.0.3)
+
+DEPENDENCIES:
+  - Gifu
+  - GSTouchesShowingWindow-Swift (from `https://github.com/Cyberbeni/GSTouchesShowingWindow-Swift.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Gifu
+
+EXTERNAL SOURCES:
+  GSTouchesShowingWindow-Swift:
+    :git: https://github.com/Cyberbeni/GSTouchesShowingWindow-Swift.git
+
+CHECKOUT OPTIONS:
+  GSTouchesShowingWindow-Swift:
+    :commit: ba28438957c2f395970f9d1303298a1680097ec3
+    :git: https://github.com/Cyberbeni/GSTouchesShowingWindow-Swift.git
+
+SPEC CHECKSUMS:
+  Gifu: 7bcb6427457d85e0b4dff5a84ec5947ac19a93ea
+  GSTouchesShowingWindow-Swift: 050beb90b87691b50410fc02ad47c7a205b0ecb2
+
+PODFILE CHECKSUM: 9fd0c41de4a3013b77de9ef879ab02faf74c40e7
+
+COCOAPODS: 1.7.5

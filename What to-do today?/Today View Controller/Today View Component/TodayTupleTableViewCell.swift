@@ -22,6 +22,7 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
     @IBOutlet weak var checkBox: UIButton!
     @IBOutlet weak var notToday: UIButton!
     @IBOutlet weak var textRightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var textBottomConstraint: NSLayoutConstraint!
     
     var originalText : String?
     var tableCellTodoTodayBoxDelegate : TableCellTodoTodayBoxDelegate?
@@ -57,9 +58,11 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
         originalText = textView.text
         notToday.isEnabled = true
         notToday.isHidden = false
-        textRightConstraint.constant = 30
+//        textRightConstraint.constant = 30
+        textView.sizeToFit()
         notToday.layer.zPosition = 10000
         expandCellDelegate?.updated()
+        print(textBottomConstraint.constant)
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
@@ -69,8 +72,9 @@ class TodayTupleTableViewCell: ExpandableTableViewCell {
         if textView.text != originalText {
             tableCellTodoTodayBoxDelegate?.doneEdittingTodayCell(textView.text, self)
         }
-        
-        
+//        expandCellDelegate?.updated()
+//        textView.sizeToFit()
+        print(textBottomConstraint.constant)
     }
 }
 
