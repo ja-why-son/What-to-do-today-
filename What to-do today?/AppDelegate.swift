@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import GSTouchesShowingWindow_Swift
+//import GSTouchesShowingWindow_Swift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

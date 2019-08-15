@@ -103,8 +103,8 @@ class SmallBoxViewController: UIViewController {
         
         // testing purpose
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
-        let walkthroughVC = self.walkthroughVC()
-        walkthroughVC.delegate = self
-        self.addChildViewControllerWithView(walkthroughVC)
+//        let walkthroughVC = self.walkthroughVC()
+//        walkthroughVC.delegate = self
+//        self.addChildViewControllerWithView(walkthroughVC)
     }
 }
