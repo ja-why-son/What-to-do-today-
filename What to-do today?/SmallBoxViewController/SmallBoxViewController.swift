@@ -14,11 +14,11 @@ import CoreData
 class SmallBoxViewController: UIViewController {
     
     let walkthroughs = [
-        WalkthroughModel(title: NSLocalizedString("Welcome!", comment: ""), subtitle: NSLocalizedString("With To-Doy, you can easily customize your to-do lists.", comment: ""), icon: "analytics-icon"),
-        WalkthroughModel(title: NSLocalizedString("Add to-dos to today!", comment: ""), subtitle: NSLocalizedString("Add tasks to your daily to-do list", comment: ""), icon: "bars-icon"),
-        WalkthroughModel(title: NSLocalizedString("Clear done to-dos.", comment: ""), subtitle: NSLocalizedString("After you've checked off your finished tasks, tap the button in the upper right to clear them.", comment: ""), icon: "bell-icon"),
-        WalkthroughModel(title: NSLocalizedString("Postpone", comment: ""), subtitle: NSLocalizedString("If you decide to postpone a task, you can also move it off the Today list.", comment: ""), icon: "bell-icon"),
-        WalkthroughModel(title: NSLocalizedString("Achieve your goal!", comment: ""), subtitle: NSLocalizedString("Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!", comment: ""), icon: "bell-icon")
+        WalkthroughModel(title: NSLocalizedString("Welcome!", comment: ""), subtitle: NSLocalizedString("With To-Doy, you can easily customize your to-do lists.", comment: ""), icon: "Tutorial(1)"),
+        WalkthroughModel(title: NSLocalizedString("Add to-dos to today!", comment: ""), subtitle: NSLocalizedString("Add tasks to your daily to-do list", comment: ""), icon: "Tutorial(2)"),
+        WalkthroughModel(title: NSLocalizedString("Clear done to-dos.", comment: ""), subtitle: NSLocalizedString("After you've checked off your finished tasks, tap the button in the upper right to clear them.", comment: ""), icon: "Tutorial(3)"),
+        WalkthroughModel(title: NSLocalizedString("Postpone", comment: ""), subtitle: NSLocalizedString("If you decide to postpone a task, you can also move it off the Today list.", comment: ""), icon: "Tutorial(4)"),
+        WalkthroughModel(title: NSLocalizedString("Achieve your goal!", comment: ""), subtitle: NSLocalizedString("Set your daily tasks at the start of each day. Stick to the tasks on the Today list and icrease productivity!", comment: ""), icon: "Tutorial(5)")
     ]
     
     // UI Components

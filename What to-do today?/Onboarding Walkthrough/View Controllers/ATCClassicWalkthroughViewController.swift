@@ -36,7 +36,7 @@ class ATCClassicWalkthroughViewController: UIViewController {
 //        imageView.clipsToBounds = true
 //        imageView.tintColor = .white
 //        imageContainerView.backgroundColor = .clear
-        imageView.animate(withGIFNamed: "giphy")
+        imageView.animate(withGIFNamed: model.icon)
         
         titleLabel.text = model.title
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
