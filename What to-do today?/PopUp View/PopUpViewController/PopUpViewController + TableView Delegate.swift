@@ -16,7 +16,7 @@ extension PopUpViewController : UITableViewDelegate {
         if list.isEmpty || indexPath.row == list.count {
             return nil
         }
-        let deleteAction = UIContextualAction(style: .normal, title:  "Delete", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+        let deleteAction = UIContextualAction(style: .normal, title:  NSLocalizedString("Delete", comment: ""), handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Delete todo")
             self.deleteTodo(indexPath)
             success(true)
@@ -35,13 +35,13 @@ extension PopUpViewController : UITableViewDelegate {
             return nil
         }
         
-        let todayAction = UIContextualAction(style: .normal, title:  "Today", handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
+        let todayAction = UIContextualAction(style: .normal, title:  NSLocalizedString("Today", comment: ""), handler: { (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Move to today")
             self.todayOrNot(indexPath)
             success(true)
         })
         todayAction.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-        let notTodayAction = UIContextualAction(style: .normal, title: "Later", handler: {
+        let notTodayAction = UIContextualAction(style: .normal, title: NSLocalizedString("Later", comment: ""), handler: {
             (ac:UIContextualAction, view:UIView, success:(Bool) -> Void) in
             print("Move out from today")
             self.todayOrNot(indexPath)
