@@ -16,6 +16,11 @@ extension SmallBoxViewController {
         let walkthroughVC = self.walkthroughVC()
         walkthroughVC.delegate = self
         self.addChildViewControllerWithView(walkthroughVC)
-        // can add animation 
+        walkthroughVC.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        walkthroughVC.view.alpha = 0.0
+        UIView.animate(withDuration: 0.25, animations: {
+            walkthroughVC.view.alpha = 1.0
+            walkthroughVC.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        })
     }
 }
