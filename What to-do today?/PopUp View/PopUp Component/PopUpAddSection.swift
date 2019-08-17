@@ -42,12 +42,30 @@ class RedAddTableViewCell: addTableViewCell {
     func textViewDidEndEditing(_ textView: UITextView) {
         if textView.text != "" {
             var addString = textView.text!
-            addString = addString.replacingOccurrences(of: "\n", with: " ")
+            addString = addString.replacingOccurrences(of: "\n", with: "")
             addRowDelegate?.addRow(self, addString)
         }
         textView.text = NSLocalizedString("Add new todo here", comment: "")
         textView.textColor = UIColor.gray;
         expandCellDelegate?.updated()
+//        textView.becomeFirstResponder()
+    }
+    
+    override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            let newCurrText = textView.text.replacingOccurrences(of: " ", with: "")
+            if newCurrText == "" {
+                textView.text = ""
+                textView.resignFirstResponder()
+            } else {
+                textView.resignFirstResponder()
+                textView.becomeFirstResponder()
+                textView.text = ""
+                textView.textColor = UIColor.black
+                return false
+            }
+        }
+        return true
     }
     
 }
