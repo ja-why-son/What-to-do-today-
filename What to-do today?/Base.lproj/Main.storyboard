@@ -194,17 +194,17 @@
                                 <rect key="frame" x="16" y="94" width="343" height="660"/>
                                 <subviews>
                                     <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyZ-tb-P2Y">
-                                        <rect key="frame" x="180" y="0.0" width="164" height="322.66666666666669"/>
+                                        <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="322.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design &amp; Misc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxw-G5-GxB">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.33333333333334" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TUm-HP-8Iz">
-                                                <rect key="frame" x="12" y="42" width="140" height="272.66666666666669"/>
+                                                <rect key="frame" x="12" y="42" width="139.33333333333334" height="272.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -245,17 +245,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzc-xL-jcs">
-                                        <rect key="frame" x="0.0" y="0.0" width="164" height="322.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="322.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technical" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtN-Bh-7L6">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.66666666666666" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yHm-Qc-MlJ">
-                                                <rect key="frame" x="12" y="42" width="140" height="272.66666666666669"/>
+                                                <rect key="frame" x="12" y="42" width="139.66666666666666" height="272.66666666666669"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -296,17 +296,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="21r-gS-7tG">
-                                        <rect key="frame" x="0.0" y="337.66666666666674" width="164" height="322.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="337.66666666666674" width="163.66666666666666" height="322.33333333333326"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Internship" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsr-bl-x4I">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.66666666666666" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98e-5l-fdu">
-                                                <rect key="frame" x="12" y="42" width="140" height="272.33333333333331"/>
+                                                <rect key="frame" x="12" y="42" width="139.66666666666666" height="272.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -347,17 +347,17 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                         </connections>
                                     </view>
                                     <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vm6-f5-y6S">
-                                        <rect key="frame" x="179" y="337.66666666666674" width="164" height="322.33333333333326"/>
+                                        <rect key="frame" x="178.66666666666663" y="337.66666666666674" width="163.33333333333337" height="322.33333333333326"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Misc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM5-qt-86g">
-                                                <rect key="frame" x="12" y="12" width="140" height="24"/>
+                                                <rect key="frame" x="12" y="12" width="139.33333333333334" height="24"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMN-L8-Sh9">
-                                                <rect key="frame" x="12" y="42" width="140" height="272.33333333333331"/>
+                                                <rect key="frame" x="12" y="42" width="139.33333333333334" height="272.33333333333331"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <gestureRecognizers/>
                                                 <attributedString key="attributedText">
@@ -420,12 +420,26 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                     <constraint firstItem="Vm6-f5-y6S" firstAttribute="leading" secondItem="21r-gS-7tG" secondAttribute="trailing" constant="15" id="yqZ-us-o1i"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rah-Yq-cvI">
+                                <rect key="frame" x="323" y="56" width="29" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="cbB-1H-IWa"/>
+                                    <constraint firstAttribute="width" constant="29" id="r6e-dZ-Mmf"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="tutorial_icon"/>
+                                <state key="highlighted" image="highlighted_tutorial_icon"/>
+                                <connections>
+                                    <action selector="revieTutorial" destination="G3W-Cm-XPX" eventType="touchUpInside" id="IeJ-By-xRH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="8dX-hi-KHU" firstAttribute="bottom" secondItem="l0b-xE-xql" secondAttribute="bottom" constant="24" id="CUj-61-fFk"/>
+                            <constraint firstItem="rah-Yq-cvI" firstAttribute="centerY" secondItem="osD-IM-OeF" secondAttribute="centerY" id="EJk-kZ-S2Q"/>
                             <constraint firstItem="osD-IM-OeF" firstAttribute="leading" secondItem="8dX-hi-KHU" secondAttribute="leading" constant="16" id="Zca-B1-7m4"/>
                             <constraint firstItem="osD-IM-OeF" firstAttribute="top" secondItem="8dX-hi-KHU" secondAttribute="top" constant="8" id="cnj-cR-Uxe"/>
+                            <constraint firstItem="8dX-hi-KHU" firstAttribute="trailing" secondItem="rah-Yq-cvI" secondAttribute="trailing" constant="23" id="eji-Gg-tGj"/>
                             <constraint firstItem="l0b-xE-xql" firstAttribute="leading" secondItem="8dX-hi-KHU" secondAttribute="leading" constant="16" id="odu-av-ORj"/>
                             <constraint firstItem="l0b-xE-xql" firstAttribute="top" secondItem="osD-IM-OeF" secondAttribute="bottom" constant="8" id="qnp-Wi-yeW"/>
                             <constraint firstItem="8dX-hi-KHU" firstAttribute="trailing" secondItem="l0b-xE-xql" secondAttribute="trailing" constant="16" id="wlP-hS-yZ9"/>
@@ -530,7 +544,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-IY-MNw">
-                                                            <rect key="frame" x="35" y="0.0" width="232" height="37"/>
+                                                            <rect key="frame" x="35" y="0.0" width="232" height="36.666666666666664"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.69999999999999996" height="0.69999999999999996"/>
                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
@@ -649,7 +663,9 @@ Thank Kelden for his Designs and awesome Swift help</string>
         <image name="cross_icon" width="512" height="512"/>
         <image name="highlighted_clear_done_icon" width="512" height="512"/>
         <image name="highlighted_later_icon" width="512" height="512"/>
+        <image name="highlighted_tutorial_icon" width="512" height="512"/>
         <image name="later_icon" width="512" height="512"/>
         <image name="plus_sign" width="100" height="100"/>
+        <image name="tutorial_icon" width="512" height="512"/>
     </resources>
 </document>

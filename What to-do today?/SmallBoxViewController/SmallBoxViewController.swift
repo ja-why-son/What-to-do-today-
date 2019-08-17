@@ -101,10 +101,6 @@ class SmallBoxViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
         
-        // testing purpose
-//        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
-//        let walkthroughVC = self.walkthroughVC()
-//        walkthroughVC.delegate = self
-//        self.addChildViewControllerWithView(walkthroughVC)
+
     }
 }

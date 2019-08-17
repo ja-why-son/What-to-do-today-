@@ -61,6 +61,7 @@
 		9CC1CD5B2306A2F8005789C3 /* Tutorial(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */; };
 		9CC1CD5C2306A2F8005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */; };
 		9CC1CD5E2307E731005789C3 /* BigBoxViewController + InitialCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */; };
+		9CC1CD622307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
@@ -130,6 +131,7 @@
 		9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(1).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(1).gif"; sourceTree = "<group>"; };
 		9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(4).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(4).gif"; sourceTree = "<group>"; };
 		9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + InitialCheck.swift"; sourceTree = "<group>"; };
+		9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallBoxViewController + Review Tutorial.swift"; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+				9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */,
 				9C0B8C4F22F15FFA00F5446E /* SmallBoxViewController + Show Box.swift */,
 				9C0B8C4D22F15F3100F5446E /* SmallBoxViewController + SmallBoxPopUpDelegate.swift */,
 				9C0B8C4722F1126B00F5446E /* SmallBoxViewController + Default Load.swift */,
@@ -511,6 +514,7 @@
 				9C0B8C5622F1638F00F5446E /* PopUpViewController + TableView Delegate.swift in Sources */,
 				9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */,
 				9C0B8C5C22F16B3600F5446E /* PopUpViewController + Drop.swift in Sources */,
+				9CC1CD622307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift in Sources */,
 				9C186DB122F6960C007315B8 /* SmallBoxViewController + Walkthrough.swift in Sources */,
 				9C0B8C4822F1126B00F5446E /* SmallBoxViewController + Default Load.swift in Sources */,
 				9C0B8C5E22F16C8400F5446E /* PopUpViewController + Keyboard Op.swift in Sources */,

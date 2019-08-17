@@ -16,7 +16,7 @@ class RedAddTableViewCell: addTableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        textView.text = "Add new todo here";
+        textView.text = NSLocalizedString("Add new todo here", comment: "");
         textView.textColor = UIColor.gray
         textView.delegate = self
         NotificationCenter.default.addObserver(
@@ -45,7 +45,7 @@ class RedAddTableViewCell: addTableViewCell {
             addString = addString.replacingOccurrences(of: "\n", with: " ")
             addRowDelegate?.addRow(self, addString)
         }
-        textView.text = "Add new todo here"
+        textView.text = NSLocalizedString("Add new todo here", comment: "")
         textView.textColor = UIColor.gray;
         expandCellDelegate?.updated()
     }
