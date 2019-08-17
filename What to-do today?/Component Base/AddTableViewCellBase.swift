@@ -26,7 +26,7 @@ class addTableViewCell: ExpandableTableViewCell {
     override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
             if text == "\n" {
                 textView.resignFirstResponder()
-                textView.text = NSLocalizedString("Add new todo here", comment: "")
+                textView.text = "Add new todo here"
                 textView.textColor = UIColor.gray; 
             }
         return true
