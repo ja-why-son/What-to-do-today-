@@ -55,11 +55,12 @@
 		9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124622475ABC003A7FD9 /* Todo.swift */; };
 		9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */; };
 		9CC1CD3423028D09005789C3 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3323028D09005789C3 /* giphy.gif */; };
-		9CC1CD3A23053F53005789C3 /* Tutorial(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3523053F53005789C3 /* Tutorial(1).gif */; };
-		9CC1CD3B23053F53005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3623053F53005789C3 /* Tutorial(4).gif */; };
-		9CC1CD3C23053F53005789C3 /* Tutorial(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3723053F53005789C3 /* Tutorial(2).gif */; };
-		9CC1CD3D23053F53005789C3 /* Tutorial(5).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3823053F53005789C3 /* Tutorial(5).gif */; };
-		9CC1CD3E23053F53005789C3 /* Tutorial(3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3923053F53005789C3 /* Tutorial(3).gif */; };
+		9CC1CD582306A2F8005789C3 /* Tutorial(3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */; };
+		9CC1CD592306A2F8005789C3 /* Tutorial(5).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */; };
+		9CC1CD5A2306A2F8005789C3 /* Tutorial(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */; };
+		9CC1CD5B2306A2F8005789C3 /* Tutorial(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */; };
+		9CC1CD5C2306A2F8005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */; };
+		9CC1CD5E2307E731005789C3 /* BigBoxViewController + InitialCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
@@ -123,11 +124,12 @@
 		9C6D124622475ABC003A7FD9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9CC1CD3323028D09005789C3 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
-		9CC1CD3523053F53005789C3 /* Tutorial(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Tutorial(1).gif"; sourceTree = "<group>"; };
-		9CC1CD3623053F53005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Tutorial(4).gif"; sourceTree = "<group>"; };
-		9CC1CD3723053F53005789C3 /* Tutorial(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Tutorial(2).gif"; sourceTree = "<group>"; };
-		9CC1CD3823053F53005789C3 /* Tutorial(5).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Tutorial(5).gif"; sourceTree = "<group>"; };
-		9CC1CD3923053F53005789C3 /* Tutorial(3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Tutorial(3).gif"; sourceTree = "<group>"; };
+		9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(3).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(3).gif"; sourceTree = "<group>"; };
+		9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(5).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(5).gif"; sourceTree = "<group>"; };
+		9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(2).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(2).gif"; sourceTree = "<group>"; };
+		9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(1).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(1).gif"; sourceTree = "<group>"; };
+		9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(4).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(4).gif"; sourceTree = "<group>"; };
+		9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + InitialCheck.swift"; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				9C1DB731220799F600C49EE9 /* BigBoxViewController.swift */,
+				9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */,
 				9C186DC922FD3E1F007315B8 /* BigBoxViewController + Drag.swift */,
 				9C186DCB22FD4AA6007315B8 /* BigBoxViewController + Drop.swift */,
 				9C0B8C6522F1796E00F5446E /* BigBoxViewController + Reload .swift */,
@@ -329,11 +332,11 @@
 			isa = PBXGroup;
 			children = (
 				9CC1CD3323028D09005789C3 /* giphy.gif */,
-				9CC1CD3523053F53005789C3 /* Tutorial(1).gif */,
-				9CC1CD3723053F53005789C3 /* Tutorial(2).gif */,
-				9CC1CD3923053F53005789C3 /* Tutorial(3).gif */,
-				9CC1CD3623053F53005789C3 /* Tutorial(4).gif */,
-				9CC1CD3823053F53005789C3 /* Tutorial(5).gif */,
+				9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */,
+				9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */,
+				9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */,
+				9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */,
+				9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -426,16 +429,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC1CD3423028D09005789C3 /* giphy.gif in Resources */,
-				9CC1CD3A23053F53005789C3 /* Tutorial(1).gif in Resources */,
-				9CC1CD3D23053F53005789C3 /* Tutorial(5).gif in Resources */,
 				9C186DC822FA83B8007315B8 /* ATCWalkthroughViewController.xib in Resources */,
+				9CC1CD5B2306A2F8005789C3 /* Tutorial(1).gif in Resources */,
 				9C186DC722FA83B8007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */,
+				9CC1CD5C2306A2F8005789C3 /* Tutorial(4).gif in Resources */,
+				9CC1CD582306A2F8005789C3 /* Tutorial(3).gif in Resources */,
 				9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */,
 				9C186DC022F92044007315B8 /* Localizable.strings in Resources */,
-				9CC1CD3E23053F53005789C3 /* Tutorial(3).gif in Resources */,
-				9CC1CD3C23053F53005789C3 /* Tutorial(2).gif in Resources */,
+				9CC1CD5A2306A2F8005789C3 /* Tutorial(2).gif in Resources */,
 				9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */,
-				9CC1CD3B23053F53005789C3 /* Tutorial(4).gif in Resources */,
+				9CC1CD592306A2F8005789C3 /* Tutorial(5).gif in Resources */,
 				9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +520,7 @@
 				9C0B8C5A22F16AC900F5446E /* PopUpViewController + Drag.swift in Sources */,
 				9C0B8C5222F161D800F5446E /* PopUpViewController + show, close animation.swift in Sources */,
 				9C0B8C4C22F1185900F5446E /* SmallBoxViewController + Edit Label.swift in Sources */,
+				9CC1CD5E2307E731005789C3 /* BigBoxViewController + InitialCheck.swift in Sources */,
 				9C1DB732220799F600C49EE9 /* BigBoxViewController.swift in Sources */,
 				9C0B8C5422F162BA00F5446E /* PopUpViewController + TableView Datasource Delegate.swift in Sources */,
 				9C0B8C4E22F15F3100F5446E /* SmallBoxViewController + SmallBoxPopUpDelegate.swift in Sources */,
@@ -703,7 +707,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -723,7 +727,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "uw.edu.What-to-do-today-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

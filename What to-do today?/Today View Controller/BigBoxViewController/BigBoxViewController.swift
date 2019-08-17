@@ -82,5 +82,6 @@ class BigBoxViewController: UIViewController{
         tableView.dragInteractionEnabled = true
         tableView.dragDelegate = self
         tableView.dropDelegate = self
+        perform(#selector(initialCheck), with: nil, afterDelay: 0.1)
     }
 }
