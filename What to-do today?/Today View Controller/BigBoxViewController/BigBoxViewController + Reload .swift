@@ -44,6 +44,7 @@ extension BigBoxViewController {
         for todo in list {
             if todo.done {
                 deletedTodos.append(todo)
+                
             } else {
                 keepTodos.append(todo)
             }

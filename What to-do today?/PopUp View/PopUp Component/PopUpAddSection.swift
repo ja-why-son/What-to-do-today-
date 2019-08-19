@@ -48,7 +48,6 @@ class RedAddTableViewCell: addTableViewCell {
         textView.text = NSLocalizedString("Add new todo here", comment: "")
         textView.textColor = UIColor.gray;
         expandCellDelegate?.updated()
-//        textView.becomeFirstResponder()
     }
     
     override func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {

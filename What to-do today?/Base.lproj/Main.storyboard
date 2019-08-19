@@ -628,7 +628,7 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App Designed &amp; Developed By Jayson Chen" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8e-YW-bjK">
-                                <rect key="frame" x="72" y="746" width="279" height="16"/>
+                                <rect key="frame" x="84.333333333333343" y="746" width="266.66666666666663" height="16"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -637,13 +637,12 @@ Thank Kelden for his Designs and awesome Swift help</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Z8e-YW-bjK" firstAttribute="leading" secondItem="Mx9-Qf-I3w" secondAttribute="leading" constant="72" id="97o-1I-dWh"/>
                             <constraint firstItem="Mx9-Qf-I3w" firstAttribute="trailing" secondItem="hWW-si-CPG" secondAttribute="trailing" constant="24" id="JwS-k4-CYD"/>
-                            <constraint firstItem="Mx9-Qf-I3w" firstAttribute="trailing" secondItem="Z8e-YW-bjK" secondAttribute="trailing" constant="24" id="S53-Ho-DcB"/>
                             <constraint firstItem="Z8e-YW-bjK" firstAttribute="top" secondItem="hWW-si-CPG" secondAttribute="bottom" constant="8" id="Xt6-FZ-OPf"/>
                             <constraint firstItem="hWW-si-CPG" firstAttribute="top" secondItem="Mx9-Qf-I3w" secondAttribute="top" constant="36" id="bU5-bZ-IxU"/>
                             <constraint firstItem="hWW-si-CPG" firstAttribute="leading" secondItem="Mx9-Qf-I3w" secondAttribute="leading" constant="24" id="ncw-fo-KtS"/>
                             <constraint firstItem="Mx9-Qf-I3w" firstAttribute="bottom" secondItem="Z8e-YW-bjK" secondAttribute="bottom" constant="16" id="vm7-ux-cFw"/>
+                            <constraint firstItem="Z8e-YW-bjK" firstAttribute="trailing" secondItem="hWW-si-CPG" secondAttribute="trailing" id="wqM-J1-aqe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Mx9-Qf-I3w"/>
                     </view>

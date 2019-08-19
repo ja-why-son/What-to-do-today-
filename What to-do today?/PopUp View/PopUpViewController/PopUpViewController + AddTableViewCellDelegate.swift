@@ -23,7 +23,7 @@ extension PopUpViewController : AddTableViewCellDelegate {
         tableView.insertRows(at: [indexPath], with: .fade)
         print("\(newContent) was added");
        scrollTarget = IndexPath(row: list.count - 1, section: 0)
-        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reloadToday"), object: nil)
     }
     
     func updateScrollTarget (_ indexPath : IndexPath) {
