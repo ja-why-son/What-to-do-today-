@@ -71,6 +71,7 @@ class ATCWalkthroughViewController: UIViewController, UIPageViewControllerDataSo
         }
         if let lastPushedVC = pageViewController.viewControllers?.last {
             if let index = index(of: lastPushedVC) {
+                NotificationCenter.default.post(name: NSNotification.Name("current index"), object: NSNumber(value: index))
                 pageControl.currentPage = index
             } else {
             }

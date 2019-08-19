@@ -31,13 +31,13 @@ class ATCClassicWalkthroughViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        imageView.image = UIImage.localImage(model.icon, template: true)
-//        imageView.contentMode = .scaleAspectFill
-//        imageView.clipsToBounds = true
-//        imageView.tintColor = .white
-//        imageContainerView.backgroundColor = .clear
+
         imageView.animate(withGIFNamed: model.icon)
-        
+        if model.icon != "Tutorial(1)" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                self.imageView.stopAnimatingGIF()
+            }
+        }
         titleLabel.text = model.title
         titleLabel.font = UIFont.boldSystemFont(ofSize: 20.0)
         titleLabel.textColor = .black
@@ -47,5 +47,19 @@ class ATCClassicWalkthroughViewController: UIViewController {
         subtitleLabel.textColor = .black
         
         containerView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ATCClassicWalkthroughViewController.gifControl), name: NSNotification.Name(rawValue: "current index"), object: nil)
+    }
+    
+    @objc func gifControl(_ notification: Notification) {
+        var checkNum = 0
+        if let num = notification.object as? NSNumber {
+            checkNum = Int(truncating: num) + 1
+        }
+        if model.icon.contains(String(checkNum)) {
+            imageView.startAnimatingGIF()
+        } else {
+            imageView.stopAnimatingGIF()
+        }
     }
 }
