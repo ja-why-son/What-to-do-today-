@@ -7,11 +7,11 @@
 */
 
 "Welcome!" = "歡迎！";
-"With To-Doy, you can easily customize your to-do lists." = "藉由To-Doy，你可以輕鬆編輯出屬於自己的待辦清單";
+"With To-Doy, you can easily customize your to-do lists." = "藉由Todoy，你可以輕鬆創造出屬於你的待辦清單";
 "Add to-dos to today!" = "加入「今天」清單！";
 "Add tasks to your daily to-do list" = "把你今天要做的事情加入「今天」清單";
-"Clear done to-dos." = "消除完成事項";
-"After you've checked off your finished tasks, tap the button in the upper right to clear them." = "當你完成待辦後，點擊右上方的按鈕可以消除完成的事項";
+"Clear done to-dos." = "清除完成事項";
+"After you've checked off your finished tasks, tap the button in the upper right to clear them." = "當你完成待辦後，點擊右上方的按鈕可以清除完成的事項";
 "Postpone" = "延遲";
 "If you decide to postpone a task, you can also move it off the Today list." = "如果你決定改天再完成此事項，可以將它移出「今日」清單";
 "Achieve your goal!" = "達成你的目標！";
