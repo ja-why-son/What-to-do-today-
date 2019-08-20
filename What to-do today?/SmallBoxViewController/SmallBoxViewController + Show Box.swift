@@ -19,25 +19,25 @@ extension SmallBoxViewController {
         popUp?.labelTag = senderTag
         switch senderTag {
         case 0: // do red
-            popUp?.color = UPPER_LEFT_COLOR
+            popUp?.color = upperLeftColor
             popUp?.list = redList
             popUp?.indexList = redIndexList
             popUp?.category = "red"
             popUp?.categoryName = categoriesList[0]
         case 1:  // do orange
-            popUp?.color = UPPER_RIGHT_COLOR
+            popUp?.color = upperRightColor
             popUp?.list = orangeList
             popUp?.indexList = orangeIndexList
             popUp?.category = "orange"
             popUp?.categoryName = categoriesList[1]
         case 2:  // do blue
-            popUp?.color = BOTTOM_LEFT_COLOR
+            popUp?.color = bottomLeftColor
             popUp?.list = blueList
             popUp?.indexList = blueIndexList
             popUp?.category = "blue"
             popUp?.categoryName = categoriesList[2]
         case 3:  // do green
-            popUp?.color = BOTTOM_RIGHT_COLOR
+            popUp?.color = bottomRightColor
             popUp?.list = greenList
             popUp?.indexList = greenIndexList
             popUp?.category = "green"

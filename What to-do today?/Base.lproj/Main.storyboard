@@ -432,14 +432,28 @@ Thank Kelden for his Designs and awesome Swift help</string>
                                     <action selector="revieTutorial" destination="G3W-Cm-XPX" eventType="touchUpInside" id="IeJ-By-xRH"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ze9-SF-fcX">
+                                <rect key="frame" x="282" y="55" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="5ME-k6-kTv"/>
+                                    <constraint firstAttribute="width" constant="28" id="EBa-VP-Kwy"/>
+                                </constraints>
+                                <state key="normal" image="color_palette_icon"/>
+                                <state key="highlighted" image="highlighted_color_palette_icon"/>
+                                <connections>
+                                    <action selector="setColor" destination="G3W-Cm-XPX" eventType="touchUpInside" id="V0t-wy-dJe"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="8dX-hi-KHU" firstAttribute="bottom" secondItem="l0b-xE-xql" secondAttribute="bottom" constant="24" id="CUj-61-fFk"/>
                             <constraint firstItem="rah-Yq-cvI" firstAttribute="centerY" secondItem="osD-IM-OeF" secondAttribute="centerY" id="EJk-kZ-S2Q"/>
+                            <constraint firstItem="rah-Yq-cvI" firstAttribute="leading" secondItem="ze9-SF-fcX" secondAttribute="trailing" constant="13" id="G0T-es-ey9"/>
                             <constraint firstItem="osD-IM-OeF" firstAttribute="leading" secondItem="8dX-hi-KHU" secondAttribute="leading" constant="16" id="Zca-B1-7m4"/>
                             <constraint firstItem="osD-IM-OeF" firstAttribute="top" secondItem="8dX-hi-KHU" secondAttribute="top" constant="8" id="cnj-cR-Uxe"/>
                             <constraint firstItem="8dX-hi-KHU" firstAttribute="trailing" secondItem="rah-Yq-cvI" secondAttribute="trailing" constant="23" id="eji-Gg-tGj"/>
+                            <constraint firstItem="ze9-SF-fcX" firstAttribute="centerY" secondItem="rah-Yq-cvI" secondAttribute="centerY" id="gIt-LJ-scH"/>
                             <constraint firstItem="l0b-xE-xql" firstAttribute="leading" secondItem="8dX-hi-KHU" secondAttribute="leading" constant="16" id="odu-av-ORj"/>
                             <constraint firstItem="l0b-xE-xql" firstAttribute="top" secondItem="osD-IM-OeF" secondAttribute="bottom" constant="8" id="qnp-Wi-yeW"/>
                             <constraint firstItem="8dX-hi-KHU" firstAttribute="trailing" secondItem="l0b-xE-xql" secondAttribute="trailing" constant="16" id="wlP-hS-yZ9"/>
@@ -659,8 +673,10 @@ Thank Kelden for his Designs and awesome Swift help</string>
     </scenes>
     <resources>
         <image name="clear_done_icon" width="512" height="512"/>
+        <image name="color_palette_icon" width="512" height="512"/>
         <image name="cross_icon" width="512" height="512"/>
         <image name="highlighted_clear_done_icon" width="512" height="512"/>
+        <image name="highlighted_color_palette_icon" width="512" height="512"/>
         <image name="highlighted_later_icon" width="512" height="512"/>
         <image name="highlighted_tutorial_icon" width="512" height="512"/>
         <image name="later_icon" width="512" height="512"/>

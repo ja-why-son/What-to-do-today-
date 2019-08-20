@@ -55,13 +55,14 @@
 		9C6D124722475ABC003A7FD9 /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D124622475ABC003A7FD9 /* Todo.swift */; };
 		9C6D124A224763DE003A7FD9 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C6D1248224763DE003A7FD9 /* DataModel.xcdatamodeld */; };
 		9CC1CD3423028D09005789C3 /* giphy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD3323028D09005789C3 /* giphy.gif */; };
-		9CC1CD582306A2F8005789C3 /* Tutorial(3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */; };
-		9CC1CD592306A2F8005789C3 /* Tutorial(5).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */; };
-		9CC1CD5A2306A2F8005789C3 /* Tutorial(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */; };
-		9CC1CD5B2306A2F8005789C3 /* Tutorial(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */; };
-		9CC1CD5C2306A2F8005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */; };
 		9CC1CD5E2307E731005789C3 /* BigBoxViewController + InitialCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */; };
 		9CC1CD622307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */; };
+		9CC1CD64230BA64F005789C3 /* SmallBoxViewController + Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC1CD63230BA64F005789C3 /* SmallBoxViewController + Theme.swift */; };
+		9CC1CD6A230BB9EB005789C3 /* Tutorial(1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD65230BB9EA005789C3 /* Tutorial(1).gif */; };
+		9CC1CD6B230BB9EB005789C3 /* Tutorial(5).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD66230BB9EA005789C3 /* Tutorial(5).gif */; };
+		9CC1CD6C230BB9EB005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD67230BB9EA005789C3 /* Tutorial(4).gif */; };
+		9CC1CD6D230BB9EB005789C3 /* Tutorial(3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD68230BB9EB005789C3 /* Tutorial(3).gif */; };
+		9CC1CD6E230BB9EB005789C3 /* Tutorial(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD69230BB9EB005789C3 /* Tutorial(2).gif */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
@@ -125,13 +126,14 @@
 		9C6D124622475ABC003A7FD9 /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		9C6D1249224763DE003A7FD9 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		9CC1CD3323028D09005789C3 /* giphy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = giphy.gif; sourceTree = "<group>"; };
-		9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(3).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(3).gif"; sourceTree = "<group>"; };
-		9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(5).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(5).gif"; sourceTree = "<group>"; };
-		9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(2).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(2).gif"; sourceTree = "<group>"; };
-		9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(1).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(1).gif"; sourceTree = "<group>"; };
-		9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(4).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/Exp/Tutorial(4).gif"; sourceTree = "<group>"; };
 		9CC1CD5D2307E731005789C3 /* BigBoxViewController + InitialCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BigBoxViewController + InitialCheck.swift"; sourceTree = "<group>"; };
 		9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallBoxViewController + Review Tutorial.swift"; sourceTree = "<group>"; };
+		9CC1CD63230BA64F005789C3 /* SmallBoxViewController + Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SmallBoxViewController + Theme.swift"; sourceTree = "<group>"; };
+		9CC1CD65230BB9EA005789C3 /* Tutorial(1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(1).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(1).gif"; sourceTree = "<group>"; };
+		9CC1CD66230BB9EA005789C3 /* Tutorial(5).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(5).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(5).gif"; sourceTree = "<group>"; };
+		9CC1CD67230BB9EA005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(4).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(4).gif"; sourceTree = "<group>"; };
+		9CC1CD68230BB9EB005789C3 /* Tutorial(3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(3).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(3).gif"; sourceTree = "<group>"; };
+		9CC1CD69230BB9EB005789C3 /* Tutorial(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(2).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(2).gif"; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				9C1DB72F2206935900C49EE9 /* SmallBoxViewController.swift */,
+				9CC1CD63230BA64F005789C3 /* SmallBoxViewController + Theme.swift */,
 				9CC1CD612307F449005789C3 /* SmallBoxViewController + Review Tutorial.swift */,
 				9C0B8C4F22F15FFA00F5446E /* SmallBoxViewController + Show Box.swift */,
 				9C0B8C4D22F15F3100F5446E /* SmallBoxViewController + SmallBoxPopUpDelegate.swift */,
@@ -335,11 +338,11 @@
 			isa = PBXGroup;
 			children = (
 				9CC1CD3323028D09005789C3 /* giphy.gif */,
-				9CC1CD562306A2F8005789C3 /* Tutorial(1).gif */,
-				9CC1CD552306A2F7005789C3 /* Tutorial(2).gif */,
-				9CC1CD532306A2F7005789C3 /* Tutorial(3).gif */,
-				9CC1CD572306A2F8005789C3 /* Tutorial(4).gif */,
-				9CC1CD542306A2F7005789C3 /* Tutorial(5).gif */,
+				9CC1CD65230BB9EA005789C3 /* Tutorial(1).gif */,
+				9CC1CD69230BB9EB005789C3 /* Tutorial(2).gif */,
+				9CC1CD68230BB9EB005789C3 /* Tutorial(3).gif */,
+				9CC1CD67230BB9EA005789C3 /* Tutorial(4).gif */,
+				9CC1CD66230BB9EA005789C3 /* Tutorial(5).gif */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -432,16 +435,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CC1CD3423028D09005789C3 /* giphy.gif in Resources */,
+				9CC1CD6A230BB9EB005789C3 /* Tutorial(1).gif in Resources */,
+				9CC1CD6D230BB9EB005789C3 /* Tutorial(3).gif in Resources */,
+				9CC1CD6C230BB9EB005789C3 /* Tutorial(4).gif in Resources */,
 				9C186DC822FA83B8007315B8 /* ATCWalkthroughViewController.xib in Resources */,
-				9CC1CD5B2306A2F8005789C3 /* Tutorial(1).gif in Resources */,
 				9C186DC722FA83B8007315B8 /* ATCClassicWalkthroughViewController.xib in Resources */,
-				9CC1CD5C2306A2F8005789C3 /* Tutorial(4).gif in Resources */,
-				9CC1CD582306A2F8005789C3 /* Tutorial(3).gif in Resources */,
 				9C13EFC321FC15FF00642F56 /* LaunchScreen.storyboard in Resources */,
 				9C186DC022F92044007315B8 /* Localizable.strings in Resources */,
-				9CC1CD5A2306A2F8005789C3 /* Tutorial(2).gif in Resources */,
 				9C13EFC021FC15FF00642F56 /* Assets.xcassets in Resources */,
-				9CC1CD592306A2F8005789C3 /* Tutorial(5).gif in Resources */,
+				9CC1CD6B230BB9EB005789C3 /* Tutorial(5).gif in Resources */,
+				9CC1CD6E230BB9EB005789C3 /* Tutorial(2).gif in Resources */,
 				9C13EFBB21FC15FF00642F56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +533,7 @@
 				9C0B8C4E22F15F3100F5446E /* SmallBoxViewController + SmallBoxPopUpDelegate.swift in Sources */,
 				9C0B8C7122F17B8C00F5446E /* BigBoxViewController + TableCellTodoTodayBoxDelegate.swift in Sources */,
 				9C0B8C5022F15FFA00F5446E /* SmallBoxViewController + Show Box.swift in Sources */,
+				9CC1CD64230BA64F005789C3 /* SmallBoxViewController + Theme.swift in Sources */,
 				9C0B8C6A22F17A4100F5446E /* BigBoxViewController + ScrollViewDelegate.swift in Sources */,
 				9C32FCEB2257FDEE00B9AEEF /* PersistenceService.swift in Sources */,
 				9C186DAE22F69581007315B8 /* ViewControllerHelper.swift in Sources */,

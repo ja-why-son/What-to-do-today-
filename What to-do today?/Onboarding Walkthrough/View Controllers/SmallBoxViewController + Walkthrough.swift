@@ -18,6 +18,8 @@ extension SmallBoxViewController : ATCWalkthroughViewControllerDelegate {
         }, completion: nil)
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "enableSwipe"), object: nil)
         self.removeChildViewController(vc)
+        user?.tutorialComplete = true
+        PersistenceService.saveContext()
     }
     
     

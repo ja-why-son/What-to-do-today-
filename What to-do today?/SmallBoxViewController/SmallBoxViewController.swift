@@ -51,10 +51,10 @@ class SmallBoxViewController: UIViewController {
     var categoriesList = [String]()
     var todayOrdersList = [String]()
     
-    let UPPER_LEFT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.5791445374, blue: 0.5924175978, alpha: 1)
-    let UPPER_RIGHT_COLOR : UIColor = #colorLiteral(red: 1, green: 0.7859908342, blue: 0.5220321417, alpha: 1)
-    let BOTTOM_LEFT_COLOR : UIColor = #colorLiteral(red: 0.768627451, green: 0.8431372549, blue: 0.9294117647, alpha: 1)
-    let BOTTOM_RIGHT_COLOR : UIColor = #colorLiteral(red: 0.6162154078, green: 0.8536292911, blue: 0.6761775017, alpha: 1)
+    var upperLeftColor : UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    var upperRightColor : UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    var bottomLeftColor : UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    var bottomRightColor : UIColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
     
 
     
@@ -64,10 +64,7 @@ class SmallBoxViewController: UIViewController {
         orangeBox.layer.cornerRadius = 10
         blueBox.layer.cornerRadius = 10
         greenBox.layer.cornerRadius = 10
-        redBox.backgroundColor = UPPER_LEFT_COLOR
-        orangeBox.backgroundColor = UPPER_RIGHT_COLOR
-        blueBox.backgroundColor = BOTTOM_LEFT_COLOR
-        greenBox.backgroundColor = BOTTOM_RIGHT_COLOR
+        
         
         // Data
         let fetchRequest : NSFetchRequest<User> = User.fetchRequest()
@@ -78,10 +75,6 @@ class SmallBoxViewController: UIViewController {
             if result.count == 0 { // []
                 print("Creating initial user")
                 let newUser = User(context: PersistenceService.context)
-                NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
-                let walkthroughVC = self.walkthroughVC()
-                walkthroughVC.delegate = self
-                self.addChildViewControllerWithView(walkthroughVC)
                 newUser.todoList = [] //createTips()
                 newUser.categoryList = [NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: ""), NSLocalizedString("Untitled", comment: "") ]
                 newUser.todayOrdersList = []
@@ -101,6 +94,12 @@ class SmallBoxViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(SmallBoxViewController.reload), name: NSNotification.Name(rawValue: "reloadSmallBox"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.editLabel), name: NSNotification.Name(rawValue: "reload label"), object: nil)
         
-
+        getColor()
+        if !(user?.tutorialComplete)! {
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "disableSwipe"), object: nil)
+            let walkthroughVC = self.walkthroughVC()
+            walkthroughVC.delegate = self
+            self.addChildViewControllerWithView(walkthroughVC)
+        }
     }
 }
