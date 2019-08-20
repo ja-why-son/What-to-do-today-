@@ -49,9 +49,12 @@ class PopUpTextField: UITextField, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField : UITextField) {
-        if textField.text != originalLabel {
+        let checkText = textField.text!.replacingOccurrences(of: " ", with: "")
+        if textField.text != originalLabel && !checkText.isEmpty {
             let info : [String : Int] = [textField.text!: textField.tag]
             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "reload label"), object: nil, userInfo: info)
+        } else {
+            textField.text = originalLabel
         }
     }
     
