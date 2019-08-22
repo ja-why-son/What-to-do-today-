@@ -1,4 +1,4 @@
-# What-to-do-today-
+# Todoy: the simple to-do list
 
 ## Privacy Policy
 
