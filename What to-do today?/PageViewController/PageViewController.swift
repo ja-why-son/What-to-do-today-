@@ -15,6 +15,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
         return [self.newViewController(name: "AllToDoViewController"),
                 self.newViewController(name: "TodayToDoViewController")]
     }()
+    var pageControl = UIPageControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,8 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
                 break;
             }
         }
+        self.delegate = self
+        configurePageControl()
         
     }
     
@@ -40,4 +43,19 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
     
+    func configurePageControl() {
+        // The total number of pages that are available is based on how many available colors we have.
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 75,width: UIScreen.main.bounds.width,height: 75))
+        self.pageControl.numberOfPages = orderedViewControllers.count
+        self.pageControl.currentPage = 0
+        self.pageControl.tintColor = UIColor.black
+        self.pageControl.pageIndicatorTintColor = UIColor.lightGray
+        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.view.addSubview(pageControl)
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0]
+        self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
+    }
 }
