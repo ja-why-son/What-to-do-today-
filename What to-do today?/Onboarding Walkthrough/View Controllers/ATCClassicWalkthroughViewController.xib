@@ -29,7 +29,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="677"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBB-wU-Tzs" userLabel="Image Container View">
-                            <rect key="frame" x="28" y="135" width="320" height="320"/>
+                            <rect key="frame" x="27.5" y="135" width="320" height="320"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-v9-Ctm" customClass="GIFImageView" customModule="Gifu">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="320"/>
@@ -66,7 +66,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="yRL-uJ-wL1" firstAttribute="centerX" secondItem="t6a-rE-WeO" secondAttribute="centerX" id="DN8-8I-DWK"/>
                         <constraint firstItem="yRL-uJ-wL1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="t6a-rE-WeO" secondAttribute="leading" constant="35" id="EZV-u7-UB0"/>

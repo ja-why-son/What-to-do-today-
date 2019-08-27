@@ -13,10 +13,12 @@ extension ToDoViewController: UIPageViewControllerDataSource, UIPageViewControll
     
     @objc func disableSwipe(){
         self.dataSource = nil
+        self.pageControl.isHidden = true;
     }
     
     @objc func enableSwipe(){
         self.dataSource = self
+        self.pageControl.isHidden = false;
     }
     
     func pageViewController(_ pageViewController: UIPageViewController,

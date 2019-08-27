@@ -48,7 +48,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
         pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 75,width: UIScreen.main.bounds.width,height: 75))
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
-        self.pageControl.tintColor = UIColor.black
+        self.pageControl.tintColor = UIColor.darkGray
         self.pageControl.pageIndicatorTintColor = UIColor.lightGray
         self.pageControl.currentPageIndicatorTintColor = UIColor.black
         self.view.addSubview(pageControl)
@@ -58,4 +58,5 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
         let pageContentViewController = pageViewController.viewControllers![0]
         self.pageControl.currentPage = orderedViewControllers.index(of: pageContentViewController)!
     }
+    
 }
