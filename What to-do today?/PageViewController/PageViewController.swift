@@ -45,12 +45,15 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
     
     func configurePageControl() {
         // The total number of pages that are available is based on how many available colors we have.
-        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - 75,width: UIScreen.main.bounds.width,height: 75))
+        print(UIScreen.main.bounds.maxY)
+        print(UIDevice.modelName)
+        let gap = UIDevice.modelName.contains("X") ? CGFloat(75) : CGFloat(30)
+        pageControl = UIPageControl(frame: CGRect(x: 0,y: UIScreen.main.bounds.maxY - gap,width: UIScreen.main.bounds.width,height: gap))
         self.pageControl.numberOfPages = orderedViewControllers.count
         self.pageControl.currentPage = 0
-        self.pageControl.tintColor = UIColor.darkGray
+        self.pageControl.tintColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
         self.pageControl.pageIndicatorTintColor = UIColor.lightGray
-        self.pageControl.currentPageIndicatorTintColor = UIColor.black
+        self.pageControl.currentPageIndicatorTintColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         self.view.addSubview(pageControl)
     }
     

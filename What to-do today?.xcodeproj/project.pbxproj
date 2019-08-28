@@ -63,6 +63,7 @@
 		9CC1CD6C230BB9EB005789C3 /* Tutorial(4).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD67230BB9EA005789C3 /* Tutorial(4).gif */; };
 		9CC1CD6D230BB9EB005789C3 /* Tutorial(3).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD68230BB9EB005789C3 /* Tutorial(3).gif */; };
 		9CC1CD6E230BB9EB005789C3 /* Tutorial(2).gif in Resources */ = {isa = PBXBuildFile; fileRef = 9CC1CD69230BB9EB005789C3 /* Tutorial(2).gif */; };
+		9CD4D79C231643D100AD2D3F /* UIDevice extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4D79B231643D100AD2D3F /* UIDevice extension.swift */; };
 		9CF9D3632207C57E00688F21 /* TodayTupleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */; };
 		9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D364220BBCC100688F21 /* PopUpViewController.swift */; };
 		9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */; };
@@ -134,6 +135,7 @@
 		9CC1CD67230BB9EA005789C3 /* Tutorial(4).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(4).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(4).gif"; sourceTree = "<group>"; };
 		9CC1CD68230BB9EB005789C3 /* Tutorial(3).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(3).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(3).gif"; sourceTree = "<group>"; };
 		9CC1CD69230BB9EB005789C3 /* Tutorial(2).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Tutorial(2).gif"; path = "../../../../Desktop/To-Doy Tutorial/Gif/New/Tutorial(2).gif"; sourceTree = "<group>"; };
+		9CD4D79B231643D100AD2D3F /* UIDevice extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice extension.swift"; sourceTree = "<group>"; };
 		9CF9D3622207C57E00688F21 /* TodayTupleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTupleTableViewCell.swift; sourceTree = "<group>"; };
 		9CF9D364220BBCC100688F21 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		9CF9D3742218B43600688F21 /* ExpandableTableViewCellBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTableViewCellBase.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				9C32FCEA2257FDEE00B9AEEF /* PersistenceService.swift */,
 				9C6D124622475ABC003A7FD9 /* Todo.swift */,
 				9C186DBA22F7BDF3007315B8 /* Constants.swift */,
+				9CD4D79B231643D100AD2D3F /* UIDevice extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				9CF9D3752218B43600688F21 /* ExpandableTableViewCellBase.swift in Sources */,
 				9CF9D365220BBCC100688F21 /* PopUpViewController.swift in Sources */,
 				9C0B8C4622F10FC800F5446E /* PageViewController + Delegate.swift in Sources */,
+				9CD4D79C231643D100AD2D3F /* UIDevice extension.swift in Sources */,
 				9C3434542230E5AA00A8B923 /* PopUpTupleViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
