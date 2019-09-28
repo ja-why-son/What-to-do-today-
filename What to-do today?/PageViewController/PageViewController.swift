@@ -19,6 +19,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configurePageControl()
         NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.enableSwipe), name:NSNotification.Name(rawValue: "enableSwipe"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(ToDoViewController.disableSwipe), name:NSNotification.Name(rawValue: "disableSwipe"), object: nil)
         dataSource = self
@@ -35,7 +36,7 @@ class ToDoViewController: UIPageViewController, UIScrollViewDelegate{
             }
         }
         self.delegate = self
-        configurePageControl()
+        
         
     }
     
